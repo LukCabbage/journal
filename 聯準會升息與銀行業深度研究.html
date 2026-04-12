@@ -1,0 +1,1300 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>聯準會升息對銀行業的全面影響：從 NIM、存款定價到系統性風險</title>
+    <style>
+      :root {
+        --bg: #f6f7fb;
+        --card: #ffffff;
+        --text: #121826;
+        --muted: #4b5563;
+        --border: rgba(17, 24, 39, 0.1);
+        --shadow: 0 10px 30px rgba(17, 24, 39, 0.08);
+        --accent: #1d4ed8;
+        --accent2: #0f766e;
+        --warn: #b45309;
+        --danger: #b91c1c;
+      }
+
+      * { box-sizing: border-box; }
+
+      body {
+        margin: 0;
+        font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+          Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+        color: var(--text);
+        background: radial-gradient(1200px 600px at 20% 0%, rgba(29, 78, 216, 0.08), transparent 55%),
+          radial-gradient(900px 500px at 90% 10%, rgba(15, 118, 110, 0.08), transparent 55%),
+          var(--bg);
+        line-height: 1.7;
+      }
+
+      a { color: var(--accent); text-decoration: none; }
+      a:hover { text-decoration: underline; }
+
+      .wrap { max-width: 1080px; margin: 0 auto; padding: 28px 18px 56px; }
+
+      header.hero {
+        background: linear-gradient(135deg, rgba(29, 78, 216, 0.12), rgba(15, 118, 110, 0.1));
+        border: 1px solid var(--border);
+        border-radius: 18px;
+        padding: 22px 22px 18px;
+        box-shadow: var(--shadow);
+      }
+
+      .kicker {
+        display: inline-flex;
+        gap: 8px;
+        align-items: center;
+        padding: 6px 10px;
+        border: 1px solid var(--border);
+        border-radius: 999px;
+        background: rgba(255, 255, 255, 0.7);
+        color: var(--muted);
+        font-size: 13px;
+      }
+
+      h1 {
+        margin: 14px 0 8px;
+        font-size: 28px;
+        line-height: 1.25;
+        letter-spacing: -0.02em;
+      }
+
+      .sub { margin: 0; color: var(--muted); max-width: 85ch; }
+
+      .meta {
+        margin-top: 12px;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        color: var(--muted);
+        font-size: 13px;
+      }
+      .pill {
+        padding: 6px 10px;
+        border: 1px solid var(--border);
+        border-radius: 999px;
+        background: rgba(255, 255, 255, 0.65);
+      }
+
+      main {
+        display: grid;
+        grid-template-columns: 1fr 320px;
+        gap: 18px;
+        margin-top: 18px;
+        align-items: start;
+      }
+
+      @media (max-width: 980px) {
+        main { grid-template-columns: 1fr; }
+      }
+
+      .card {
+        background: var(--card);
+        border: 1px solid var(--border);
+        border-radius: 16px;
+        box-shadow: var(--shadow);
+      }
+
+      .content { padding: 18px 18px 8px; }
+      .content h2 {
+        margin: 24px 0 10px;
+        font-size: 19px;
+        letter-spacing: -0.01em;
+        border-bottom: 2px solid rgba(29, 78, 216, 0.15);
+        padding-bottom: 6px;
+      }
+      .content h2:first-child { margin-top: 4px; }
+      .content h3 {
+        margin: 18px 0 8px;
+        font-size: 16px;
+        color: var(--accent2);
+      }
+      .content p { margin: 10px 0; }
+      .content ul { margin: 8px 0 12px; padding-left: 18px; }
+      .content ol { margin: 8px 0 12px; padding-left: 18px; }
+
+      .toc { padding: 14px 14px 12px; }
+      .toc h3 {
+        margin: 6px 0 8px;
+        font-size: 14px;
+        color: var(--muted);
+        letter-spacing: 0.02em;
+        text-transform: uppercase;
+      }
+      .toc a {
+        display: block;
+        padding: 7px 10px;
+        border-radius: 10px;
+        border: 1px solid transparent;
+        color: var(--text);
+        font-size: 14px;
+      }
+      .toc a:hover {
+        border-color: var(--border);
+        background: rgba(29, 78, 216, 0.06);
+        text-decoration: none;
+      }
+
+      .callout {
+        border-left: 4px solid var(--accent2);
+        background: rgba(15, 118, 110, 0.06);
+        padding: 12px 14px;
+        border-radius: 12px;
+        margin: 14px 0;
+      }
+      .callout strong { color: var(--accent2); }
+
+      .warn {
+        border-left: 4px solid var(--warn);
+        background: rgba(180, 83, 9, 0.08);
+      }
+      .warn strong { color: var(--warn); }
+
+      .danger {
+        border-left: 4px solid var(--danger);
+        background: rgba(185, 28, 28, 0.06);
+      }
+      .danger strong { color: var(--danger); }
+
+      .nums {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+        margin: 12px 0 8px;
+      }
+      @media (max-width: 560px) {
+        .nums { grid-template-columns: 1fr; }
+      }
+      .num {
+        padding: 12px 12px;
+        border: 1px solid var(--border);
+        border-radius: 14px;
+        background: rgba(255, 255, 255, 0.7);
+      }
+      .num .label { font-size: 12px; color: var(--muted); }
+      .num .value {
+        margin-top: 4px;
+        font-size: 18px;
+        font-weight: 700;
+        letter-spacing: -0.01em;
+      }
+      .num .note { margin-top: 4px; font-size: 12px; color: var(--muted); }
+
+      table.data {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 14px 0;
+        font-size: 14px;
+      }
+      table.data th {
+        background: rgba(29, 78, 216, 0.06);
+        text-align: left;
+        padding: 10px 12px;
+        border-bottom: 2px solid var(--border);
+        font-size: 13px;
+        color: var(--muted);
+        text-transform: uppercase;
+        letter-spacing: 0.03em;
+      }
+      table.data td {
+        padding: 10px 12px;
+        border-bottom: 1px solid var(--border);
+        vertical-align: top;
+      }
+      table.data tr:last-child td { border-bottom: none; }
+      table.data tr:hover { background: rgba(29, 78, 216, 0.02); }
+
+      .flow-box {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        flex-wrap: wrap;
+        margin: 14px 0;
+        font-size: 14px;
+      }
+      .flow-step {
+        padding: 8px 14px;
+        background: rgba(29, 78, 216, 0.08);
+        border: 1px solid rgba(29, 78, 216, 0.15);
+        border-radius: 10px;
+        font-weight: 600;
+        font-size: 13px;
+      }
+      .flow-arrow { color: var(--muted); font-size: 18px; }
+
+      code.inline {
+        padding: 2px 6px;
+        border-radius: 8px;
+        background: rgba(17, 24, 39, 0.06);
+        border: 1px solid rgba(17, 24, 39, 0.08);
+        font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+        font-size: 0.92em;
+      }
+
+      footer {
+        margin-top: 16px;
+        padding: 14px 16px;
+        color: var(--muted);
+        font-size: 12px;
+        border-top: 1px dashed var(--border);
+      }
+
+      .aside { padding: 14px; }
+      .aside h3 {
+        margin: 8px 0 10px;
+        font-size: 14px;
+        letter-spacing: 0.02em;
+        text-transform: uppercase;
+        color: var(--muted);
+      }
+      .aside .box {
+        border: 1px solid var(--border);
+        border-radius: 14px;
+        padding: 12px;
+        background: rgba(255, 255, 255, 0.7);
+        margin-bottom: 12px;
+      }
+      .aside ul { margin: 8px 0 0; padding-left: 18px; }
+      .aside li { margin: 6px 0; }
+      .muted { color: var(--muted); }
+
+      .timeline {
+        position: relative;
+        padding-left: 24px;
+        margin: 14px 0;
+      }
+      .timeline::before {
+        content: '';
+        position: absolute;
+        left: 8px;
+        top: 4px;
+        bottom: 4px;
+        width: 2px;
+        background: rgba(29, 78, 216, 0.2);
+      }
+      .timeline .event {
+        position: relative;
+        margin-bottom: 14px;
+        padding: 10px 14px;
+        border: 1px solid var(--border);
+        border-radius: 12px;
+        background: rgba(255, 255, 255, 0.8);
+      }
+      .timeline .event::before {
+        content: '';
+        position: absolute;
+        left: -20px;
+        top: 14px;
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background: var(--accent);
+        border: 2px solid #fff;
+      }
+      .timeline .event .date {
+        font-size: 12px;
+        color: var(--muted);
+        font-weight: 600;
+      }
+      .sticky-toc {
+        position: sticky;
+        top: 18px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <header class="hero">
+        <div class="kicker">銀行業研究 · 利率傳導機制 · 存款定價 · 資產負債管理</div>
+        <h1>聯準會升息對銀行業的全面影響</h1>
+        <p class="sub">
+          從 Net Interest Margin（淨利差）、Deposit Beta（存款利率敏感度）、定存定價策略，
+          到 2022–2023 升息週期引爆的 SVB 危機——全面解構利率與銀行之間的動態博弈。
+        </p>
+        <div class="meta">
+          <span class="pill">閱讀時間：約 20 分鐘</span>
+          <span class="pill">語言：繁體中文</span>
+          <span class="pill">資料：以 FDIC、Fed、SEC 公開資料為主</span>
+        </div>
+      </header>
+
+      <main>
+        <article class="card">
+          <div class="content">
+
+            <!-- 目錄 -->
+            <section class="card toc" aria-label="目錄">
+              <h3>目錄</h3>
+              <a href="#sec-1">1) 利率傳導全景：Fed Funds Rate 如何影響銀行每一個角落</a>
+              <a href="#sec-2">2) 淨利差（NIM）：升息一定利好銀行嗎？</a>
+              <a href="#sec-3">3) Deposit Beta：存款利率為什麼「跟不上」升息</a>
+              <a href="#sec-4">4) 定存（CD）與高利率定存：銀行的定價博弈</a>
+              <a href="#sec-5">5) 存款搬家（Deposit Flight）：升息尾段的致命壓力</a>
+              <a href="#sec-6">6) 資產端風險：升息如何製造「帳上地雷」</a>
+              <a href="#sec-7">7) 案例研究：SVB、Signature Bank 與 First Republic</a>
+              <a href="#sec-8">8) 大型銀行 vs 區域銀行 vs 社區銀行：誰承受得起</a>
+              <a href="#sec-9">9) 2022–2025 升息週期的數據回顧</a>
+              <a href="#sec-10">10) 從降息到下一次升息：銀行業的長期結構問題</a>
+              <a href="#sources">資料來源</a>
+            </section>
+
+            <!-- ==================== 第 1 節 ==================== -->
+            <section id="sec-1">
+              <h2>1) 利率傳導全景：Fed Funds Rate 如何影響銀行每一個角落</h2>
+              <p>
+                聯準會的 <strong>Federal Funds Rate（聯邦基金利率）</strong>是短期利率的錨。當 FOMC 宣布升息，
+                影響並非只是銀行間隔夜拆借成本上升——它會像漣漪一樣，逐層擴散到銀行經營的每一個面向。
+              </p>
+
+              <div class="flow-box">
+                <span class="flow-step">Fed Funds Rate ↑</span>
+                <span class="flow-arrow">→</span>
+                <span class="flow-step">銀行間拆借成本 ↑</span>
+                <span class="flow-arrow">→</span>
+                <span class="flow-step">Prime Rate ↑</span>
+                <span class="flow-arrow">→</span>
+                <span class="flow-step">貸款利率 ↑</span>
+              </div>
+              <div class="flow-box">
+                <span class="flow-step">Fed Funds Rate ↑</span>
+                <span class="flow-arrow">→</span>
+                <span class="flow-step">貨幣市場基金收益 ↑</span>
+                <span class="flow-arrow">→</span>
+                <span class="flow-step">存款競爭壓力 ↑</span>
+                <span class="flow-arrow">→</span>
+                <span class="flow-step">存款利率（被迫）↑</span>
+              </div>
+
+              <h3>1.1 資產端（放款 / 投資）的即時受益</h3>
+              <p>
+                銀行的放款組合中，有相當比例是<strong>浮動利率貸款</strong>（如商業貸款 tied to SOFR/Prime、可調利率房貸 ARM、
+                信用卡循環利息）。升息後，這類貸款的利息收入幾乎「即時」跟著上升。
+              </p>
+              <ul>
+                <li><strong>Prime Rate</strong> 通常在 FOMC 決議後 1–2 個營業日同步調整，等於 Fed Funds Rate + 3%。</li>
+                <li><strong>SOFR-linked 商業貸款</strong>在下一個利率重設日（通常為月或季）即反映新利率。</li>
+                <li><strong>信用卡利率</strong>多為 Prime + spread，升息效果幾乎即時傳導到消費金融。</li>
+              </ul>
+
+              <h3>1.2 負債端（存款 / 批發融資）的延遲反應</h3>
+              <p>
+                這正是升息「利好」銀行的核心假設：<strong>資產端利率快速上升，負債端成本上升較慢</strong>，
+                中間那個利差就暫時擴大了——但這只是故事的前半段。
+              </p>
+              <ul>
+                <li><strong>活期存款（DDA / Checking）</strong>：利率長期接近 0%，即使升息也幾乎不動。</li>
+                <li><strong>一般儲蓄帳戶</strong>：大型銀行的 Savings Rate 在整個 2022–2023 升息期間大多僅從 0.01% 升到 0.05%。</li>
+                <li><strong>定期存款（CD）</strong>：上升速度較快，但仍有明顯時滯（見第 4 節）。</li>
+                <li><strong>貨幣市場帳戶（MMA）</strong>：介於儲蓄與定存之間，升幅視競爭環境而定。</li>
+              </ul>
+              <div class="callout">
+                <strong>核心邏輯</strong>：升息初期，銀行享受的是「收入端先行、成本端延遲」的時間差紅利。
+                但若升息幅度夠大、持續夠久，負債端最終會追上來——特別是存款開始外流時。
+              </div>
+            </section>
+
+            <!-- ==================== 第 2 節 ==================== -->
+            <section id="sec-2">
+              <h2>2) 淨利差（NIM）：升息一定利好銀行嗎？</h2>
+              <p>
+                <strong>Net Interest Margin（NIM）</strong>是衡量銀行核心獲利能力最重要的指標之一：
+              </p>
+              <div class="callout">
+                <strong>NIM = （利息收入 − 利息支出）÷ 平均生息資產</strong><br>
+                它衡量的是：銀行每一塊錢的生息資產，扣掉資金成本後，淨賺多少利息。
+              </div>
+
+              <h3>2.1 升息初期：NIM 擴張的「甜蜜期」</h3>
+              <p>歷史上，升息初期（前 100–200 bps）幾乎總是帶來 NIM 的擴張：</p>
+              <table class="data">
+                <thead>
+                  <tr>
+                    <th>因素</th>
+                    <th>對 NIM 的影響</th>
+                    <th>反應速度</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>浮動利率貸款收入上升</td>
+                    <td>正向，直接推升利息收入</td>
+                    <td>即時 ~ 1 季</td>
+                  </tr>
+                  <tr>
+                    <td>新增貸款利率更高</td>
+                    <td>正向，但須等舊貸款到期替換</td>
+                    <td>逐步，1–3 年</td>
+                  </tr>
+                  <tr>
+                    <td>活期/儲蓄存款利率幾乎不動</td>
+                    <td>正向，負債成本壓制</td>
+                    <td>可維持 2–4 季</td>
+                  </tr>
+                  <tr>
+                    <td>投資組合重新部署（到期再投資）</td>
+                    <td>正向，但受久期限制</td>
+                    <td>緩慢，取決於組合到期結構</td>
+                  </tr>
+                </tbody>
+              </table>
+
+              <h3>2.2 升息後段：NIM 壓縮的「代價期」</h3>
+              <p>
+                當升息累積到一定幅度（如 2022–2023 連續 525 bps），遊戲規則改變了：
+              </p>
+              <ul>
+                <li><strong>存款定價壓力暴增</strong>：客戶開始比價，特別是高淨值客戶與企業財務部門發現貨幣市場基金可以拿到 5%+，
+                  銀行被迫提高存款利率以留住資金。</li>
+                <li><strong>高成本 CD 大量發行</strong>：為吸引或留住存款，銀行開出 4.5%–5.5% 的 CD，
+                  這些定存的成本在未來 1–2 年內鎖死。</li>
+                <li><strong>批發融資依賴度上升</strong>：靠 FHLB Advance（聯邦住房貸款銀行借款）或 Brokered Deposits（經紀存款）
+                  填補缺口，這些都是市場利率定價，成本遠高於核心存款。</li>
+                <li><strong>貸款需求可能下降</strong>：高利率抑制借貸需求，資產端的成長放緩。</li>
+              </ul>
+
+              <div class="nums">
+                <div class="num">
+                  <div class="label">美國商業銀行平均 NIM（2022 Q1，升息前）</div>
+                  <div class="value">2.54%</div>
+                  <div class="note">FDIC Quarterly Banking Profile</div>
+                </div>
+                <div class="num">
+                  <div class="label">美國商業銀行平均 NIM（2023 Q3，升息尾段）</div>
+                  <div class="value">3.30%</div>
+                  <div class="note">FDIC QBP — 升息甜蜜期的高峰</div>
+                </div>
+                <div class="num">
+                  <div class="label">美國商業銀行平均 NIM（2024 Q2，高利率維持期）</div>
+                  <div class="value">3.17%</div>
+                  <div class="note">NIM 開始壓縮 — 存款成本追上來</div>
+                </div>
+                <div class="num">
+                  <div class="label">利息支出佔平均資產比（2024 Q2）</div>
+                  <div class="value">2.15%</div>
+                  <div class="note">vs 2022 Q1 的 0.28% — 增幅達 7.7 倍</div>
+                </div>
+              </div>
+
+              <div class="callout warn">
+                <strong>關鍵觀察</strong>：利息收入確實隨升息上升，但利息支出上升的幅度更為劇烈——
+                從 2022 Q1 到 2024 Q2，銀行業的利息支出佔平均資產比從 0.28% 暴增至 2.15%，
+                證明負債端成本最終會大幅追趕上來。NIM 在 2023 Q3 見頂後逐步壓縮。
+              </div>
+            </section>
+
+            <!-- ==================== 第 3 節 ==================== -->
+            <section id="sec-3">
+              <h2>3) Deposit Beta：存款利率為什麼「跟不上」升息</h2>
+              <p>
+                <strong>Deposit Beta</strong> 是銀行業最重要的內部管理指標之一，
+                定義為：<strong>存款利率的變動幅度 ÷ 政策利率的變動幅度</strong>。
+              </p>
+              <div class="callout">
+                <strong>Deposit Beta 公式</strong><br>
+                <code class="inline">β = ΔDeposit Rate ÷ ΔFed Funds Rate</code><br><br>
+                例如：Fed Funds Rate 升了 500 bps，銀行的平均存款利率升了 200 bps → β = 40%。<br>
+                β 越低，代表銀行「截留」了越多升息紅利，但也意味著存款外流風險越高。
+              </div>
+
+              <h3>3.1 為什麼 Beta 不是 100%？</h3>
+              <ul>
+                <li><strong>客戶慣性（Switching Cost）</strong>：多數零售存款客戶不會因為利差 1% 就搬銀行——
+                  需要開新戶、轉帳設定、改自動扣款等等。這個摩擦成本讓銀行有定價權。</li>
+                <li><strong>活期存款的非利率價值</strong>：活期帳戶提供支付、轉帳、ATM 等服務價值，
+                  客戶願意接受接近 0% 的利率來換取便利性。</li>
+                <li><strong>資訊不對稱</strong>：許多客戶（尤其年長者、低餘額客戶）根本不知道自己存款拿的利率有多低，
+                  也不知道替代選擇（如 T-bills、MMF）的存在。</li>
+                <li><strong>銀行市場集中度</strong>：四大銀行（JPM、BAC、WFC、C）控制了全美超過 40% 的存款，
+                  寡佔結構讓它們不需要在利率上激烈競爭。</li>
+              </ul>
+
+              <h3>3.2 不同存款產品的 Beta 差異（2022–2024 升息週期）</h3>
+              <table class="data">
+                <thead>
+                  <tr>
+                    <th>存款類型</th>
+                    <th>典型 Beta 範圍</th>
+                    <th>說明</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>活期存款（DDA / Checking）</td>
+                    <td>0%–5%</td>
+                    <td>幾乎完全不動；大型銀行整個升息週期維持 0.01%</td>
+                  </tr>
+                  <tr>
+                    <td>一般儲蓄帳戶（Savings）</td>
+                    <td>5%–15%</td>
+                    <td>大型銀行 0.05%–0.45%；線上銀行可達 4%–5%</td>
+                  </tr>
+                  <tr>
+                    <td>貨幣市場帳戶（MMA）</td>
+                    <td>30%–50%</td>
+                    <td>高餘額客戶更積極要求利率，beta 偏高</td>
+                  </tr>
+                  <tr>
+                    <td>定期存款（CD）</td>
+                    <td>60%–90%</td>
+                    <td>最接近市場利率，特別是 brokered CD 幾乎 1:1 反映</td>
+                  </tr>
+                  <tr>
+                    <td>經紀存款（Brokered Deposits）</td>
+                    <td>90%–100%</td>
+                    <td>完全市場定價，beta 接近 100%</td>
+                  </tr>
+                </tbody>
+              </table>
+
+              <h3>3.3 Beta 的時間動態：「遲到但不缺席」</h3>
+              <p>
+                Deposit Beta 不是恆定不變的——它隨時間推移而上升。
+                升息初期 beta 很低，因為客戶反應慢、市場競爭尚未白熱化。
+                但隨著升息持續，beta 會加速上升，形成所謂的 <strong>「Beta Catch-up」</strong>。
+              </p>
+              <p>
+                以 2022–2023 升息週期為例，大型銀行的<strong>累積 Deposit Beta</strong> 走勢大致如下：
+              </p>
+              <table class="data">
+                <thead>
+                  <tr>
+                    <th>時間點</th>
+                    <th>累積升息幅度</th>
+                    <th>大型銀行平均累積 Beta</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr><td>2022 Q2</td><td>+75 bps</td><td>~5%</td></tr>
+                  <tr><td>2022 Q4</td><td>+425 bps</td><td>~20%</td></tr>
+                  <tr><td>2023 Q2</td><td>+500 bps</td><td>~35%</td></tr>
+                  <tr><td>2023 Q4</td><td>+525 bps（停止升息後）</td><td>~45%</td></tr>
+                  <tr><td>2024 Q2</td><td>+525 bps（維持高利率）</td><td>~55%</td></tr>
+                </tbody>
+              </table>
+              <div class="callout warn">
+                <strong>關鍵啟示</strong>：即使 Fed 在 2023 年 7 月停止升息，Deposit Beta 仍持續攀升。
+                這意味著<strong>銀行的存款成本壓力在升息結束後仍會繼續惡化</strong>，形成一種
+                「成本追趕利率」的延遲效應。這也是為什麼許多銀行在 2024 年面臨 NIM 壓縮。
+              </div>
+            </section>
+
+            <!-- ==================== 第 4 節 ==================== -->
+            <section id="sec-4">
+              <h2>4) 定存（CD）與高利率定存：銀行的定價博弈</h2>
+
+              <h3>4.1 定存（Certificate of Deposit）的基本機制</h3>
+              <p>
+                定期存款（CD）是銀行向存款人承諾在固定期限（通常 3 個月～5 年）內支付固定利率的合約。
+                對銀行而言，CD 有兩面性：
+              </p>
+              <ul>
+                <li><strong>優勢</strong>：鎖定資金期限，降低流動性風險；可預測的資金成本方便 ALM（資產負債管理）規劃。</li>
+                <li><strong>劣勢</strong>：成本比活期/儲蓄帳戶高得多，且一旦鎖定，即使降息也要繼續支付約定利率。</li>
+              </ul>
+
+              <h3>4.2 升息週期中 CD 利率的演變</h3>
+              <table class="data">
+                <thead>
+                  <tr>
+                    <th>時間點</th>
+                    <th>Fed Funds Rate</th>
+                    <th>1 年期 CD 全國平均</th>
+                    <th>最高利率 CD（線上銀行/信用社）</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr><td>2022 年 1 月</td><td>0.00%–0.25%</td><td>~0.14%</td><td>~0.50%–0.65%</td></tr>
+                  <tr><td>2022 年 7 月</td><td>1.50%–1.75%</td><td>~0.55%</td><td>~2.50%–3.00%</td></tr>
+                  <tr><td>2023 年 1 月</td><td>4.25%–4.50%</td><td>~1.50%</td><td>~4.50%–4.75%</td></tr>
+                  <tr><td>2023 年 7 月</td><td>5.25%–5.50%</td><td>~1.75%</td><td>~5.25%–5.50%</td></tr>
+                  <tr><td>2024 年初</td><td>5.25%–5.50%</td><td>~1.85%</td><td>~5.30%–5.50%</td></tr>
+                </tbody>
+              </table>
+              <p class="muted">
+                資料來源：FDIC Weekly National Rates、Bankrate、DepositAccounts.com。
+                「全國平均」包含大量低利率大型銀行，因此遠低於最高利率。
+              </p>
+
+              <h3>4.3 「高利率定存」現象：背後的策略邏輯</h3>
+              <p>
+                在 2023–2024 年間，許多銀行推出了年利率 4.5%–5.5% 的定存產品，
+                這在以往低利率時代是不可想像的。促成這一現象的因素包括：
+              </p>
+              <ol>
+                <li>
+                  <strong>替代品競爭</strong>：貨幣市場基金（如 Vanguard Federal Money Market、Schwab Value Advantage）
+                  的收益率已達 5%+，短天期美債殖利率也在 5% 以上。銀行必須開出可比的利率才能防止存款外流。
+                </li>
+                <li>
+                  <strong>線上銀行的競爭壓力</strong>：純線上銀行（如 Marcus by Goldman Sachs、Ally Bank、
+                  Discover Bank）沒有實體分行成本，能以更高利率吸引存款，迫使傳統銀行跟進。
+                </li>
+                <li>
+                  <strong>區域銀行的生存需求</strong>：SVB 事件後，區域銀行面臨更大的存款外流壓力，
+                  只能用高利率定存「買時間」穩住資金基礎。
+                </li>
+                <li>
+                  <strong>「寧付高利率也不願借批發資金」</strong>：FHLB Advance 和 Fed Discount Window
+                  的借款雖能應急，但在財報上被視為依賴非核心資金的警訊，分析師和評級機構都會盯。
+                  相比之下，高利率 CD 至少在分類上仍算「核心存款」。
+                </li>
+              </ol>
+
+              <h3>4.4 定存的不對稱風險：升息時吃虧、降息時也吃虧</h3>
+              <p>
+                CD 對銀行的一個被低估的風險是<strong>利率方向不對稱</strong>：
+              </p>
+              <ul>
+                <li>
+                  <strong>升息期間</strong>：銀行不得不追著市場利率開出越來越高的 CD，
+                  但它們的固定利率貸款和長久期債券投資組合的收益不會同步上升。
+                </li>
+                <li>
+                  <strong>降息來臨時</strong>：2023–2024 年間開出的高利率 CD（如 5% 的 2 年期 CD）
+                  不會因為 Fed 降息就消失——它們的成本會持續到到期為止。
+                  這意味著降息初期，銀行反而可能面臨更大的 NIM 壓力：資產端收益隨浮動利率下降，
+                  但負債端有一大塊高利率 CD 鎖在那裡。
+                </li>
+              </ul>
+              <div class="callout danger">
+                <strong>雙向夾殺</strong>：銀行在升息尾段被迫發行高利率 CD → 降息來臨後，
+                資產端收益下降但高利率 CD 仍未到期 → NIM 被從兩端擠壓。
+                這正是 2024–2025 年部分區域銀行面臨的困境。
+              </div>
+            </section>
+
+            <!-- ==================== 第 5 節 ==================== -->
+            <section id="sec-5">
+              <h2>5) 存款搬家（Deposit Flight）：升息尾段的致命壓力</h2>
+
+              <h3>5.1 錢去了哪裡？</h3>
+              <p>
+                升息幅度夠大時，存款不只是在銀行之間搬家，更會<strong>流出銀行體系</strong>：
+              </p>
+              <table class="data">
+                <thead>
+                  <tr>
+                    <th>資金流向</th>
+                    <th>吸引力來源</th>
+                    <th>對銀行存款的影響</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>貨幣市場基金（MMF）</td>
+                    <td>收益率 5%+、每日流動、無鎖定期</td>
+                    <td>直接替代儲蓄和活期存款</td>
+                  </tr>
+                  <tr>
+                    <td>短期美國國債（T-bills）</td>
+                    <td>收益率 5%+、國家信用、州稅豁免</td>
+                    <td>高淨值與企業客戶大量轉移</td>
+                  </tr>
+                  <tr>
+                    <td>Fed 逆回購（ON RRP）</td>
+                    <td>MMF 的投資標的之一，間接吸走存款</td>
+                    <td>系統性地減少銀行體系內的準備金</td>
+                  </tr>
+                  <tr>
+                    <td>同業高利率產品</td>
+                    <td>線上銀行 HYS 4.5%+</td>
+                    <td>傳統銀行存款向線上銀行遷移</td>
+                  </tr>
+                </tbody>
+              </table>
+
+              <div class="nums">
+                <div class="num">
+                  <div class="label">美國商業銀行存款（2022 Q1 高峰）</div>
+                  <div class="value">~18.16 兆美元</div>
+                  <div class="note">Fed H.8 數據</div>
+                </div>
+                <div class="num">
+                  <div class="label">美國商業銀行存款（2023 Q2）</div>
+                  <div class="value">~17.30 兆美元</div>
+                  <div class="note">一年間流失約 8,600 億美元</div>
+                </div>
+                <div class="num">
+                  <div class="label">貨幣市場基金總規模（2024 初）</div>
+                  <div class="value">~6.0 兆美元</div>
+                  <div class="note">ICI 數據 — 歷史新高</div>
+                </div>
+                <div class="num">
+                  <div class="label">MMF 規模增幅（2022 初 → 2024 初）</div>
+                  <div class="value">+~1.5 兆美元</div>
+                  <div class="note">與銀行存款流失規模大致對應</div>
+                </div>
+              </div>
+
+              <h3>5.2 存款結構的惡化：從「便宜存款」到「昂貴存款」</h3>
+              <p>
+                即使存款總量不變，<strong>存款結構的變化</strong>也會嚴重侵蝕獲利：
+              </p>
+              <ul>
+                <li><strong>無息存款（Non-Interest Bearing, NIB）</strong>佔比下降：
+                  2022 年初約佔總存款 27%–28%，到 2024 年降至約 22%–23%。
+                  這意味著銀行最「便宜」的資金來源縮水了。</li>
+                <li><strong>高成本定存佔比上升</strong>：客戶把活期/儲蓄搬到 CD，
+                  或銀行主動推出高利率定存來防止外流。</li>
+                <li><strong>結果</strong>：即便存款量不減反增（部分銀行靠高利率搶到存款），
+                  <strong>存款的平均成本</strong>卻劇烈上升。</li>
+              </ul>
+
+              <div class="callout">
+                <strong>存款「質量」比「數量」更重要</strong>：分析師在評估銀行時，不只看存款總量，
+                更看「存款組合」（deposit mix）。無息存款佔比高的銀行（如 SVB 事件前的 60%+），
+                在升息環境中本應最受益——但前提是這些存款不會跑掉。
+              </div>
+            </section>
+
+            <!-- ==================== 第 6 節 ==================== -->
+            <section id="sec-6">
+              <h2>6) 資產端風險：升息如何製造「帳上地雷」</h2>
+
+              <h3>6.1 債券投資組合的未實現虧損</h3>
+              <p>
+                這是 2022–2023 升息週期中最被忽視——直到 SVB 爆發才引起注意的系統性風險。
+              </p>
+              <p>
+                銀行持有大量債券（美國國債、MBS、Agency 債券），主要出於兩個目的：
+              </p>
+              <ul>
+                <li><strong>流動性緩衝</strong>：監管要求（LCR、HQLA）銀行持有足夠的高品質流動資產。</li>
+                <li><strong>收益配置</strong>：在貸款需求不足時，將多餘存款投入債券市場賺取利差。</li>
+              </ul>
+              <p>
+                問題在於：許多銀行在 2020–2021 年（利率接近 0% 時期）大量購買了長天期債券，
+                鎖定了極低的收益率（如 10 年期美債 ~1.5%、30 年期 MBS ~2%–2.5%）。
+                當利率急速上升後，這些債券的市場價值暴跌。
+              </p>
+
+              <h3>6.2 會計分類的關鍵：HTM vs AFS</h3>
+              <table class="data">
+                <thead>
+                  <tr>
+                    <th>分類</th>
+                    <th>全名</th>
+                    <th>是否反映市價</th>
+                    <th>升息影響</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><strong>AFS</strong></td>
+                    <td>Available-for-Sale</td>
+                    <td>是 — 未實現損益計入 OCI（其他綜合損益），影響帳面權益</td>
+                    <td>升息 → 債券市值下跌 → 帳面權益縮水（但不影響損益表）</td>
+                  </tr>
+                  <tr>
+                    <td><strong>HTM</strong></td>
+                    <td>Held-to-Maturity</td>
+                    <td>否 — 以攤銷成本入帳，除非減損</td>
+                    <td>升息 → 市值下跌但「隱藏」在帳上 → 若被迫賣出才會認列損失</td>
+                  </tr>
+                </tbody>
+              </table>
+
+              <div class="nums">
+                <div class="num">
+                  <div class="label">全美銀行業 AFS 未實現虧損高峰（2022 Q3）</div>
+                  <div class="value">-3,100 億美元</div>
+                  <div class="note">FDIC QBP</div>
+                </div>
+                <div class="num">
+                  <div class="label">全美銀行業 HTM 未實現虧損高峰（2022 Q3）</div>
+                  <div class="value">-3,500 億美元</div>
+                  <div class="note">FDIC QBP — 帳面上看不到，但實際存在</div>
+                </div>
+                <div class="num">
+                  <div class="label">合計未實現虧損</div>
+                  <div class="value">-6,600 億美元</div>
+                  <div class="note">這個數字超過了許多中小銀行的總權益</div>
+                </div>
+                <div class="num">
+                  <div class="label">全美銀行業總權益（2022 Q3）</div>
+                  <div class="value">~2.2 兆美元</div>
+                  <div class="note">未實現虧損約佔總權益的 30%</div>
+                </div>
+              </div>
+
+              <div class="callout danger">
+                <strong>「帳面溶劑、實際資不抵債」的風險</strong>：如果把 HTM 的未實現虧損也納入計算，
+                部分銀行的「真實淨值」已經接近零甚至為負。
+                只要不被迫出售這些債券，帳上數字不會爆，但一旦存款擠兌迫使銀行變賣資產——災難就來了。
+              </div>
+            </section>
+
+            <!-- ==================== 第 7 節 ==================== -->
+            <section id="sec-7">
+              <h2>7) 案例研究：SVB、Signature Bank 與 First Republic</h2>
+              <p>
+                2023 年 3 月的銀行危機，是升息如何透過「存款流失 + 資產減值」雙重管道擊垮銀行的經典案例。
+              </p>
+
+              <div class="timeline">
+                <div class="event">
+                  <div class="date">2023 年 3 月 8 日</div>
+                  <p><strong>Silicon Valley Bank（SVB）</strong>宣布出售 210 億美元 AFS 債券組合，認列 18 億美元損失，
+                    並計畫增資 22.5 億美元。市場恐慌引發存款人擠兌。</p>
+                </div>
+                <div class="event">
+                  <div class="date">2023 年 3 月 10 日</div>
+                  <p>加州 DFPI 關閉 SVB，FDIC 接管。<strong>480 億美元</strong>的存款在最後兩天內流出。
+                    這是美國史上第二大銀行倒閉案（以資產規模計）。</p>
+                </div>
+                <div class="event">
+                  <div class="date">2023 年 3 月 12 日</div>
+                  <p><strong>Signature Bank</strong> 被紐約州監管機構關閉。主因：加密貨幣相關存款集中度高、
+                    數位銀行特性導致存款流出速度極快。</p>
+                </div>
+                <div class="event">
+                  <div class="date">2023 年 3 月 12 日</div>
+                  <p>Fed、FDIC、Treasury 聯合宣布：所有存款人（含超過 25 萬美元保險上限的部分）全額保障。
+                    Fed 同時推出 <strong>BTFP（Bank Term Funding Program）</strong>，允許銀行以面值（而非市價）
+                    抵押 HTM/AFS 債券借款，有效化解強制賣出的壓力。</p>
+                </div>
+                <div class="event">
+                  <div class="date">2023 年 5 月 1 日</div>
+                  <p><strong>First Republic Bank</strong> 被 FDIC 接管後出售予 JPMorgan Chase。
+                    First Republic 的問題不同於 SVB：它的資產端有大量低利率 Jumbo 房貸（3%–4%），
+                    而負債端已被迫支付高利率，NIM 被壓縮到幾乎無法運營。</p>
+                </div>
+              </div>
+
+              <h3>7.1 SVB 倒閉的完整因果鏈</h3>
+              <div class="flow-box">
+                <span class="flow-step">2020–21 科技業存款暴增</span>
+                <span class="flow-arrow">→</span>
+                <span class="flow-step">大量購入長久期 MBS/國債</span>
+                <span class="flow-arrow">→</span>
+                <span class="flow-step">2022 Fed 暴力升息 525 bps</span>
+              </div>
+              <div class="flow-box">
+                <span class="flow-arrow">→</span>
+                <span class="flow-step">債券組合市值暴跌</span>
+                <span class="flow-arrow">→</span>
+                <span class="flow-step">科技業存款外流（燒錢 + 搬去 MMF）</span>
+                <span class="flow-arrow">→</span>
+                <span class="flow-step">被迫賣出虧損債券</span>
+              </div>
+              <div class="flow-box">
+                <span class="flow-arrow">→</span>
+                <span class="flow-step">認列損失引發恐慌</span>
+                <span class="flow-arrow">→</span>
+                <span class="flow-step">48 小時內 420 億存款擠兌</span>
+                <span class="flow-arrow">→</span>
+                <span class="flow-step">倒閉</span>
+              </div>
+
+              <h3>7.2 三家銀行倒閉的共同特徵</h3>
+              <table class="data">
+                <thead>
+                  <tr>
+                    <th>風險維度</th>
+                    <th>SVB</th>
+                    <th>Signature</th>
+                    <th>First Republic</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>存款集中度</td>
+                    <td>科技/VC 客群，單一產業</td>
+                    <td>加密貨幣相關</td>
+                    <td>高淨值客戶，單戶金額極高</td>
+                  </tr>
+                  <tr>
+                    <td>未保險存款佔比</td>
+                    <td>~93%</td>
+                    <td>~90%</td>
+                    <td>~68%</td>
+                  </tr>
+                  <tr>
+                    <td>利率風險管理</td>
+                    <td>債券久期極長、無對沖</td>
+                    <td>利率風險次要問題</td>
+                    <td>大量低利率固定房貸</td>
+                  </tr>
+                  <tr>
+                    <td>數位化程度/提款速度</td>
+                    <td>極高（科技客群一鍵轉帳）</td>
+                    <td>高（Signet 即時結算）</td>
+                    <td>中高</td>
+                  </tr>
+                </tbody>
+              </table>
+              <div class="callout warn">
+                <strong>教訓</strong>：升息本身不一定殺死銀行，但升息會暴露那些在低利率時期累積的
+                <strong>資產負債錯配（duration mismatch）</strong>和
+                <strong>存款集中度風險（concentration risk）</strong>。
+                當這兩者疊加在一起，一次擠兌就足以致命。
+              </div>
+            </section>
+
+            <!-- ==================== 第 8 節 ==================== -->
+            <section id="sec-8">
+              <h2>8) 大型銀行 vs 區域銀行 vs 社區銀行：誰承受得起</h2>
+              <p>
+                升息對不同規模銀行的影響差異極大。以下是結構性比較：
+              </p>
+
+              <table class="data">
+                <thead>
+                  <tr>
+                    <th>維度</th>
+                    <th>大型銀行（G-SIBs）</th>
+                    <th>區域銀行</th>
+                    <th>社區銀行</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>存款黏性</td>
+                    <td>高 — 品牌、服務生態系、客戶懶得搬</td>
+                    <td>中等 — 依賴在地關係</td>
+                    <td>中偏高 — 小鎮關係密切</td>
+                  </tr>
+                  <tr>
+                    <td>存款定價壓力</td>
+                    <td>低 — 可以不跟隨升息提高利率</td>
+                    <td>高 — 必須與大銀行和線上銀行競爭</td>
+                    <td>中等 — 在地壟斷提供緩衝</td>
+                  </tr>
+                  <tr>
+                    <td>非利息收入佔比</td>
+                    <td>高（40%+）— 投資銀行、財管、交易</td>
+                    <td>低（15%–25%）— 高度依賴 NIM</td>
+                    <td>低（10%–20%）</td>
+                  </tr>
+                  <tr>
+                    <td>資產負債管理能力</td>
+                    <td>成熟的 ALM 團隊、衍生品對沖</td>
+                    <td>能力參差不齊</td>
+                    <td>資源有限、常依賴外部顧問</td>
+                  </tr>
+                  <tr>
+                    <td>監管強度</td>
+                    <td>最嚴（壓力測試、LCR、SLR）</td>
+                    <td>2018 年後放鬆（2,500 億以下免壓力測試）</td>
+                    <td>最寬鬆</td>
+                  </tr>
+                  <tr>
+                    <td>TBTF（大到不能倒）保護</td>
+                    <td>隱性保護存在</td>
+                    <td>無 — SVB 證明了這點</td>
+                    <td>無</td>
+                  </tr>
+                  <tr>
+                    <td>2022–2023 升息的整體影響</td>
+                    <td>NIM 擴張明顯，獲利創新高</td>
+                    <td>兩極分化：部分受益、部分陷入危機</td>
+                    <td>小幅受益但成長有限</td>
+                  </tr>
+                </tbody>
+              </table>
+
+              <div class="callout">
+                <strong>「大銀行更受益」的結構性原因</strong>：
+                大型銀行之所以在升息中表現更好，核心原因是它們的<strong>存款成本幾乎不動</strong>。
+                JPMorgan 在整個升息週期中，儲蓄帳戶利率長期維持在 0.01%–0.02%，
+                而其浮動利率貸款和信用卡收入卻大幅上升。
+                這種「收入飆升、成本壓在地上」的不對稱性，讓 JPM 在 2023 年創下全年淨利 496 億美元的紀錄。
+              </div>
+            </section>
+
+            <!-- ==================== 第 9 節 ==================== -->
+            <section id="sec-9">
+              <h2>9) 2022–2025 升息週期的數據回顧</h2>
+
+              <h3>9.1 升息時間軸</h3>
+              <table class="data">
+                <thead>
+                  <tr>
+                    <th>日期</th>
+                    <th>FOMC 決議</th>
+                    <th>Fed Funds Rate 目標區間</th>
+                    <th>備註</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr><td>2022/03</td><td>+25 bps</td><td>0.25%–0.50%</td><td>疫後首次升息</td></tr>
+                  <tr><td>2022/05</td><td>+50 bps</td><td>0.75%–1.00%</td><td></td></tr>
+                  <tr><td>2022/06</td><td>+75 bps</td><td>1.50%–1.75%</td><td>自 1994 年來首次 75 bps</td></tr>
+                  <tr><td>2022/07</td><td>+75 bps</td><td>2.25%–2.50%</td><td></td></tr>
+                  <tr><td>2022/09</td><td>+75 bps</td><td>3.00%–3.25%</td><td></td></tr>
+                  <tr><td>2022/11</td><td>+75 bps</td><td>3.75%–4.00%</td><td></td></tr>
+                  <tr><td>2022/12</td><td>+50 bps</td><td>4.25%–4.50%</td><td></td></tr>
+                  <tr><td>2023/02</td><td>+25 bps</td><td>4.50%–4.75%</td><td></td></tr>
+                  <tr><td>2023/03</td><td>+25 bps</td><td>4.75%–5.00%</td><td>SVB 倒閉後仍繼續升息</td></tr>
+                  <tr><td>2023/05</td><td>+25 bps</td><td>5.00%–5.25%</td><td></td></tr>
+                  <tr><td>2023/07</td><td>+25 bps</td><td>5.25%–5.50%</td><td>本輪最後一次升息</td></tr>
+                  <tr><td>2023/09–2024/08</td><td>按兵不動</td><td>5.25%–5.50%</td><td>維持高利率 14 個月</td></tr>
+                  <tr><td>2024/09</td><td>-50 bps</td><td>4.75%–5.00%</td><td>開始降息</td></tr>
+                  <tr><td>2024/11</td><td>-25 bps</td><td>4.50%–4.75%</td><td></td></tr>
+                  <tr><td>2024/12</td><td>-25 bps</td><td>4.25%–4.50%</td><td></td></tr>
+                </tbody>
+              </table>
+
+              <h3>9.2 銀行業關鍵指標變化</h3>
+              <table class="data">
+                <thead>
+                  <tr>
+                    <th>指標</th>
+                    <th>2021 Q4<br><span class="muted">（升息前）</span></th>
+                    <th>2023 Q3<br><span class="muted">（升息尾段高峰）</span></th>
+                    <th>2024 Q2<br><span class="muted">（高利率維持期）</span></th>
+                    <th>變化方向</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Fed Funds Rate</td>
+                    <td>0.00%–0.25%</td>
+                    <td>5.25%–5.50%</td>
+                    <td>5.25%–5.50%</td>
+                    <td>↑ 525 bps</td>
+                  </tr>
+                  <tr>
+                    <td>平均 NIM</td>
+                    <td>2.50%</td>
+                    <td>3.30%</td>
+                    <td>3.17%</td>
+                    <td>先升後壓縮</td>
+                  </tr>
+                  <tr>
+                    <td>利息收入（年化/季度）</td>
+                    <td>~1,400 億</td>
+                    <td>~2,800 億</td>
+                    <td>~2,750 億</td>
+                    <td>↑ ~100%</td>
+                  </tr>
+                  <tr>
+                    <td>利息支出（年化/季度）</td>
+                    <td>~180 億</td>
+                    <td>~1,500 億</td>
+                    <td>~1,600 億</td>
+                    <td>↑ ~8 倍</td>
+                  </tr>
+                  <tr>
+                    <td>NIB 存款佔比</td>
+                    <td>~28%</td>
+                    <td>~24%</td>
+                    <td>~22%</td>
+                    <td>↓ 6 ppts</td>
+                  </tr>
+                  <tr>
+                    <td>未實現虧損（AFS+HTM）</td>
+                    <td>+$71 億</td>
+                    <td>-$6,840 億</td>
+                    <td>-$5,170 億</td>
+                    <td>巨幅負向</td>
+                  </tr>
+                  <tr>
+                    <td>銀行倒閉數量（年度）</td>
+                    <td>0</td>
+                    <td>5（2023 全年）</td>
+                    <td>1（2024 上半年）</td>
+                    <td>非零但非系統性</td>
+                  </tr>
+                </tbody>
+              </table>
+
+              <div class="callout">
+                <strong>數據告訴我們什麼</strong>：升息確實讓銀行業的利息收入翻倍，
+                但利息支出的增速更快（8 倍 vs 2 倍），導致 NIM 在觸頂後開始壓縮。
+                整體行業獲利仍然強勁（得益於浮動利率貸款和信用卡業務），
+                但<strong>分化加劇</strong>——贏家通吃（大型銀行），弱者出局（區域銀行倒閉）。
+              </div>
+            </section>
+
+            <!-- ==================== 第 10 節 ==================== -->
+            <section id="sec-10">
+              <h2>10) 從降息到下一次升息：銀行業的長期結構問題</h2>
+
+              <h3>10.1 降息不代表銀行馬上變好</h3>
+              <p>市場普遍假設「降息利好銀行」，但實際情況更複雜：</p>
+              <ul>
+                <li><strong>浮動利率資產收益即時下降</strong>：SOFR-linked 商業貸款、信用卡利率會跟著降。</li>
+                <li><strong>高利率 CD 鎖在帳上</strong>：2023–2024 年間發行的 4.5%–5.5% CD 可能還要 1–2 年才到期。</li>
+                <li><strong>長久期債券帳面回升</strong>：這是好消息——未實現虧損縮小，資本壓力緩解。</li>
+                <li><strong>貸款需求回升需要時間</strong>：降息不會立刻刺激企業大幅借貸。</li>
+              </ul>
+
+              <h3>10.2 長期結構性變化</h3>
+              <p>
+                2022–2023 升息週期對銀行業造成了一些<strong>不可逆的結構性變化</strong>：
+              </p>
+              <ol>
+                <li>
+                  <strong>存款人的利率意識覺醒</strong>：數百萬人第一次知道自己的存款可以拿到 4%–5%，
+                  也第一次接觸到貨幣市場基金和短期國債。這種認知一旦形成，很難消退。
+                  即使回到低利率環境，存款人的 beta 預期也會比以前更高。
+                </li>
+                <li>
+                  <strong>科技加速存款流動性</strong>：行動銀行讓存款轉移變成幾秒鐘的事。
+                  SVB 的擠兌在 48 小時內吸走 420 億美元——這在實體分行時代是不可能的。
+                  未來的銀行必須假設存款可以「瞬間消失」。
+                </li>
+                <li>
+                  <strong>監管將趨嚴</strong>：Fed 和 FDIC 已提出加強利率風險管理、
+                  擴大壓力測試範圍至中型銀行（1,000 億資產以上）、以及要求更高的長期債資本等改革方向。
+                </li>
+                <li>
+                  <strong>銀行業整合加速</strong>：弱小銀行被併購或消失，大銀行繼續集中化。
+                  JPMorgan 收購 First Republic 就是典型案例——危機成為強者擴張的機會。
+                </li>
+              </ol>
+
+              <h3>10.3 如果下一次升息再來？</h3>
+              <p>
+                若通膨再起、Fed 被迫再度升息，銀行業將面臨一個與上次不同的起點：
+              </p>
+              <ul>
+                <li>存款人的 beta 預期更高（不再「傻傻不動」）。</li>
+                <li>部分銀行可能仍持有上一輪升息期間累積的低利率長久期資產。</li>
+                <li>監管框架可能更嚴格，限制了銀行的操作空間。</li>
+                <li>但同時，銀行也可能因為上次的教訓而更謹慎地管理久期風險。</li>
+              </ul>
+
+              <div class="callout">
+                <strong>長期觀點</strong>：利率波動本身不是銀行的敵人——<strong>對利率波動的準備不足</strong>才是。
+                在低利率時代過度延伸久期、過度集中存款來源、忽視利率風險對沖——
+                這些才是升息週期中銀行倒閉的真正原因。
+                健全的銀行能在任何利率環境下生存甚至獲利；
+                脆弱的銀行則會在利率變化中暴露所有被掩蓋的風險。
+              </div>
+            </section>
+
+            <!-- ==================== 資料來源 ==================== -->
+            <section id="sources">
+              <h2>資料來源</h2>
+              <ul>
+                <li>
+                  FDIC Quarterly Banking Profile：
+                  <a href="https://www.fdic.gov/analysis/quarterly-banking-profile" target="_blank" rel="noreferrer noopener">
+                    QBP Dashboard
+                  </a>（NIM、利息收入/支出、未實現虧損等行業匯總數據）
+                </li>
+                <li>
+                  Federal Reserve H.8：
+                  <a href="https://www.federalreserve.gov/releases/h8/current/" target="_blank" rel="noreferrer noopener">
+                    Assets and Liabilities of Commercial Banks
+                  </a>（存款總量、結構變化）
+                </li>
+                <li>
+                  Federal Reserve：
+                  <a href="https://www.federalreserve.gov/monetarypolicy/fomc.htm" target="_blank" rel="noreferrer noopener">
+                    FOMC Decisions
+                  </a>（升息/降息決議記錄）
+                </li>
+                <li>
+                  FDIC：
+                  <a href="https://www.fdic.gov/national-rates-and-rate-caps" target="_blank" rel="noreferrer noopener">
+                    Weekly National Rates and Rate Caps
+                  </a>（全國平均存款利率）
+                </li>
+                <li>
+                  Federal Reserve Bank of St. Louis（FRED）：
+                  <a href="https://fred.stlouisfed.org/" target="_blank" rel="noreferrer noopener">
+                    FRED Economic Data
+                  </a>（利率時間序列、銀行業數據）
+                </li>
+                <li>
+                  ICI（Investment Company Institute）：
+                  <a href="https://www.ici.org/research/stats/mmf" target="_blank" rel="noreferrer noopener">
+                    Money Market Fund Assets
+                  </a>（貨幣市場基金規模追蹤）
+                </li>
+                <li>
+                  Federal Reserve Board：
+                  <a href="https://www.federalreserve.gov/publications/files/svb-review-20230428.pdf" target="_blank" rel="noreferrer noopener">
+                    Review of the Federal Reserve's Supervision and Regulation of SVB（2023/04）
+                  </a>
+                </li>
+                <li>
+                  SEC EDGAR：各銀行 10-K / 10-Q 揭露之利率敏感度分析、存款結構、投資組合久期資訊
+                </li>
+              </ul>
+            </section>
+
+            <footer>
+              免責聲明：本文件為研究與學習用途之整理，不構成投資建議或任何形式之保證。
+              文中數據以官方來源最新揭露為準；因口徑、時點差異可能存在可比性差異，使用時請回查原始來源。
+              銀行業指標（NIM、Beta、存款利率等）數據以行業匯總或代表性個案為主，個別銀行差異可能極大。
+            </footer>
+          </div>
+        </article>
+
+        <!-- ==================== 右側欄 ==================== -->
+        <aside class="card sticky-toc">
+          <div class="aside">
+            <h3>關鍵概念速查</h3>
+
+            <div class="box">
+              <div><strong>NIM（Net Interest Margin）</strong></div>
+              <p class="muted" style="margin: 6px 0 0">
+                （利息收入 − 利息支出）÷ 平均生息資產。衡量銀行核心放貸利差。
+                升息初期擴張，升息後段可能壓縮。
+              </p>
+            </div>
+
+            <div class="box">
+              <div><strong>Deposit Beta</strong></div>
+              <p class="muted" style="margin: 6px 0 0">
+                存款利率變動 ÷ 政策利率變動。Beta 越低代表銀行「截留」升息紅利越多。
+                活期 ~0%，CD ~70%–90%。
+              </p>
+            </div>
+
+            <div class="box">
+              <div><strong>HTM vs AFS</strong></div>
+              <p class="muted" style="margin: 6px 0 0">
+                HTM 按成本入帳（虧損隱藏），AFS 以市值計入 OCI（影響帳面權益但不影響損益表）。
+                升息時兩者都虧，但 HTM 不在帳面顯示。
+              </p>
+            </div>
+
+            <div class="box">
+              <div><strong>NIB Deposits</strong></div>
+              <p class="muted" style="margin: 6px 0 0">
+                Non-Interest Bearing Deposits（無息存款）。銀行最便宜的資金來源。
+                佔比從 2022 年 ~28% 降至 2024 年 ~22%。
+              </p>
+            </div>
+
+            <div class="box">
+              <div><strong>Duration Mismatch</strong></div>
+              <p class="muted" style="margin: 6px 0 0">
+                資產久期 > 負債久期。升息時資產減值速度 > 負債成本上升速度 → 淨值縮水。
+                SVB 的核心問題。
+              </p>
+            </div>
+
+            <div class="box">
+              <div><strong>BTFP</strong></div>
+              <p class="muted" style="margin: 6px 0 0">
+                Bank Term Funding Program。Fed 在 SVB 事件後推出，
+                允許銀行以面值抵押債券借款（而非市值），避免被迫認列虧損。
+                已於 2024 年 3 月到期。
+              </p>
+            </div>
+
+            <h3>延伸閱讀方向</h3>
+            <div class="box">
+              <ul>
+                <li>各銀行 10-K 中的 Interest Rate Sensitivity Analysis</li>
+                <li>FDIC 的 Risk Review（年度系統性風險報告）</li>
+                <li>Fed 的 Financial Stability Report（半年度）</li>
+                <li>個別銀行法說會逐字稿中對 NIM guidance 的說法</li>
+              </ul>
+            </div>
+          </div>
+        </aside>
+      </main>
+    </div>
+  </body>
+</html>

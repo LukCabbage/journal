@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>國家為什麼會破產？—— 主權債務與國家破產入門</title>
+  <meta name="description" content="簡介國家破產的成因、機制與歷史案例，約 30 分鐘閱讀。" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&family=Noto+Serif+TC:wght@600;700&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --color-bg: #fafaf9;
+      --color-surface: #ffffff;
+      --color-text: #1c1917;
+      --color-text-muted: #57534e;
+      --color-primary: #1e40af;
+      --color-primary-hover: #1e3a8a;
+      --color-accent: #b45309;
+      --color-border: #e7e5e4;
+      --font-sans: "Noto Sans TC", system-ui, sans-serif;
+      --font-serif: "Noto Serif TC", "Noto Sans TC", serif;
+      --content-max-width: 42rem;
+      --line-height-body: 1.75;
+      --line-height-heading: 1.3;
+      --space-unit: 0.25rem;
+      --duration: 200ms;
+      --ease: ease-out;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+    }
+
+    body {
+      margin: 0;
+      font-family: var(--font-sans);
+      font-size: 1.0625rem;
+      line-height: var(--line-height-body);
+      color: var(--color-text);
+      background: var(--color-bg);
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .wrap {
+      max-width: var(--content-max-width);
+      margin: 0 auto;
+      padding: calc(var(--space-unit) * 8) calc(var(--space-unit) * 4);
+    }
+
+    /* Hero */
+    header {
+      padding: calc(var(--space-unit) * 12) 0 calc(var(--space-unit) * 10);
+      border-bottom: 1px solid var(--color-border);
+    }
+    header h1 {
+      font-family: var(--font-serif);
+      font-size: clamp(1.75rem, 5vw, 2.25rem);
+      font-weight: 700;
+      line-height: var(--line-height-heading);
+      margin: 0 0 calc(var(--space-unit) * 4);
+      color: var(--color-text);
+    }
+    .meta {
+      font-size: 0.9375rem;
+      color: var(--color-text-muted);
+    }
+
+    /* Article */
+    article { padding: calc(var(--space-unit) * 8) 0; }
+    article section {
+      margin-bottom: calc(var(--space-unit) * 10);
+    }
+    article section:last-of-type { margin-bottom: 0; }
+
+    h2 {
+      font-family: var(--font-serif);
+      font-size: 1.375rem;
+      font-weight: 700;
+      margin: 0 0 calc(var(--space-unit) * 4);
+      color: var(--color-primary);
+      scroll-margin-top: 2rem;
+    }
+    h3 {
+      font-size: 1.125rem;
+      font-weight: 700;
+      margin: calc(var(--space-unit) * 6) 0 calc(var(--space-unit) * 2);
+      color: var(--color-text);
+    }
+    p {
+      margin: 0 0 calc(var(--space-unit) * 4);
+      text-align: justify;
+    }
+    p:last-child { margin-bottom: 0; }
+
+    .lead {
+      font-size: 1.125rem;
+      color: var(--color-text-muted);
+      margin-bottom: calc(var(--space-unit) * 6);
+    }
+
+    ul, ol {
+      margin: 0 0 calc(var(--space-unit) * 4);
+      padding-left: 1.5rem;
+    }
+    li { margin-bottom: calc(var(--space-unit) * 2); }
+    li:last-child { margin-bottom: 0; }
+
+    a {
+      color: var(--color-primary);
+      text-decoration: underline;
+      text-underline-offset: 2px;
+      transition: color var(--duration) var(--ease);
+    }
+    a:hover { color: var(--color-primary-hover); }
+    a:focus-visible {
+      outline: 2px solid var(--color-primary);
+      outline-offset: 2px;
+    }
+
+    .note {
+      background: var(--color-surface);
+      border-left: 4px solid var(--color-accent);
+      padding: calc(var(--space-unit) * 4);
+      margin: calc(var(--space-unit) * 6) 0;
+      border-radius: 0 4px 4px 0;
+    }
+    .note p:last-child { margin-bottom: 0; }
+
+    strong { font-weight: 700; }
+    .reading-time {
+      display: inline-block;
+      margin-top: calc(var(--space-unit) * 2);
+      font-size: 0.875rem;
+      color: var(--color-text-muted);
+    }
+
+    .toc {
+      margin-top: calc(var(--space-unit) * 8);
+      padding: calc(var(--space-unit) * 4);
+      background: var(--color-surface);
+      border-radius: 8px;
+      border: 1px solid var(--color-border);
+    }
+    .toc-title {
+      font-size: 0.9375rem;
+      font-weight: 700;
+      margin: 0 0 calc(var(--space-unit) * 3);
+      color: var(--color-text-muted);
+    }
+    .toc-list {
+      margin: 0;
+      padding-left: 1.25rem;
+      font-size: 0.9375rem;
+    }
+    .toc-list li { margin-bottom: var(--space-unit); }
+    .toc-list a { text-decoration: none; }
+    .toc-list a:hover { text-decoration: underline; }
+
+    footer {
+      padding: calc(var(--space-unit) * 8) 0;
+      border-top: 1px solid var(--color-border);
+      font-size: 0.875rem;
+      color: var(--color-text-muted);
+    }
+    footer p { margin-bottom: var(--space-unit); }
+    footer p:last-child { margin-bottom: 0; }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <h1>國家為什麼會破產？</h1>
+      <p class="meta">主權債務與國家破產入門 —— 成因、機制與案例</p>
+      <span class="reading-time" aria-label="預估閱讀時間">約 30 分鐘閱讀</span>
+
+      <nav class="toc" aria-label="文章目錄">
+        <p class="toc-title">目錄</p>
+        <ol class="toc-list">
+          <li><a href="#what-is-sovereign-default">一、什麼是「國家破產」？</a></li>
+          <li><a href="#why-countries-borrow">二、國家為什麼會欠那麼多債？</a></li>
+          <li><a href="#how-default-happens">三、從「借得到」到「違約」：危機如何形成？</a></li>
+          <li><a href="#cases">四、幾個歷史案例（簡要）</a></li>
+          <li><a href="#aftermath">五、違約之後會怎樣？</a></li>
+          <li><a href="#avoid-and-conclude">六、可以避免嗎？</a></li>
+        </ol>
+      </nav>
+    </header>
+
+    <article>
+      <p class="lead">
+        「國家破產」聽起來很嚇人，但和一般公司破產不太一樣：國家不會像公司一樣被清算、變賣資產。所謂國家破產，通常指的是<strong>主權債務違約</strong>或<strong>主權債務不可持續</strong>，政府無法按時償還或重組巨額債務，導致經濟與社會陷入長期危機。這篇文章用簡單的方式介紹：國家為什麼會走到這一步、背後有哪些常見原因、歷史上發生過哪些案例，以及可能的後果與出路。
+      </p>
+
+      <section aria-labelledby="what-is-sovereign-default">
+        <h2 id="what-is-sovereign-default">一、什麼是「國家破產」？</h2>
+        <p>
+          在法律與經濟上，「國家破產」並沒有像企業破產那樣全球統一的法定程序。一般我們說的國家破產，指的是<strong>主權國家無法履行其對外或對內債務義務</strong>，也就是發生「主權違約」（sovereign default）。政府可能對外國政府、國際組織（如 IMF、世界銀行）、或持有國債的投資人宣布延遲還款、部分不還、或要求重新談判條件（債務重組）。
+        </p>
+        <p>
+          和企業不同，主權國家理論上可以透過徵稅、印鈔（若為本幣債務）、或與債權人談判來處理債務，所以「破產」更多是形容<strong>債務負擔已嚴重到無法在現行條件下持續</strong>，必須透過違約或重組來減輕。一旦市場認為某國違約風險升高，該國借新債的利率會飆升、甚至借不到錢，形成惡性循環。
+        </p>
+        <p>
+          主權債務多半以「主權債券」形式存在：政府向國內外投資人發行債券，承諾定期付息、到期還本。當政府宣布無法按約定償付（延遲、減額、或要求重談），就構成違約。債權人可能是本國銀行與民眾、外國政府、國際組織、或國際投資人；違約的對象不同，政治與法律後果也不同（例如欠本國人的債可以透過通膨或國內法律重組，欠外國人的債則涉及國際談判與聲譽）。
+        </p>
+      </section>
+
+      <section aria-labelledby="why-countries-borrow">
+        <h2 id="why-countries-borrow">二、國家為什麼會欠那麼多債？</h2>
+        <p>
+          政府舉債本身不一定壞事：用於建設、教育、醫療或應對景氣衰退，可以提升長期成長或穩定社會。但若<strong>長期入不敷出、依賴借新還舊</strong>，債務占 GDP 比例就會不斷上升，利息負擔越來越重，最後變成「借新債只為了還舊債的利息」，再也無法靠成長或節流來消化。
+        </p>
+        <h3>常見的債務累積原因</h3>
+        <ul>
+          <li><strong>財政赤字長期化</strong>：政府支出（社福、軍公教、建設、補貼）持續大於稅收，差額用發債彌補，若經濟成長率追不上債務成長率，債務比率就會惡化。</li>
+          <li><strong>經常帳赤字</strong>：一國進口多於出口、或對外支付（利息、股利、專利費）大於收入時，需要從國外借錢或消耗外匯存底來填補，容易累積外幣債務。</li>
+          <li><strong>過度依賴外幣借款</strong>：若大量以美元、歐元等外幣舉債，本國貨幣一貶值，以本幣計算的債務負擔會暴增，還款能力驟降。</li>
+          <li><strong>政治與制度因素</strong>：選舉前大撒幣、貪腐、稅收不足、地下經濟龐大，都會讓財政紀律鬆弛，債務失控。</li>
+          <li><strong>產業單一、抗風險能力弱</strong>：經濟過度依賴少數商品（如原物料、觀光）或單一國家，一旦價格崩跌或需求消失，外匯收入銳減，還不起外債。</li>
+          <li><strong>戰爭、天災、疫情</strong>：巨額緊急支出與重建需求，若沒有足夠儲蓄或國際支援，往往被迫大舉借債。</li>
+        </ul>
+        <p>
+          還有一點常被忽略：<strong>利率環境</strong>。全球利率低時，許多新興國家以低成本大舉借債；一旦已開發國家央行升息（例如美國聯準會），國際資金回流、新興市場貨幣貶值、以美元計價的債務負擔加重，再融資成本也上升，容易觸發「債務牆」（大量舊債同時到期、必須再融資）。2022 年後多國升息，就讓不少高負債國壓力倍增。
+        </p>
+      </section>
+
+      <section aria-labelledby="how-default-happens">
+        <h2 id="how-default-happens">三、從「借得到」到「違約」：危機如何形成？</h2>
+        <p>
+          主權債務危機很少是一夕爆發，多半是<strong>債務不可持續 → 市場信心崩潰 → 融資斷鏈 → 違約或被迫重組</strong>的過程。
+        </p>
+        <p>
+          當投資人與國際機構開始懷疑一國還款能力時，會要求更高的利率才願意買新債，或乾脆不買。政府若無法以合理成本再融資，就必須動用外匯存底或向 IMF 等求援；若外匯見底、又得不到足夠紓困，就無法償還到期外債，只能宣布延後還款或尋求債務重組。同時，本國貨幣往往大幅貶值、通膨飆升、銀行擠兌，社會與政治動盪隨之而來。
+        </p>
+        <p>
+          <strong>國際貨幣基金（IMF）</strong>在許多主權危機中扮演「最後貸款人」角色：向陷入流動性危機的國家提供貸款，條件通常是財政緊縮、結構改革（如稅制、退休金、國企民營化）、匯率與貨幣政策調整。支持者認為這能穩定局勢、恢復市場信心；批評者則指緊縮會加深衰退、傷害弱勢，且部分方案被指「一刀切」、未充分考慮各國政治與社會現實。無論如何，對許多國家而言，向 IMF 求援是違約之外少數選項之一。
+        </p>
+        <div class="note">
+          <p><strong>小結：</strong>國家「破產」不是法律上的清算，而是主權債務違約或不可持續的狀態；成因常是長期財政與經常帳失衡、過度外幣負債、政治與結構問題；危機往往由信心崩潰與融資斷鏈觸發。</p>
+        </div>
+      </section>
+
+      <section aria-labelledby="cases">
+        <h2 id="cases">四、幾個歷史案例（簡要）</h2>
+        <p>
+          以下僅為簡要說明，幫助建立直覺；實際每個案例都涉及複雜的政治與國際關係。
+        </p>
+        <h3>希臘（2009–2010 年代）</h3>
+        <p>
+          希臘在加入歐元區後長期財政紀律鬆散、統計造假，2008 年金融海嘯後融資成本飆升，2009 年政府承認赤字遠超對外公布數字，觸發主權債務危機。歐元區與 IMF 提供多輪紓困，條件是嚴厲的緊縮與改革；希臘經歷多年衰退、高失業與社會抗爭，最終完成債務重組並逐步走出危機，但代價巨大。
+        </p>
+        <h3>阿根廷</h3>
+        <p>
+          阿根廷在 20 世紀多次發生主權違約，是著名的「違約常客」。原因包括：過度依賴外幣舉債、政治不穩、貨幣政策搖擺（固定匯率後又崩潰）、產業結構與財政紀律問題。每次違約後都經歷債務重組、與債權人漫長談判，以及國內經濟與社會動盪。
+        </p>
+        <h3>斯里蘭卡（2022）</h3>
+        <p>
+          斯里蘭卡長期依賴外債推動建設與進口，經常帳與財政雙赤字；COVID-19 重創觀光收入，俄烏戰爭推升能源與糧食價格，外匯存底耗盡後無法進口燃料與必需品，2022 年宣布無法償還外債、實質違約，社會陷入嚴重動盪，總統下台，後續依賴 IMF 紓困與債務重組談判。
+        </p>
+        <h3>黎巴嫩</h3>
+        <p>
+          黎巴嫩多年來依賴銀行體系與海外匯款支撐消費與進口，財政與經常帳雙赤字，政治派系把持、改革停滯。2019 年起銀行流動性危機、本幣崩跌、通膨失控，政府與央行無法履行外債義務，被視為主權違約，民生與社會秩序嚴重惡化。
+        </p>
+        <h3>其他簡要例子</h3>
+        <p>
+          <strong>冰島（2008）</strong>：銀行業過度擴張、外債暴增，金融海嘯時三大銀行崩潰，冰島克朗暴跌；政府選擇讓銀行倒閉、實施資本管制，未對外債全額擔保，經多年才逐步解除管制並完成賠償談判。<strong>厄瓜多</strong>曾多次違約與重組，近年再度因油價與政治因素陷入債務談判。<strong>辛巴威、委內瑞拉</strong>等則在惡性通膨與政治危機下，主權信用名存實亡。每個案例都提醒：主權債務危機往往是財政、結構、政治與國際環境共同作用的結果。
+        </p>
+      </section>
+
+      <section aria-labelledby="aftermath">
+        <h2 id="aftermath">五、違約之後會怎樣？</h2>
+        <p>
+          主權違約或重組之後，通常會伴隨幾類後果（程度因國而異）：
+        </p>
+        <ul>
+          <li><strong>緊縮與衰退</strong>：若接受 IMF 或國際紓困，往往伴隨削減支出、加稅、結構改革，短期內經濟收縮、失業上升。</li>
+          <li><strong>貨幣貶值與通膨</strong>：本幣貶值使進口物價上漲，若央行以印鈔支應財政，通膨會更嚴重，民眾購買力大降。</li>
+          <li><strong>社會與政治不穩</strong>：失業、貧窮、削減福利常引發示威、政局更迭，甚至移民潮。</li>
+          <li><strong>長期難以重返國際市場</strong>：違約會損害信用，多年內借貸成本高昂或難以舉債，影響投資與成長。</li>
+        </ul>
+        <p>
+          另一方面，<strong>債務重組</strong>若能成功減記部分債務或延長還款期，可為國家爭取喘息空間；但若改革不到位、政治不穩，仍可能再次陷入危機。重組過程通常漫長：政府須與眾多債權人（雙邊政府、國際組織、私人債權人）協商，常出現「搭便車」與「堅持不減記」的僵局，近年國際上持續有呼聲推動更有序的主權債務重組架構，以縮短談判時間、減少不確定性。
+        </p>
+      </section>
+
+      <section aria-labelledby="avoid-and-conclude">
+        <h2 id="avoid-and-conclude">六、可以避免嗎？</h2>
+        <p>
+          理論上可以降低風險：<strong>維持財政與經常帳的可持续性、避免過度依賴外幣債務、建立制度與政治穩定、分散經濟結構</strong>，都有助於避免走到違約。但實務上，政治壓力（選舉、既得利益）、全球景氣與利率環境、天災人禍，常使預防難以落實；一旦債務與赤字長期失控，往往要等到市場拒借、危機爆發，才被迫痛苦調整。
+        </p>
+        <p>
+          國際上也有一些機制試圖減緩危機蔓延：例如 IMF 的預防性額度、G20 的「共同架構」協助低收入國與債權人協調重組、以及民間與官方對「債務透明」的倡議。但主權債務的根結仍在各國自身的財政紀律與成長動能，沒有單一藥方可以保證不破產。
+        </p>
+        <p>
+          對一般讀者而言，理解「國家為什麼會破產」有助於看懂國際新聞中的主權債務危機、紓困談判與緊縮爭議；也能更理性地看待自己國家的財政與舉債政策，以及全球經濟連動的風險。若你關心某個國家的債務動態，可以留意其政府債務占 GDP 比例、經常帳餘額、外匯存底、以及國際機構（如 IMF）的評估報告，作為判斷的起點。
+        </p>
+      </section>
+    </article>
+
+    <footer>
+      <p>本頁為入門簡介，不構成任何投資或政策建議。若需更深入理解，可參考 IMF、世界銀行或各國央行之公開報告與教材。</p>
+      <p>預估閱讀時間約 30 分鐘，實際依個人閱讀速度而異。</p>
+    </footer>
+  </div>
+</body>
+</html>

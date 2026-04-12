@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>投資研究日誌</title>
+  <style>
+    :root {
+      --bg: #f4f5f7;
+      --surface: #ffffff;
+      --text: #1a1a2e;
+      --muted: #6b7280;
+      --border: #e5e7eb;
+      --accent: #2563eb;
+      --accent-soft: #dbeafe;
+      --tag-research: #059669;
+      --tag-research-bg: #d1fae5;
+      --tag-book: #7c3aed;
+      --tag-book-bg: #ede9fe;
+      --tag-macro: #d97706;
+      --tag-macro-bg: #fef3c7;
+      --tag-trade: #dc2626;
+      --tag-trade-bg: #fee2e2;
+      --tag-journal: #2563eb;
+      --tag-journal-bg: #dbeafe;
+      --shadow: 0 1px 3px rgba(0,0,0,0.06), 0 1px 2px rgba(0,0,0,0.04);
+      --shadow-hover: 0 10px 25px rgba(0,0,0,0.08);
+      --radius: 12px;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #0f172a;
+        --surface: #1e293b;
+        --text: #f1f5f9;
+        --muted: #94a3b8;
+        --border: #334155;
+        --accent: #60a5fa;
+        --accent-soft: #1e3a5f;
+        --tag-research: #34d399;
+        --tag-research-bg: #064e3b;
+        --tag-book: #a78bfa;
+        --tag-book-bg: #3b0764;
+        --tag-macro: #fbbf24;
+        --tag-macro-bg: #78350f;
+        --tag-trade: #f87171;
+        --tag-trade-bg: #7f1d1d;
+        --tag-journal: #60a5fa;
+        --tag-journal-bg: #1e3a5f;
+        --shadow: 0 1px 3px rgba(0,0,0,0.3);
+        --shadow-hover: 0 10px 25px rgba(0,0,0,0.4);
+      }
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Noto Sans TC", sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      min-height: 100vh;
+    }
+
+    .header {
+      background: var(--surface);
+      border-bottom: 1px solid var(--border);
+      padding: 1.5rem 1rem;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      backdrop-filter: blur(10px);
+    }
+
+    .header-inner {
+      max-width: 720px;
+      margin: 0 auto;
+    }
+
+    .header h1 {
+      font-size: 1.5rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+    }
+
+    .header p {
+      color: var(--muted);
+      font-size: 0.875rem;
+      margin-top: 0.25rem;
+    }
+
+    .filters {
+      display: flex;
+      gap: 0.5rem;
+      margin-top: 1rem;
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+      scrollbar-width: none;
+    }
+    .filters::-webkit-scrollbar { display: none; }
+
+    .filter-btn {
+      padding: 0.375rem 0.875rem;
+      border-radius: 20px;
+      border: 1px solid var(--border);
+      background: var(--surface);
+      color: var(--muted);
+      font-size: 0.8125rem;
+      cursor: pointer;
+      white-space: nowrap;
+      transition: all 0.15s;
+      font-family: inherit;
+    }
+    .filter-btn:hover { border-color: var(--accent); color: var(--accent); }
+    .filter-btn.active {
+      background: var(--accent);
+      color: #fff;
+      border-color: var(--accent);
+    }
+
+    .main {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 1rem;
+    }
+
+    .article-list { list-style: none; }
+
+    .article-card {
+      display: block;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1rem 1.25rem;
+      margin-bottom: 0.75rem;
+      text-decoration: none;
+      color: inherit;
+      box-shadow: var(--shadow);
+      transition: box-shadow 0.2s, transform 0.2s;
+    }
+    .article-card:hover {
+      box-shadow: var(--shadow-hover);
+      transform: translateY(-1px);
+    }
+
+    .card-top {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .tag {
+      font-size: 0.6875rem;
+      font-weight: 600;
+      padding: 0.15rem 0.5rem;
+      border-radius: 10px;
+      letter-spacing: 0.02em;
+    }
+    .tag-投資研究 { color: var(--tag-research); background: var(--tag-research-bg); }
+    .tag-書籍筆記 { color: var(--tag-book); background: var(--tag-book-bg); }
+    .tag-總經研究 { color: var(--tag-macro); background: var(--tag-macro-bg); }
+    .tag-交易策略 { color: var(--tag-trade); background: var(--tag-trade-bg); }
+    .tag-日誌 { color: var(--tag-journal); background: var(--tag-journal-bg); }
+
+    .card-date {
+      font-size: 0.75rem;
+      color: var(--muted);
+    }
+
+    .card-title {
+      font-size: 1rem;
+      font-weight: 600;
+      line-height: 1.4;
+    }
+
+    .empty-state {
+      text-align: center;
+      padding: 3rem 1rem;
+      color: var(--muted);
+    }
+
+    .count {
+      font-size: 0.8125rem;
+      color: var(--muted);
+      margin-bottom: 1rem;
+    }
+
+    @media (min-width: 640px) {
+      .header { padding: 2rem 1.5rem; }
+      .header h1 { font-size: 1.75rem; }
+      .main { padding: 1.5rem; }
+      .card-title { font-size: 1.0625rem; }
+    }
+  </style>
+</head>
+<body>
+  <header class="header">
+    <div class="header-inner">
+      <h1>投資研究日誌</h1>
+      <p>個人投資筆記、書籍整理與研究紀錄</p>
+      <div class="filters" id="filters"></div>
+    </div>
+  </header>
+
+  <main class="main">
+    <div class="count" id="count"></div>
+    <ul class="article-list" id="list"></ul>
+  </main>
+
+  <script>
+    const CATEGORY_ORDER = ["全部", "投資研究", "總經研究", "書籍筆記", "交易策略", "日誌"];
+
+    let articles = [];
+    let activeCategory = "全部";
+
+    async function load() {
+      try {
+        const r = await fetch("articles.json");
+        articles = await r.json();
+      } catch {
+        articles = [];
+      }
+      buildFilters();
+      render();
+    }
+
+    function buildFilters() {
+      const cats = new Set(articles.map(a => a.category));
+      const ordered = CATEGORY_ORDER.filter(c => c === "全部" || cats.has(c));
+
+      const el = document.getElementById("filters");
+      el.innerHTML = ordered.map(c =>
+        `<button class="filter-btn${c === activeCategory ? " active" : ""}" data-cat="${c}">${c}</button>`
+      ).join("");
+
+      el.addEventListener("click", e => {
+        const btn = e.target.closest(".filter-btn");
+        if (!btn) return;
+        activeCategory = btn.dataset.cat;
+        el.querySelectorAll(".filter-btn").forEach(b => b.classList.remove("active"));
+        btn.classList.add("active");
+        render();
+      });
+    }
+
+    function render() {
+      const filtered = activeCategory === "全部"
+        ? articles
+        : articles.filter(a => a.category === activeCategory);
+
+      document.getElementById("count").textContent = `共 ${filtered.length} 篇`;
+
+      const listEl = document.getElementById("list");
+      if (filtered.length === 0) {
+        listEl.innerHTML = '<li class="empty-state">尚無文章</li>';
+        return;
+      }
+
+      listEl.innerHTML = filtered.map(a => `
+        <li>
+          <a class="article-card" href="${a.filename}">
+            <div class="card-top">
+              <span class="tag tag-${a.category}">${a.category}</span>
+              <span class="card-date">${a.date}</span>
+            </div>
+            <div class="card-title">${a.title}</div>
+          </a>
+        </li>
+      `).join("");
+    }
+
+    load();
+  </script>
+</body>
+</html>

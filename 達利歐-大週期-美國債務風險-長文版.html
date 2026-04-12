@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>用達利歐大週期分析美國債務風險（長文版）</title>
+    <style>
+      :root {
+        --bg: #f6f7fb;
+        --card: #ffffff;
+        --text: #121826;
+        --muted: #4b5563;
+        --border: rgba(17, 24, 39, 0.1);
+        --shadow: 0 10px 30px rgba(17, 24, 39, 0.08);
+        --accent: #1d4ed8;
+        --accent2: #0f766e;
+        --warn: #b45309;
+      }
+      * { box-sizing: border-box; }
+      body {
+        margin: 0;
+        font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+        color: var(--text);
+        background: var(--bg);
+        line-height: 1.7;
+      }
+      a { color: var(--accent); text-decoration: none; }
+      a:hover { text-decoration: underline; }
+      .wrap { max-width: 720px; margin: 0 auto; padding: 28px 18px 56px; }
+      header.hero {
+        background: linear-gradient(135deg, rgba(29, 78, 216, 0.1), rgba(15, 118, 110, 0.08));
+        border: 1px solid var(--border);
+        border-radius: 14px;
+        padding: 20px;
+        box-shadow: var(--shadow);
+      }
+      .kicker {
+        display: inline-block;
+        padding: 6px 12px;
+        border-radius: 999px;
+        background: rgba(255,255,255,0.8);
+        color: var(--muted);
+        font-size: 13px;
+      }
+      h1 { margin: 12px 0 8px; font-size: 24px; }
+      .sub { margin: 0; color: var(--muted); font-size: 15px; }
+      .meta { margin-top: 10px; font-size: 13px; color: var(--muted); }
+      .card {
+        background: var(--card);
+        border: 1px solid var(--border);
+        border-radius: 14px;
+        padding: 20px;
+        margin-top: 18px;
+        box-shadow: var(--shadow);
+      }
+      h2 { margin: 24px 0 12px; font-size: 18px; }
+      h2:first-of-type { margin-top: 0; }
+      p { margin: 12px 0; }
+      ul { margin: 10px 0; padding-left: 22px; }
+      li { margin: 6px 0; }
+      .callout {
+        border-left: 4px solid var(--accent2);
+        background: rgba(15, 118, 110, 0.06);
+        padding: 14px;
+        border-radius: 10px;
+        margin: 16px 0;
+      }
+      .callout strong { color: var(--accent2); }
+      .warn { border-left-color: var(--warn); background: rgba(180, 83, 9, 0.08); }
+      .warn strong { color: var(--warn); }
+      .nums { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin: 14px 0; }
+      @media (max-width: 520px) { .nums { grid-template-columns: 1fr; } }
+      .num {
+        padding: 12px;
+        border: 1px solid var(--border);
+        border-radius: 12px;
+        background: rgba(255,255,255,0.8);
+      }
+      .num .label { font-size: 12px; color: var(--muted); }
+      .num .value { margin-top: 4px; font-size: 17px; font-weight: 700; }
+      .num .note { margin-top: 4px; font-size: 11px; color: var(--muted); }
+      code.inline {
+        padding: 2px 6px;
+        border-radius: 6px;
+        background: rgba(0,0,0,0.06);
+        font-size: 0.9em;
+      }
+      footer {
+        margin-top: 24px;
+        padding-top: 16px;
+        border-top: 1px dashed var(--border);
+        color: var(--muted);
+        font-size: 12px;
+      }
+      .toc { padding: 14px; margin-bottom: 20px; }
+      .toc h3 { font-size: 14px; color: var(--muted); margin: 0 0 10px; }
+      .toc a { display: block; padding: 6px 0; color: var(--text); }
+      .toc a:hover { color: var(--accent); }
+      .muted { color: var(--muted); }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <header class="hero">
+        <span class="kicker">宏觀研究 · 達利歐大週期 · 美國債務</span>
+        <h1>用達利歐大週期分析美國債務風險（長文版）</h1>
+        <p class="sub">問題不在「會不會明天違約」，而在「為了延後清算，要付出什麼代價」。</p>
+        <div class="meta">閱讀時間：約 25–30 分鐘 · 寫法偏直白、好懂</div>
+      </header>
+
+      <article class="card">
+        <section class="toc">
+          <h3>目錄</h3>
+          <a href="#sec-0">0) 什麼是大債務週期？先有個概念</a>
+          <a href="#sec-1">1) 結論先講：美國比較像「慢性重估」</a>
+          <a href="#sec-2">2) 現在美國的數字長怎樣</a>
+          <a href="#sec-3">3) 達利歐的四個指標，怎麼用在美國身上</a>
+          <a href="#sec-4">4) 美國是怎麼走到今天的：MP0 到 MP3</a>
+          <a href="#sec-5">5) 為什麼不是「立刻爆」</a>
+          <a href="#sec-6">6) 接下來要盯什麼</a>
+          <a href="#sec-7">7) 總結</a>
+          <a href="#sources">資料來源</a>
+        </section>
+
+        <section id="sec-0">
+          <h2>0) 什麼是大債務週期？先有個概念</h2>
+          <p>
+            達利歐（Ray Dalio）是橋水基金的創辦人，他花很多年研究各國的債務危機，最後整理出一套「大債務週期」的框架。
+            簡單講，就是：借錢會讓當下很爽，但借多了、還不起的時候，就會出問題。而且這個過程不是隨機的，而是有規律可循。
+          </p>
+          <p>
+            他發現，很多國家都會經歷類似的階段：一開始債務不高、大家很保守；接著借錢變便宜、大家越借越多、資產漲、看起來一片繁榮；
+            然後某個時點，債務負擔變太重，要嘛違約、要嘛印鈔稀釋、要嘛緊縮痛苦一陣子。這就是「大債務週期」。
+          </p>
+          <p>
+            達利歐還把「完整大週期」拆成五種力量在互相影響：債務週期、國內政治、國際地緣政治、大自然衝擊（戰爭、疫情等）、還有技術變革。
+            所以看美國債務，不能只看數字，也要看政治、看全球秩序、看 Fed 跟財政部怎麼配合。這篇文章就是用這套思路來講美國。
+          </p>
+        </section>
+
+        <section id="sec-1">
+          <h2>1) 結論先講：美國比較像「慢性重估」</h2>
+          <p>
+            很多人會問：美國會不會破產？用達利歐的框架來看，美國的風險跟新興市場不太一樣。新興市場常常是「借外幣、還不起、直接違約」。
+            美國借的是美元，而美元是美國自己印的，所以它理論上可以一直印鈔還債。問題是：印鈔還債的代價是什麼？答案是通膨、貨幣貶值、持有美債的人實質上被稀釋。
+          </p>
+          <p>
+            所以更精準的說法是：美國比較可能面對的，不是「某天突然宣布破產」，而是一種<strong>慢性的、長期的</strong>壓力——
+            利息越付越多、赤字很難縮小、為了維持體系運轉，可能被迫接受更高的通膨、或者讓央行繼續買債、壓低利率。這些都會一點一點侵蝕美元的購買力。
+          </p>
+          <div class="callout">
+            <strong>一句話</strong>：美國更可能走「用本幣慢慢稀釋債務」的路，而不是「硬違約、立刻爆」。
+          </div>
+        </section>
+
+        <section id="sec-2">
+          <h2>2) 現在美國的數字長怎樣</h2>
+          <p class="muted">以下數字來自美國財政部 Treasury 的公開資料，會隨時間更新。</p>
+
+          <div class="nums">
+            <div class="num">
+              <div class="label">總公共債務（Total Public Debt）</div>
+              <div class="value">約 38.9 兆美元</div>
+              <div class="note">2026 年 3 月，Debt to the Penny</div>
+            </div>
+            <div class="num">
+              <div class="label">公眾持有（Debt Held by the Public）</div>
+              <div class="value">約 31.3 兆美元</div>
+              <div class="note">同上</div>
+            </div>
+            <div class="num">
+              <div class="label">FY2025 全年淨利息支出</div>
+              <div class="value">約 9,704 億美元</div>
+              <div class="note">Monthly Treasury Statement</div>
+            </div>
+            <div class="num">
+              <div class="label">FY2026 前五個月淨利息（10–2 月）</div>
+              <div class="value">約 4,249 億美元</div>
+              <div class="note">MTS，FYTD</div>
+            </div>
+          </div>
+
+          <p>
+            38.9 兆美元聽起來很多，但光看數字本身還不夠。達利歐會說：你要看的是債務跟「收入」的關係，還有「每年要付多少利息」。
+            美國政府的主要收入是稅收。當債務很大、利率又高，每年光付利息就會吃掉一大塊收入，剩下的才能拿來做其他事（國防、社福、基建等）。
+          </p>
+          <p>
+            更麻煩的是：利息支出會「自我強化」。債務多 → 要付的利息多 → 赤字變大 → 要發更多債 → 債務更多 → 利息更多⋯⋯
+            這就是為什麼達利歐特別重視「償債支出相對於收入」這個指標。一旦這個比例開始失控，就很難靠小修小補拉回來。
+          </p>
+          <div class="callout warn">
+            <strong>重點</strong>：當利息支出變成「推高未來赤字的引擎」，債務就不只是靜態數字，而是會自我推動的動態過程。
+          </div>
+
+          <p>
+            CBO（國會預算辦公室）的長期展望也說得很清楚：到 2036 年，聯邦債務會從現在約 100% GDP 升到約 120% GDP；
+            赤字會從約 1.9 兆擴大到約 3.1 兆；利息支出會從 2025 年的約 9,700 億，翻倍到 2036 年的約 2.1 兆。這些都是官方預估，不是危言聳聽。
+          </p>
+        </section>
+
+        <section id="sec-3">
+          <h2>3) 達利歐的四個指標，怎麼用在美國身上</h2>
+          <p>
+            達利歐在書裡反覆強調：不要只看一個數字（例如 Debt/GDP），要看四件事一起怎麼動：
+          </p>
+
+          <p><strong>第一：債務相對於收入</strong></p>
+          <p>
+            很多人會看 Debt/GDP，但 GDP 不等於政府收入。政府真正能拿來還債的，是稅收等收入。所以更準的是看「債務 / 政府收入」。
+            美國現在債務很高，政府收入雖然也大，但比例已經到歷史高檔，而且還在往上走。
+          </p>
+
+          <p><strong>第二：償債支出相對於收入</strong></p>
+          <p>
+            這是最關鍵的。每年要付多少利息、多少到期本金？這些加起來占政府收入多少？如果這個比例一直升，就代表財政空間被利息吃掉，
+            政府要嘛削減其他支出、要嘛加稅、要嘛再借更多。美國現在淨利息已經快破兆，而且 CBO 預估還會再翻倍，這是很明顯的警訊。
+          </p>
+
+          <p><strong>第三：利率 vs 名目成長率</strong></p>
+          <p>
+            如果名目利率高於名目 GDP 成長率，債務負擔會越滾越大，因為債務的複利成長比收入快。反過來，如果利率低於成長率，債務負擔比較容易被「時間 + 成長」稀釋掉。
+            過去十幾年美國利率很低，所以高債務還能撐得住。2022 年後通膨回來、利率上去，這個條件就變差了。
+          </p>
+
+          <p><strong>第四：債務 vs 儲備/吸收能力</strong></p>
+          <p>
+            一個國家債務很多，但如果有大量外匯存底、或者金融體系很願意買債，短期壓力可能還不會爆發。美國的問題是：它沒有傳統意義的「外匯存底」（因為美元就是儲備貨幣），
+            它的「吸收能力」來自全球投資人、各國央行、還有 Fed 自己願不願意買。當 Fed 縮表、海外買家減持，市場吸收美債的能力就會下降，利率就會有壓力。
+          </p>
+
+          <p>
+            綜合這四點，美國目前最脆弱的是第二和第三項：償債支出在升、利率環境也比過去十年緊。第一項（債務/收入）已經很高，第四項（誰來買）則要看 Fed 和海外買家的動向。
+          </p>
+        </section>
+
+        <section id="sec-4">
+          <h2>4) 美國是怎麼走到今天的：MP0 到 MP3</h2>
+          <p>
+            達利歐把貨幣政策環境分成幾種「模式」，方便理解不同時期美國是怎麼處理債務的。這不是官方說法，是他自己整理的一套分類。
+          </p>
+
+          <p><strong>MP0：硬通貨時代（約 1945–1971）</strong></p>
+          <p>
+            二戰後美國建立布雷頓森林體系，美元跟黃金掛鉤。其他國家貨幣跟美元掛鉤。這時候貨幣供給受黃金約束，不能隨便印。好處是通膨比較可控，壞處是一旦經濟出問題，政府沒辦法靠印鈔救火，容易引發深度通縮。
+
+          </p>
+
+          <p><strong>MP1：利率驅動的法幣時代（約 1971–2008）</strong></p>
+          <p>
+            1971 年尼克森讓美元跟黃金脫鉤，從此美國進入「法定貨幣」時代。央行不再受黃金約束，改靠調利率來控制經濟。利率降 → 借錢便宜 → 經濟活絡；利率升 → 借錢貴 → 經濟冷卻。
+            這段期間美國經歷了停滯性通膨、沃爾克升息、然後 1980 年代起利率長期往下走，債務也一路累積。但因為利率夠低，債務負擔還算可控。
+          </p>
+
+          <p><strong>MP2：QE 時代（約 2008–2020）</strong></p>
+          <p>
+            2008 金融危機後，利率已經降到接近零，傳統降息沒用了。Fed 改採「量化寬鬆」（QE）：直接印鈔買債券，把錢注入市場。這樣做的好處是成功避免金融體系崩潰，壞處是 Fed 資產負債表暴漲，
+            債務被央行「吸收」了很大一部分。等於把民間不願意接的債，改由央行自己買。這在達利歐的框架裡，就是大債務週期後段的典型特徵。
+          </p>
+
+          <p><strong>MP3：財政赤字 + 貨幣化協同（約 2020 至今）</strong></p>
+          <p>
+            疫情來了，政府大撒錢、Fed 大買債，財政跟貨幣政策高度同步。這比 MP2 更進一步：不只是央行買債，而是政府直接發錢給民眾、企業，央行在背後買債支撐。這種模式在歷史上也有過，
+            通常發生在「傳統工具已經不夠用」的時候。達利歐會說：這代表我們已經進入大債務週期很後段了。
+          </p>
+
+          <p>
+            現在 Fed 的資產負債表還有約 6.7 兆美元，其中持有約 4.3 兆美債、約 2 兆 MBS。雖然比疫情高峰時縮了不少，但還是比 2008 前大很多。這表示 Fed 仍然是美債市場的重要買家，
+            一旦下次危機來，它很可能還會再擴表。所以美國的「貨幣政策模式」其實已經回不去了，我們已經在 MP2/MP3 的環境裡。
+          </p>
+        </section>
+
+        <section id="sec-5">
+          <h2>5) 為什麼不是「立刻爆」</h2>
+          <p>
+            講了這麼多風險，為什麼美國不會明天就破產？主要有幾個原因。
+          </p>
+
+          <p><strong>第一：債務是美元計價的</strong></p>
+          <p>
+            美國借的是美元，而美元是美國自己印的。所以理論上它永遠可以印鈔還債。問題是印鈔會導致通膨、貨幣貶值，但那是「慢性重估」，不是「立刻違約」。新興市場借外幣就沒這麼幸運，
+            它們不能印美元，所以真的會違約。美國不一樣。
+          </p>
+
+          <p><strong>第二：美元仍是全球儲備貨幣</strong></p>
+          <p>
+            各國央行、主權基金、跨國企業，都還需要持有大量美元資產。美債市場是全球最大、最流動的債券市場。這種「網路效應」讓美國在短期內很難被取代。就算大家開始擔心，要「去美元化」也需要很長時間。
+          </p>
+
+          <p><strong>第三：美國有強稅基和經濟實力</strong></p>
+          <p>
+            美國的 GDP、稅收、科技、軍事、創新能力，都還是全球最強之一。這不代表沒問題，但代表它「有本錢」拖。問題是拖得越久，利息累積越多，後面的調整會越痛苦。
+          </p>
+
+          <p><strong>第四：政治會擋住「立刻爆」</strong></p>
+          <p>
+            真的到了緊要關頭，美國兩黨再怎麼吵，大概也會同意提高舉債上限、或者讓 Fed 出手。因為讓政府關門、讓美債違約，對誰都沒好處。所以「立刻爆」的機率很低。但「慢慢爛」的機率不低。
+          </p>
+
+          <div class="callout">
+            <strong>投資上的意思</strong>：與其擔心「美債突然歸零」，不如擔心「持有美債或現金的人，十年後的實質購買力會怎樣」。通膨、低實質利率、或者某種形式的金融壓抑，都可能是「代價」。
+          </div>
+        </section>
+
+        <section id="sec-6">
+          <h2>6) 接下來要盯什麼</h2>
+          <p>
+            如果你要持續追蹤美國債務風險，用達利歐的框架，可以盯這幾件事：
+          </p>
+
+          <p><strong>① 淨利息支出</strong></p>
+          <p>
+            看 Treasury 的 Monthly Treasury Statement，每季或每半年看一下 Net Interest 的走勢。如果它長期跑贏名目 GDP 成長，代表利息負擔在加重。
+          </p>
+
+          <p><strong>② 結構性赤字</strong></p>
+          <p>
+            就算經濟沒衰退，赤字是不是還是很大？如果是，代表問題不是「景氣不好」，而是「結構上就入不敷出」。CBO 的預估可以當參考。
+          </p>
+
+          <p><strong>③ 長天期美債的期限溢酬</strong></p>
+          <p>
+            如果市場開始擔心長期償債能力，會要求更高的「期限溢酬」——也就是說，買 10 年、30 年債的人會要求更高利率來補償風險。這會反映在殖利率曲線上。
+          </p>
+
+          <p><strong>④ Fed 的資產負債表</strong></p>
+          <p>
+            下次經濟或金融危機來的時候，Fed 會不會又被迫擴表、買債？如果會，就代表我們還在 MP2/MP3 的邏輯裡，債務問題只是被延後、沒有被解決。
+          </p>
+
+          <p><strong>⑤ 財政主導貨幣政策的跡象</strong></p>
+          <p>
+            理論上 Fed 是獨立的，專注於通膨和就業。但如果政府發債壓力太大，Fed 會不會「被迫」配合——例如在該升息時不升、或者該縮表時不縮？這種「財政主導」在歷史上常常出現在大債務週期後段。
+          </p>
+        </section>
+
+        <section id="sec-7">
+          <h2>7) 總結</h2>
+          <p>
+            美國在可見的未來內，還是有能力避免「名義上的硬違約」。但它避免違約的方式，可能會讓債權人、持有現金的人、還有整個社會，承擔另一種形式的代價：通膨、金融壓抑、財政空間被利息吃掉、政策反應餘地變小。
+          </p>
+          <p>
+            達利歐的提醒是：判斷美國風險，不能只問「安不安全」，而要問「<strong>這份安全是用什麼代價換來的？</strong>」。
+          </p>
+          <p>
+            對投資人來說，這代表未來十年，持有美債或現金的人，可能要更認真思考實質購買力會怎麼被侵蝕；而持有實質資產（黃金、房地產、股票等）的人，可能會在「慢性重估」的過程中受益。當然這不是投資建議，只是從達利歐框架推出來的一個可能情境。
+          </p>
+        </section>
+
+        <section id="sources">
+          <h2>資料來源</h2>
+          <ul>
+            <li>U.S. Treasury：<a href="https://fiscaldata.treasury.gov/datasets/debt-to-the-penny/" target="_blank" rel="noreferrer noopener">Debt to the Penny</a></li>
+            <li>U.S. Treasury：<a href="https://fiscaldata.treasury.gov/datasets/monthly-treasury-statement/" target="_blank" rel="noreferrer noopener">Monthly Treasury Statement</a></li>
+            <li>Federal Reserve：<a href="https://www.federalreserve.gov/releases/h41/current/h41.htm" target="_blank" rel="noreferrer noopener">H.4.1</a></li>
+            <li>BEA：<a href="https://www.bea.gov/news/2026/gdp-second-estimate-4th-quarter-and-year-2025" target="_blank" rel="noreferrer noopener">GDP 2025</a></li>
+            <li>CBO：<a href="https://www.cbo.gov/publication/61187" target="_blank" rel="noreferrer noopener">Long-Term Budget Outlook</a></li>
+          </ul>
+        </section>
+
+        <footer>
+          免責聲明：本文件為研究與學習用途，不構成投資建議。數據以官方來源為準。
+        </footer>
+      </article>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,1033 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="UTF-8" />
+    <title>華晨中國（01114.HK）財務與投資分析報告</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style>
+      :root {
+        color-scheme: light;
+        --bg: #f6f7f9;
+        --card: #ffffff;
+        --border: #e5e7eb;
+        --text: #111827;
+        --muted: #6b7280;
+        --accent: #0ea5e9;
+        --accent-soft: rgba(14, 165, 233, 0.15);
+        --danger: #dc2626;
+        --positive: #16a34a;
+        --warn: #ca8a04;
+      }
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+          sans-serif;
+        background: var(--bg);
+        color: var(--text);
+        line-height: 1.6;
+      }
+      .page {
+        max-width: 1080px;
+        margin: 28px auto 44px;
+        padding: 0 18px 40px;
+      }
+      header {
+        margin-bottom: 18px;
+      }
+      .badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        padding: 4px 10px;
+        border-radius: 999px;
+        border: 1px solid rgba(14, 165, 233, 0.3);
+        background: rgba(14, 165, 233, 0.08);
+        color: #0369a1;
+        font-size: 11px;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+      }
+      .badge-dot {
+        width: 7px;
+        height: 7px;
+        border-radius: 999px;
+        background: var(--accent);
+      }
+      h1 {
+        font-size: clamp(22px, 2.6vw, 30px);
+        margin: 10px 0 4px;
+        letter-spacing: 0.01em;
+      }
+      h1 .symbol {
+        font-weight: 650;
+        color: #0369a1;
+      }
+      .subtitle {
+        color: var(--muted);
+        font-size: 14px;
+        max-width: 76ch;
+      }
+      .meta-row {
+        margin-top: 12px;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px 16px;
+        font-size: 12px;
+        color: var(--muted);
+      }
+      .meta-row span {
+        display: inline-flex;
+        gap: 6px;
+        align-items: baseline;
+      }
+      .meta-label {
+        color: #9ca3af;
+      }
+      main {
+        display: grid;
+        grid-template-columns: minmax(0, 2.1fr) minmax(0, 1.3fr);
+        gap: 14px;
+      }
+      @media (max-width: 900px) {
+        main {
+          grid-template-columns: 1fr;
+        }
+      }
+      .card {
+        background: var(--card);
+        border: 1px solid var(--border);
+        border-radius: 14px;
+        padding: 16px 18px;
+        box-shadow: 0 10px 26px rgba(17, 24, 39, 0.07);
+      }
+      .card h2 {
+        margin: 0 0 10px;
+        font-size: 17px;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+      }
+      .card h2::before {
+        content: "";
+        width: 4px;
+        height: 16px;
+        border-radius: 999px;
+        background: linear-gradient(to bottom, var(--accent), transparent);
+      }
+      p {
+        margin: 8px 0;
+        font-size: 14px;
+      }
+      ul {
+        padding-left: 18px;
+        margin: 6px 0 0;
+      }
+      li {
+        margin: 3px 0;
+        font-size: 14px;
+      }
+      .tag-row {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 6px;
+        margin-bottom: 8px;
+      }
+      .tag {
+        font-size: 11px;
+        padding: 2px 8px;
+        border-radius: 999px;
+        border: 1px solid rgba(148, 163, 184, 0.45);
+        background: rgba(17, 24, 39, 0.02);
+        color: var(--text);
+      }
+      .tag.positive {
+        border-color: rgba(22, 163, 74, 0.35);
+        color: var(--positive);
+        background: rgba(22, 163, 74, 0.06);
+      }
+      .tag.warn {
+        border-color: rgba(202, 138, 4, 0.35);
+        color: var(--warn);
+        background: rgba(202, 138, 4, 0.07);
+      }
+      .tag.danger {
+        border-color: rgba(220, 38, 38, 0.35);
+        color: var(--danger);
+        background: rgba(220, 38, 38, 0.06);
+      }
+      .section-title {
+        margin-top: 10px;
+        margin-bottom: 4px;
+        font-size: 12px;
+        font-weight: 700;
+        color: #334155;
+        text-transform: uppercase;
+        letter-spacing: 0.06em;
+      }
+      .stat-table {
+        width: 100%;
+        border-collapse: collapse;
+        font-size: 13px;
+        margin-top: 6px;
+      }
+      .stat-table th,
+      .stat-table td {
+        padding: 6px 0;
+        border-bottom: 1px solid rgba(17, 24, 39, 0.08);
+      }
+      .stat-table th {
+        text-align: left;
+        color: var(--muted);
+        font-weight: 600;
+        font-size: 12px;
+      }
+      .stat-table td.value {
+        text-align: right;
+        color: var(--text);
+        font-variant-numeric: tabular-nums;
+      }
+      .note {
+        font-size: 11px;
+        color: var(--muted);
+        margin-top: 6px;
+      }
+      .risk-item {
+        margin: 6px 0;
+        font-size: 14px;
+      }
+      .risk-label {
+        display: inline-block;
+        font-size: 11px;
+        padding: 2px 7px;
+        border-radius: 999px;
+        margin-right: 6px;
+        border: 1px solid rgba(148, 163, 184, 0.45);
+        background: rgba(17, 24, 39, 0.02);
+        color: var(--muted);
+      }
+      .risk-label.high {
+        border-color: rgba(220, 38, 38, 0.4);
+        color: var(--danger);
+        background: rgba(220, 38, 38, 0.06);
+      }
+      .risk-label.medium {
+        border-color: rgba(202, 138, 4, 0.4);
+        color: var(--warn);
+        background: rgba(202, 138, 4, 0.07);
+      }
+      .risk-label.low {
+        border-color: rgba(22, 163, 74, 0.35);
+        color: var(--positive);
+        background: rgba(22, 163, 74, 0.06);
+      }
+      footer {
+        margin-top: 18px;
+        padding-top: 10px;
+        border-top: 1px solid rgba(17, 24, 39, 0.12);
+        color: var(--muted);
+        font-size: 11px;
+      }
+      a {
+        color: #0369a1;
+        text-decoration: none;
+      }
+      a:hover {
+        text-decoration: underline;
+      }
+      code {
+        font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
+          "Liberation Mono", "Courier New", monospace;
+        font-size: 0.95em;
+        background: rgba(17, 24, 39, 0.04);
+        padding: 1px 5px;
+        border-radius: 6px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="page">
+      <header>
+        <div class="badge"><span class="badge-dot"></span> 研究摘要（非投資建議）</div>
+        <h1>
+          華晨中國汽車控股有限公司
+          <span class="symbol">(HKEX: 1114 / 01114.HK)</span>
+        </h1>
+        <div class="subtitle">
+          本報告以公司正式披露文件為核心，整理其 2024 年度業績、獲利結構（高度依賴聯營公司
+          BMW Brilliance）與股東回饋（特別股息）對財務狀況的影響。
+        </div>
+        <div class="meta-row">
+          <span><span class="meta-label">報告日期</span><span>2026-03</span></span>
+          <span
+            ><span class="meta-label">主要資料來源</span
+            ><span
+              >公司 IR（2024 年度業績公告/年報）、Yahoo Finance（行情摘要）</span
+            ></span
+          >
+          <span><span class="meta-label">貨幣</span><span>RMB / HKD（依原始文件）</span></span>
+        </div>
+      </header>
+
+      <main>
+        <section>
+          <article class="card">
+            <h2>一、公司定位：本質上是「BBA 股息與獲利」的槓桿曝險</h2>
+            <div class="tag-row">
+              <span class="tag">投資控股</span>
+              <span class="tag">核心聯營：BMW Brilliance (BBA)</span>
+              <span class="tag warn">集中度高</span>
+              <span class="tag">股票代號：01114.HK</span>
+            </div>
+            <p>
+              華晨中國的獲利結構在近年高度依賴聯營公司
+              <strong>BMW Brilliance Automotive Ltd.（BBA，華晨中國持股 25%）</strong> 的成果分成與股息。
+              因此，與其把它當作典型「汽車整車製造商」，更接近把它視為「持有 BBA 的投資平台」：評估重點在
+              <strong>BBA 的銷量/獲利週期、股息政策</strong>，以及華晨中國自身的
+              <strong>分派（特別股息）節奏與可持續性</strong>。
+            </p>
+            <p class="section-title">2024 年度披露中，與投資人最相關的幾個訊號</p>
+            <ul>
+              <li>
+                <strong>聯營貢獻下滑</strong>：公司在年報中指出，包含 BBA 在內的聯營公司成果分成較 2023 年顯著下降。
+              </li>
+              <li>
+                <strong>特別股息策略</strong>：年報披露 2024 年宣派兩筆特別股息，2025 年亦再宣派一筆特別股息，對現金部位與權益造成大幅影響。
+              </li>
+              <li>
+                <strong>大股東變動</strong>：年度業績公告指出 2024 年 6 月底出現持股變動，單一最大股東為瀋陽汽車（間接持股約 29.99%）。
+              </li>
+            </ul>
+          </article>
+
+          <article class="card">
+            <h2>二、2024 年度財務表現（以年度業績公告為主）</h2>
+            <div class="tag-row">
+              <span class="tag warn">獲利較 2023 年大幅下滑</span>
+              <span class="tag warn">聯營貢獻年減約 44%</span>
+              <span class="tag positive">仍維持可觀股東應佔溢利</span>
+            </div>
+            <p>
+              依公司 2025-03-21 發佈之「截至 2024-12-31 年度業績公告」（Stock Code:
+              1114）：
+            </p>
+            <ul>
+              <li><strong>營收（Revenue）</strong>：RMB 1,095.9 百萬元（2023：RMB 1,121.5 百萬元）。</li>
+              <li><strong>年度溢利（Profit for the year）</strong>：RMB 3,045.6 百萬元（2023：RMB 7,736.5 百萬元）。</li>
+              <li><strong>股東應佔溢利</strong>：RMB 3,101.1 百萬元（2023：RMB 7,735.0 百萬元）。</li>
+              <li><strong>每股基本盈利</strong>：RMB 0.61465（2023：RMB 1.53312）。</li>
+              <li><strong>聯營公司成果分成</strong>：RMB 4,361.4 百萬元（2023：RMB 7,796.8 百萬元）。</li>
+            </ul>
+            <p class="section-title">對應的經營含意（解讀）</p>
+            <ul>
+              <li>
+                由於聯營貢獻佔比高，當 BBA 表現回落時，華晨中國的獲利波動會被放大，這也是投資人最需要先釐清的結構性特徵。
+              </li>
+              <li>
+                2024 年度公告顯示現金及等價物下降幅度很大，通常與股息分派與資本配置直接相關（見下節）。
+              </li>
+            </ul>
+          </article>
+
+          <article class="card">
+            <h2>三、BBA（BMW Brilliance）動能：銷量下滑但仍有股息回饋</h2>
+            <div class="tag-row">
+              <span class="tag warn">2024 本地銷量 -15%</span>
+              <span class="tag">持股：25%</span>
+              <span class="tag">角色：聯營公司</span>
+            </div>
+            <p>
+              年報披露：BBA 於 2024 年在中國本地銷量約
+              <strong>603,807 台</strong>（2023：<strong>709,954 台</strong>），年減約 <strong>15%</strong>。
+              公司並披露，華晨中國於 2024 年自 BBA 收到股息約 <strong>RMB 7,654.0 百萬元</strong>。
+            </p>
+            <p class="section-title">投資人可追蹤的「BBA 三件事」</p>
+            <ul>
+              <li><strong>銷量與價格</strong>：豪華車價格戰、產品週期、BEV/ICE 組合變化。</li>
+              <li><strong>獲利率</strong>：原料/促銷/費用結構與產能利用率。</li>
+              <li><strong>股息政策</strong>：分派比率與節奏（直接牽動華晨中國可分派現金）。</li>
+            </ul>
+          </article>
+
+          <article class="card">
+            <h2>四、股息與資本配置：特別股息使「資產負債表波動」成為主題</h2>
+            <div class="tag-row">
+              <span class="tag">特別股息（Special Dividend）</span>
+              <span class="tag warn">可持續性不確定</span>
+              <span class="tag warn">現金水位受影響</span>
+            </div>
+            <p>
+              年報披露：董事會於 2024 年宣派 <strong>HK$1.5</strong> 與 <strong>HK$4.3</strong> 每股的特別股息，且 2025 年再宣派 <strong>HK$1.0</strong> 每股特別股息（以年報披露為準）。
+              這使得公司資金大量回饋股東，但也意味著未來的股息能力將更取決於 BBA 的現金回饋與公司保留資本的策略。
+            </p>
+            <p class="section-title">資產負債表的「最直觀變化」</p>
+            <ul>
+              <li>
+                年度業績公告顯示：<strong>現金及等價物</strong> 由 2023 年末的 <strong>RMB 30,845.8 百萬元</strong>，降至 2024 年末的 <strong>RMB 10,539.6 百萬元</strong>。
+              </li>
+              <li>
+                年報現金流量表亦揭露「Dividends paid」為大額現金流出項目（反映特別股息政策對現金的直接影響）。
+              </li>
+            </ul>
+            <p>
+              這類公司在估值上往往被市場以「股息折現 + 可持續性折價」來定價；因此與其只看靜態 P/E 或 P/B，更重要的是評估
+              <strong>未來 1–3 年可重複的股息能力</strong>。
+            </p>
+          </article>
+
+          <article class="card">
+            <h2>五、風險與結論（不構成投資建議）</h2>
+            <div class="tag-row">
+              <span class="tag danger">集中度風險</span>
+              <span class="tag warn">股息不確定性</span>
+              <span class="tag warn">中國豪華車競爭</span>
+              <span class="tag positive">若 BBA 修復，彈性可觀</span>
+            </div>
+            <p class="section-title">主要風險</p>
+            <div class="risk-item">
+              <span class="risk-label high">高</span>
+              聯營（BBA）單一來源主導：BBA 的銷量/獲利/股息變動會直接牽動公司整體盈餘與分派能力。
+            </div>
+            <div class="risk-item">
+              <span class="risk-label medium">中</span>
+              特別股息可持續性：歷史分派紀錄不必然代表未來；一旦 BBA 分派轉弱或公司政策轉向保守，殖利率敘事可能快速降溫。
+            </div>
+            <div class="risk-item">
+              <span class="risk-label medium">中</span>
+              市場競爭與價格戰：中國汽車市場競爭激烈（含新能源車滲透），可能壓縮豪華品牌獲利。
+            </div>
+            <p class="section-title">結論（框架式）</p>
+            <p>
+              華晨中國的投資判斷，可以用一句話概括為：<strong>你是否看好 BBA 的中期獲利與股息回饋，且相信華晨中國能把這些現金以可持續的方式回饋股東。</strong>
+              若你希望我把它做成更像券商研究報告的版本（含同業比較、情境分析、殖利率敏感度），你只要指定你的投資期限（例如 6–12 個月或 2–3 年）與你最在意的點（股息/估值/風險），我就能在這份 HTML 上繼續擴寫。
+            </p>
+          </article>
+        </section>
+
+        <aside>
+          <section class="card">
+            <h2>快速數字表（官方披露）</h2>
+            <table class="stat-table">
+              <tbody>
+                <tr>
+                  <th>營收（2024）</th>
+                  <td class="value">RMB 1,095.9 百萬元</td>
+                </tr>
+                <tr>
+                  <th>股東應佔溢利（2024）</th>
+                  <td class="value">RMB 3,101.1 百萬元</td>
+                </tr>
+                <tr>
+                  <th>每股基本盈利（2024）</th>
+                  <td class="value">RMB 0.61465</td>
+                </tr>
+                <tr>
+                  <th>聯營成果分成（2024）</th>
+                  <td class="value">RMB 4,361.4 百萬元</td>
+                </tr>
+                <tr>
+                  <th>現金及等價物（2024/12/31）</th>
+                  <td class="value">RMB 10,539.6 百萬元</td>
+                </tr>
+                <tr>
+                  <th>現金及等價物（2023/12/31）</th>
+                  <td class="value">RMB 30,845.8 百萬元</td>
+                </tr>
+              </tbody>
+            </table>
+            <div class="note">
+              來源：公司 2025-03-21 年度業績公告（截至 2024-12-31），以及 2024 年報的相關摘要段落。
+            </div>
+          </section>
+
+          <section class="card">
+            <h2>行情快照（非官方、僅供參考）</h2>
+            <p>
+              Yahoo Finance（1114.HK）顯示股價在 2026-03 中旬約 HK$3 左右（每日波動大），常見估值指標（如 TTM P/E、P/B）會因市場與一次性分派而變動。
+              做決策請仍以港交所披露與公司文件為準。
+            </p>
+            <div class="tag-row">
+              <span class="tag">52 週區間（參考）：約 HK$2.37–4.45</span>
+              <span class="tag">TTM P/E（參考）：約 4–5 倍</span>
+              <span class="tag">P/B（參考）：約 0.6 倍</span>
+            </div>
+          </section>
+
+          <section class="card">
+            <h2>建議你接下來補的資料（可讓分析更完整）</h2>
+            <ul>
+              <li>
+                你要的投資期限：<strong>短線（1–3 月）</strong>、<strong>中期（6–12 月）</strong> 或 <strong>長期（2–3 年）</strong>。
+              </li>
+              <li>
+                你最關注：<strong>股息</strong>、<strong>估值便宜/昂貴</strong>、<strong>大股東與治理</strong>、或 <strong>BBA 基本面</strong>？
+              </li>
+            </ul>
+            <p class="note">
+              你如果把上述偏好告訴我，我可以把這份 HTML 升級成「券商報告式」：加上投資論點、情境分析（Base/Bull/Bear）、與追蹤指標表。
+            </p>
+          </section>
+        </aside>
+      </main>
+
+      <footer>
+        免責聲明：本檔案為研究與學習用途之摘要整理，未必涵蓋全部重要資訊，亦不構成任何投資建議。數字以公司公告/年報為準；行情資訊可能延遲或不完整。
+      </footer>
+    </div>
+  </body>
+</html>
+
+<!DOCTYPE html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Fiserv, Inc. (FISV) 財務與投資分析報告</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style>
+      :root {
+        color-scheme: light dark;
+        --bg: #0f172a;
+        --bg-alt: #020617;
+        --card: #0b1220;
+        --border: #1e293b;
+        --text: #e5e7eb;
+        --muted: #9ca3af;
+        --accent: #38bdf8;
+        --accent-soft: rgba(56, 189, 248, 0.15);
+        --danger: #f97373;
+        --positive: #4ade80;
+        --warn: #facc15;
+      }
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+          sans-serif;
+        background: radial-gradient(circle at top left, #1e293b, #020617 55%);
+        color: var(--text);
+        line-height: 1.6;
+      }
+      .page {
+        max-width: 1080px;
+        margin: 32px auto 40px;
+        padding: 0 20px 40px;
+      }
+      header {
+        margin-bottom: 24px;
+      }
+      .badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        padding: 2px 10px;
+        border-radius: 999px;
+        border: 1px solid var(--accent-soft);
+        background: linear-gradient(
+          135deg,
+          rgba(15, 23, 42, 0.9),
+          rgba(15, 23, 42, 0.2)
+        );
+        color: var(--accent);
+        font-size: 11px;
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+      }
+      .badge-dot {
+        width: 6px;
+        height: 6px;
+        border-radius: 999px;
+        background: var(--accent);
+        box-shadow: 0 0 8px rgba(56, 189, 248, 0.8);
+      }
+      h1 {
+        font-size: clamp(26px, 3vw, 32px);
+        margin: 10px 0 4px;
+        letter-spacing: 0.02em;
+      }
+      h1 span.symbol {
+        font-weight: 600;
+        color: var(--accent);
+      }
+      .subtitle {
+        color: var(--muted);
+        font-size: 14px;
+      }
+      .meta-row {
+        margin-top: 16px;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px 18px;
+        font-size: 13px;
+        color: var(--muted);
+      }
+      .meta-row span {
+        display: inline-flex;
+        align-items: baseline;
+        gap: 4px;
+      }
+      .meta-label {
+        color: #6b7280;
+      }
+      main {
+        display: grid;
+        grid-template-columns: minmax(0, 2.1fr) minmax(0, 1.4fr);
+        gap: 18px;
+      }
+      @media (max-width: 900px) {
+        main {
+          grid-template-columns: minmax(0, 1fr);
+        }
+      }
+      .card {
+        background: radial-gradient(circle at top left, #020617, #020617 55%);
+        border-radius: 14px;
+        border: 1px solid var(--border);
+        padding: 16px 18px 18px;
+        box-shadow: 0 18px 45px rgba(0, 0, 0, 0.55);
+      }
+      .card h2 {
+        margin: 0 0 10px;
+        font-size: 17px;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+      }
+      .card h2::before {
+        content: "";
+        width: 4px;
+        height: 16px;
+        border-radius: 999px;
+        background: linear-gradient(to bottom, var(--accent), transparent);
+      }
+      .tag-row {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 6px;
+        margin-bottom: 10px;
+      }
+      .tag {
+        font-size: 11px;
+        padding: 2px 8px;
+        border-radius: 999px;
+        border: 1px solid rgba(148, 163, 184, 0.4);
+        color: #e5e7eb;
+        background: rgba(15, 23, 42, 0.9);
+      }
+      .tag.positive {
+        border-color: rgba(74, 222, 128, 0.4);
+        color: var(--positive);
+      }
+      .tag.warn {
+        border-color: rgba(250, 204, 21, 0.4);
+        color: var(--warn);
+      }
+      .tag.danger {
+        border-color: rgba(248, 113, 113, 0.5);
+        color: var(--danger);
+      }
+      p {
+        margin: 6px 0;
+        font-size: 14px;
+      }
+      ul {
+        padding-left: 18px;
+        margin: 4px 0 4px;
+      }
+      li {
+        font-size: 14px;
+        margin: 2px 0;
+      }
+      .pill-list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 6px;
+        margin-top: 6px;
+      }
+      .pill-item {
+        font-size: 11px;
+        padding: 3px 8px;
+        border-radius: 999px;
+        background: rgba(15, 23, 42, 0.9);
+        border: 1px solid rgba(148, 163, 184, 0.4);
+        color: var(--muted);
+      }
+      .stat-table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 4px 0 4px;
+        font-size: 13px;
+      }
+      .stat-table th,
+      .stat-table td {
+        padding: 4px 0;
+        border-bottom: 1px solid rgba(30, 64, 175, 0.3);
+      }
+      .stat-table th {
+        text-align: left;
+        color: var(--muted);
+        font-weight: 500;
+        font-size: 12px;
+      }
+      .stat-table td.value {
+        text-align: right;
+        color: #e5e7eb;
+        font-variant-numeric: tabular-nums;
+      }
+      .stat-note {
+        font-size: 11px;
+        color: var(--muted);
+        margin-top: 4px;
+      }
+      .section-title {
+        margin-top: 8px;
+        margin-bottom: 3px;
+        font-size: 13px;
+        font-weight: 600;
+        color: #cbd5f5;
+        text-transform: uppercase;
+        letter-spacing: 0.06em;
+      }
+      .risk-item {
+        margin: 4px 0;
+      }
+      .risk-label {
+        display: inline-block;
+        font-size: 11px;
+        padding: 1px 6px;
+        border-radius: 999px;
+        margin-right: 6px;
+        background: rgba(15, 23, 42, 0.95);
+        border: 1px solid rgba(148, 163, 184, 0.4);
+      }
+      .risk-label.high {
+        border-color: rgba(248, 113, 113, 0.6);
+        color: var(--danger);
+      }
+      .risk-label.medium {
+        border-color: rgba(250, 204, 21, 0.6);
+        color: var(--warn);
+      }
+      .risk-label.low {
+        border-color: rgba(74, 222, 128, 0.6);
+        color: var(--positive);
+      }
+      footer {
+        margin-top: 22px;
+        font-size: 11px;
+        color: var(--muted);
+        border-top: 1px solid rgba(30, 64, 175, 0.4);
+        padding-top: 10px;
+      }
+      a {
+        color: var(--accent);
+        text-decoration: none;
+      }
+      a:hover {
+        text-decoration: underline;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="page">
+      <header>
+        <div class="badge">
+          <span class="badge-dot"></span>
+          財務分析報告（參考用）
+        </div>
+        <h1>
+          Fiserv, Inc.
+          <span class="symbol">(NASDAQ: FISV)</span>
+        </h1>
+        <div class="subtitle">
+          金融科技與支付服務公司之概要財務分析與投資觀點
+        </div>
+        <div class="meta-row">
+          <span>
+            <span class="meta-label">報告日期</span>
+            <span>約 2026-03，基於公開資訊</span>
+          </span>
+          <span>
+            <span class="meta-label">資料來源</span>
+            <span>Yahoo Finance、CNBC、SEC EDGAR 等公開管道</span>
+          </span>
+          <span>
+            <span class="meta-label">用途</span>
+            <span>教學與研究，不構成投資建議</span>
+          </span>
+        </div>
+      </header>
+
+      <main>
+        <!-- 左側：敘述性分析 -->
+        <section>
+          <article class="card">
+            <h2>一、公司概況與商業模式</h2>
+            <div class="tag-row">
+              <span class="tag">金融科技（Fintech）</span>
+              <span class="tag">支付與核心銀行系統</span>
+              <span class="tag">併購整合：First Data</span>
+            </div>
+            <p>
+              Fiserv
+              是一家大型金融科技服務供應商，主要向銀行、信用合作社及商戶提供
+              <strong>核心銀行系統、支付處理、卡片與電子帳單、商戶收單與 POS（Clover 平台）</strong>
+              等解決方案。2019 年與 First Data 合併後，在商戶收單與支付處理領域的版圖大幅擴張，收入結構更加偏向支付與商戶服務。
+            </p>
+            <p>
+              其商業模式高度「基礎設施化」：客戶一旦導入核心系統與支付平台，轉換成本高，合約週期長，收入中
+              <strong>經常性（recurring）比重高</strong>，具一定可預見性與黏著度。
+            </p>
+            <p class="section-title">收入來源大致可分為：</p>
+            <ul>
+              <li>
+                <strong>Merchant Acceptance / Payments</strong>：商戶收單、卡組織路由、Clover POS 等（成長與刷卡金額、交易量掛鉤）。
+              </li>
+              <li>
+                <strong>Fintech / Payments Solutions</strong>：向銀行與信用社收取系統授權、維護、交易手續費。
+              </li>
+              <li>
+                <strong>其他科技與服務收入</strong>：專案導入、諮詢與雲端服務等。
+              </li>
+            </ul>
+          </article>
+
+          <article class="card">
+            <h2>二、近期財務表現（概要）</h2>
+            <div class="tag-row">
+              <span class="tag positive">中高成長</span>
+              <span class="tag positive">穩定獲利</span>
+              <span class="tag warn">槓桿偏高</span>
+            </div>
+            <p>
+              依據 2024–2025 年度公開財報與市場數據，Fiserv
+              大致呈現：
+            </p>
+            <ul>
+              <li>
+                <strong>營收規模</strong>：近年年化營收超過
+                <strong>200 億美元</strong> 等級，併購 First
+                Data 後持續成長，支付與商戶服務為主要動能。
+              </li>
+              <li>
+                <strong>獲利能力</strong>：受併購攤銷與整合成本影響，帳面淨利波動較大，但
+                <strong>營業利益與自由現金流表現相對穩健</strong>，長期毛利率與營業利益率維持在金融科技服務應有水準。
+              </li>
+              <li>
+                <strong>成長趨勢</strong>：在電子支付滲透率提高、現金轉電子交易、線上／線下融合（omni-channel）
+                的大趨勢下，中高個位數到低雙位數的收入成長被市場視為合理區間。
+              </li>
+            </ul>
+            <p class="section-title">現金流與資本配置</p>
+            <ul>
+              <li>
+                <strong>營運現金流</strong> 穩定，反映 recurring 收入優勢。
+              </li>
+              <li>
+                <strong>資本支出（CapEx）</strong> 相對營收比重不高，多用於資料中心、雲端與支付基礎設施升級。
+              </li>
+              <li>
+                公司偏好以
+                <strong>回購股票與減債</strong>
+                作為資本配置工具，股利發放並非核心訴求。
+              </li>
+            </ul>
+          </article>
+
+          <article class="card">
+            <h2>三、估值與市場觀點（約略）</h2>
+            <div class="tag-row">
+              <span class="tag positive">P/E 低於多數高成長支付股</span>
+              <span class="tag warn">需要留意成長放緩風險</span>
+            </div>
+            <p>
+              以 Yahoo Finance、CNBC 等公開數據為基礎，2025–2026 年 FISV
+              約略呈現：
+            </p>
+            <ul>
+              <li>
+                <strong>股價水準</strong>：約落在 <strong>50–70 美元</strong> 區間，52 週高低點大致在
+                <strong>約 55–230 美元</strong> 間，顯示過去一年股價波動劇烈，可能反映估值重評與獲利預期修正。
+              </li>
+              <li>
+                <strong>市值</strong>：約 <strong>300–350 億美元</strong> 區間，屬大型金融科技公司。
+              </li>
+              <li>
+                <strong>本益比（TTM / Forward P/E）</strong>：大致約在
+                <strong>7–11 倍</strong> 間，相較許多支付與 SaaS
+                公司顯得偏低，反映市場對其成長與槓桿水準的折價要求。
+              </li>
+              <li>
+                <strong>EV / Revenue、EV / EBITDA</strong>：依 Yahoo
+                統計，企業價值相對營收與 EBITDA 的倍數，亦顯示估值已較 2020–2021
+                年高成長期大幅壓縮。
+              </li>
+            </ul>
+            <p>
+              整體來看，<strong>以「成熟但仍具成長性」的金融科技基礎設施公司</strong>
+              角度來看，目前估值在同業相對座標上偏中性至略具吸引力，但投資人需對
+              <strong>成長動能、整合風險與槓桿水準</strong> 有清楚評估。
+            </p>
+          </article>
+
+          <article class="card">
+            <h2>四、關鍵風險與結構性機會</h2>
+            <div class="tag-row">
+              <span class="tag warn">競爭激烈</span>
+              <span class="tag warn">技術演進快速</span>
+              <span class="tag danger">槓桿與利率風險</span>
+            </div>
+
+            <p class="section-title">主要風險</p>
+            <div class="risk-item">
+              <span class="risk-label medium">競爭強度</span>
+              <span>
+                支付與金融科技領域競爭者眾多，包括 Visa、Mastercard、Global
+                Payments、PayPal 以及各類新創收單與支付公司。價格競爭與產品同質化，可能壓縮手續費率與獲利空間。
+              </span>
+            </div>
+            <div class="risk-item">
+              <span class="risk-label medium">技術替代與創新風險</span>
+              <span>
+                新興支付技術（如即時支付、數位錢包、開放銀行、加密資產相關支付解決方案）若被新創快速搶占，可能侵蝕部分傳統卡片與收單業務。
+              </span>
+            </div>
+            <div class="risk-item">
+              <span class="risk-label medium">整合與執行風險</span>
+              <span>
+                與 First Data 等歷來大型併購案的整合，涉及系統整合、客戶遷移與文化融合，若執行不佳，可能造成成本超支或客戶流失。
+              </span>
+            </div>
+            <div class="risk-item">
+              <span class="risk-label medium">財務槓桿與利率風險</span>
+              <span>
+                併購帶來一定槓桿水準，在高利率環境下，利息費用與再融資成本上升，可能壓縮淨利與股東報酬。
+              </span>
+            </div>
+            <div class="risk-item">
+              <span class="risk-label medium">監管與資安風險</span>
+              <span>
+                作為支付與金融基礎設施供應商，公司面臨嚴格監管與資安要求。重大資安事件或合規失誤，將對聲譽與財務造成實質衝擊。
+              </span>
+            </div>
+
+            <p class="section-title">結構性機會</p>
+            <ul>
+              <li>
+                全球現金轉電子支付、線上消費與訂閱經濟持續成長，支撐長期交易量與手續費收入。
+              </li>
+              <li>
+                中小企業數位化與 POS 升級（Clover 等）提供額外向上銷售（up-sell）與交叉銷售（cross-sell）空間。
+              </li>
+              <li>
+                與銀行、金融機構的長期合作關係及高轉換成本，是對抗新競爭者的重要護城河之一。
+              </li>
+            </ul>
+          </article>
+
+          <article class="card">
+            <h2>五、整體觀點（不構成投資建議）</h2>
+            <div class="tag-row">
+              <span class="tag positive">質優金融科技基礎設施</span>
+              <span class="tag warn">估值反映成長與槓桿疑慮</span>
+            </div>
+            <p>
+              綜合來看，Fiserv
+              兼具「支付成長題材」與「基礎設施穩定現金流」兩種特性：一方面受惠於全球支付數位化長期趨勢，另一方面收入結構中 recurring
+              比重高、客戶黏著度強。以目前公開資訊估計，其估值水準已低於高成長支付股，但市場仍對未來成長、併購整合與槓桿風險有所折價。
+            </p>
+            <p>
+              對長期投資人而言，關鍵在於：
+              <strong>（1）能否持續轉化交易量成為穩定的獲利與自由現金流；（2）在高利率與監管環境下，維持健康的資產負債表與風險控管；（3）在技術競賽中持續推出具競爭力的解決方案。</strong>
+            </p>
+            <p>
+              任何實際投資決策仍應以
+              <strong>最新官方財報（10-K／10-Q）、公司年報與投資人簡報</strong> 為主，並搭配你自身的風險承受度與投資期限進行判斷。
+            </p>
+          </article>
+        </section>
+
+        <!-- 右側：關鍵數字與摘要 -->
+        <aside>
+          <section class="card">
+            <h2>快速總結</h2>
+            <p>
+              <strong>定位</strong>：
+              大型金融科技與支付基礎設施提供商，收入以經常性與交易量掛鉤為主，與金融機構與商戶有長期黏著關係。
+            </p>
+            <p>
+              <strong>投資敘事</strong>：
+              受惠全球支付數位化與非現金交易成長，但面臨激烈競爭與併購後整合、槓桿與利率環境的挑戰。
+            </p>
+            <div class="pill-list">
+              <span class="pill-item">金融科技基礎設施</span>
+              <span class="pill-item">支付與收單</span>
+              <span class="pill-item">高黏著度客戶</span>
+              <span class="pill-item">估值重評中</span>
+            </div>
+          </section>
+
+          <section class="card">
+            <h2>關鍵估值指標（約略）</h2>
+            <table class="stat-table">
+              <tbody>
+                <tr>
+                  <th>股價區間（約）</th>
+                  <td class="value">US$50–70 / 股</td>
+                </tr>
+                <tr>
+                  <th>市值（約）</th>
+                  <td class="value">US$300–350 億</td>
+                </tr>
+                <tr>
+                  <th>本益比（TTM）</th>
+                  <td class="value">約 9 倍上下</td>
+                </tr>
+                <tr>
+                  <th>預估本益比（Forward）</th>
+                  <td class="value">約 7–11 倍</td>
+                </tr>
+                <tr>
+                  <th>EV / Revenue</th>
+                  <td class="value">約 3 倍上下</td>
+                </tr>
+                <tr>
+                  <th>EV / EBITDA</th>
+                  <td class="value">約 7–11 倍</td>
+                </tr>
+                <tr>
+                  <th>股利殖利率</th>
+                  <td class="value">極低或近乎 0%</td>
+                </tr>
+              </tbody>
+            </table>
+            <div class="stat-note">
+              上述數字為根據 Yahoo Finance 等公開來源整理之
+              <strong>近似範圍</strong>，僅供參考；實際數字請以最新行情與官方財報為準。
+            </div>
+          </section>
+
+          <section class="card">
+            <h2>分析參考架構</h2>
+            <p class="section-title">建議進一步追蹤項目</p>
+            <ul>
+              <li>最新 10-K / 10-Q 中的分部營收與獲利表現。</li>
+              <li>支付與商戶服務的交易量成長與 Take Rate 變化。</li>
+              <li>槓桿比率、利息保障倍數與債務到期結構。</li>
+              <li>資安事件記錄與重大監管變化。</li>
+              <li>與主要競爭對手（如 GPN、FIS、V、MA 等）的估值比較。</li>
+            </ul>
+          </section>
+        </aside>
+      </main>
+
+      <footer>
+        本報告僅基於公開資訊（含 Yahoo Finance、CNBC 與 SEC EDGAR 年報索引等）進行概要整理，<strong>不保證即時性與完全正確</strong>，亦不構成任何形式之買賣建議或投資意見。實際決策前，請務必查閱最新官方財報與交易所公告，並自行評估風險與適合度。
+      </footer>
+    </div>
+  </body>
+</html>
+

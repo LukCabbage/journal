@@ -1,0 +1,2514 @@
+Hong Kong Exchanges and Clearing Limited and The Stock Exchange of Hong Kong Limited take no 
+responsibility for the contents of this announcement, make no representation as to its accuracy or completeness 
+and expressly disclaim any liability whatsoever for any loss howsoever arising from or in reliance upon the whole 
+or any part of the content of this announcement.
+
+BRILLIANCE CHINA AUTOMOTIVE HOLDINGS LIMITED
+（ 華 晨 中 國 汽 車 控 股 有 限 公 司）*
+(Incorporated in Bermuda with limited liability)
+(Stock Code: 1114)
+
+ANNOUNCEMENT OF RESULTS
+FOR THE YEAR ENDED 31ST DECEMBER, 2023
+
+The  board  of  directors  (the  “Board”)  of  Brilliance  China  Automotive  Holdings  Limited  (the  “Company”) 
+announces  the  consolidated  financial  results  of  the  Company  and  its  subsidiaries  (collectively  referred  to  as  the 
+“Group”) for the year ended 31st December, 2023 as follows:
+
+CONSOLIDATED STATEMENT OF PROFIT OR LOSS
+For the year ended 31st December,
+(Expressed in thousands of RMB except for earnings per share amounts)
+
+Note
+
+3
+
+2023
+RMB’000
+
+2022
+RMB’000
+
+1,121,454
+(832,975)
+
+1,130,725
+(895,153)
+
+288,479
+
+235,572
+
+39,821
+670,174
+(45,252)
+(432,269)
+
+(53,227)
+(1,744)
+
+139,593
+416,323
+(33,930)
+(437,802)
+
+(475,748)
+(12,927)
+
+–
+7,796,829
+
+2,379,782
+6,543,795
+
+8,262,811
+
+8,754,658
+
+Revenue
+Cost of sales
+
+Gross profit
+
+Other income
+Interest income
+Selling expenses
+General and administrative expenses
+Net expected credit loss (“ECL”) allowance on  
+
+loans and receivables 
+
+Finance costs
+Share of results of:
+A joint venture
+Associates
+
+*  For identification purposes only
+
+1
+
+CONSOLIDATED STATEMENT OF PROFIT OR LOSS (Continued)
+For the year ended 31st December,
+(Expressed in thousands of RMB except for earnings per share amounts)
+
+Gain on disposal of partial equity interest in a joint venture
+Other taxes related to the disposal
+
+Gain on deconsolidation of subsidiaries
+
+Profit before income tax (expense) credit 
+
+Income tax (expense) credit 
+
+Profit for the year
+
+Attributable to:
+Equity holders of the Company
+Non-controlling interests
+
+Earnings per share
+
+– Basic
+– Diluted
+
+Note
+
+2023
+RMB’000
+
+2022
+RMB’000
+
+–
+–
+
+–
+
+–
+
+4,895,929
+(7,287,093)
+
+(2,391,164)
+
+779,278
+
+8,262,811
+
+7,142,772
+
+(526,360)
+
+4,058
+
+7,736,451
+
+7,146,830
+
+7,734,993
+1,458
+
+7,146,895
+(65)
+
+7,736,451
+
+7,146,830
+
+RMB1.53312
+RMB1.53312
+
+RMB1.41655
+RMB1.41655
+
+4
+
+5
+
+6
+
+2
+
+CONSOLIDATED STATEMENT OF COMPREHENSIVE INCOME
+For the year ended 31st December,
+
+Profit for the year
+
+7,736,451
+
+7,146,830
+
+2023
+RMB’000
+
+2022
+RMB’000
+
+Other comprehensive income (expense) that will be 
+
+subsequently reclassified to consolidated statement  
+of profit or loss, net of tax
+
+Share of other comprehensive income of a joint venture
+Share of other comprehensive income of associates
+Fair value (loss) gain on notes receivable at fair value  
+through other comprehensive income (“FVOCI”)
+
+Other comprehensive (expense) income that  
+will not be subsequently reclassified to  
+consolidated statement of profit or loss, net of tax
+
+Change in fair value of equity investments
+
+–
+563,920
+
+747,009
+517,516
+
+(206)
+
+322
+
+563,714
+
+1,264,847
+
+(4,015)
+
+461
+
+Total comprehensive income for the year
+
+8,296,150
+
+8,412,138
+
+Attributable to:
+
+Equity holders of the Company
+Non-controlling interests
+
+8,294,692
+1,458
+
+8,412,203
+(65)
+
+8,296,150
+
+8,412,138
+
+3
+
+CONSOLIDATED STATEMENT OF FINANCIAL POSITION
+As at 31st December,
+
+Non-current assets
+Intangible assets
+Property, plant and equipment
+Land lease prepayments
+Interests in associates
+Equity investments
+Long-term loan receivables
+Prepayment for investment
+Other non-current assets
+
+Note
+
+2023
+RMB’000
+
+2022
+RMB’000
+
+32,084
+401,627
+73,911
+16,690,022
+5,909
+2,237,756
+282,557
+128,074
+
+37,935
+444,185
+76,029
+19,727,942
+9,924
+1,314,172
+–
+87,832
+
+Total non-current assets
+
+19,851,940
+
+21,698,019
+
+Current assets
+Cash and cash equivalents
+Statutory deposit reserves at central bank
+Pledged and restricted short-term bank deposits
+Inventories
+Accounts receivable
+Notes receivable
+Short-term loan receivables
+Other current assets
+
+Total current assets
+
+Current liabilities
+Accounts payable
+Notes payable
+Other current liabilities
+Short-term bank borrowings
+Long-term bank borrowings due within one year
+Income tax payable
+Provision for loss on unauthorised guarantees
+
+30,845,795
+57,500
+2,500,975
+127,438
+344,050
+99,918
+1,192,100
+134,904
+
+28,463,276
+32,500
+3,461,922
+185,201
+282,075
+94,470
+1,109,779
+99,362
+
+35,302,680
+
+33,728,585
+
+297,280
+219,330
+264,670
+924,500
+–
+2,940
+1,469,944
+
+366,829
+170,149
+292,322
+350,000
+7,500
+10,337
+1,917,062
+
+7
+
+8
+
+9
+
+11
+
+Total current liabilities
+
+3,178,664
+
+3,114,199
+
+Net current assets 
+
+32,124,016
+
+30,614,386
+
+Total assets less current liabilities
+
+51,975,956
+
+52,312,405
+
+4
+
+CONSOLIDATED STATEMENT OF FINANCIAL POSITION (Continued)
+As at 31st December,
+
+Non-current liabilities
+Other non-current liabilities
+
+2023
+RMB’000
+
+2022
+RMB’000
+
+84,821
+
+95,578
+
+NET ASSETS
+
+51,891,135
+
+52,216,827
+
+Capital and reser ves
+Share capital
+Reserves
+
+397,176
+50,720,928
+
+397,176
+51,048,078
+
+Total equity attributable to equity holders of the Company
+Non-controlling interests
+
+51,118,104
+773,031
+
+51,445,254
+771,573
+
+TOTAL EQUITY
+
+51,891,135
+
+52,216,827
+
+5
+
+NOTES:
+
+1.  CORPORATE INFORMATION
+
+The Company was incorporated in Bermuda on 9th June, 1992 with limited liability. The Company’s shares 
+are  traded  on  the  main  board  of  The  Stock  Exchange  of  Hong  Kong  Limited  (the  “SEHK”).  The  address 
+of the registered office of the Company is at Victoria Place, 5th Floor, 31 Victoria Street, Hamilton HM 10, 
+Bermuda.  The  principal  place  of  business  of  the  subsidiaries  are  in  the  People’s  Republic  of  China  (the 
+“PRC”).
+
+The  directors  of  the  Company  considered  Huachen  Automotive  Group  Holdings  Company  Limited 
+(“Huachen”) and its wholly-owned subsidiary, Liaoning Xinrui Automotive Industry Development Co., Ltd. 
+(“Liaoning  Xinrui”), which held 30.43% equity interest of the Company were the controlling shareholders 
+of the Company as at 31st December, 2023. For details, please refer to sub-section headed “Restructuring of 
+Huachen” of this announcement.
+
+The Company is an investment holding company. The principal activities of the Group are the manufacture 
+and sale of BMW vehicles in the PRC through its major associate, BMW Brilliance Automotive Ltd. (“BBA”), 
+the  manufacture  and  sale  of  automotive  components  through  its  subsidiaries,  Ningbo  Yumin  Machinery 
+Industrial  Co.,  Ltd.  (“Ningbo  Yumin”)  and  Mianyang  Brilliance  Ruian  Automotive  Components  Co.,  Ltd. 
+(“Mianyang Ruian”), and the provision of auto financing service through its subsidiary, Brilliance-BEA Auto 
+Finance Co., Ltd. (“BBAFC”).
+
+2.  PRINCIPAL ACCOUNTING POLICIES
+
+(a)  Statement of compliance
+
+These  annual  consolidated  financial  statements  have  been  prepared  in  accordance  with  Hong  Kong 
+Financial Reporting Standards (“HKFRSs”), collective terms of which includes all applicable individual 
+Hong  Kong  Financial  Reporting  Standards,  Hong  Kong  Accounting  Standards  (“HKASs”)  and 
+Interpretations issued by the Hong Kong Institute of Certified Public Accountants (the “HKICPA”), and 
+the  accounting  principles  generally  accepted  in  Hong  Kong.  These  consolidated  financial  statements 
+also comply with the applicable disclosure requirements of the Hong Kong Companies Ordinance and 
+include the applicable disclosure requirements of the Rules Governing the Listing of Securities on the 
+SEHK (the “Listing Rules”).
+
+These consolidated financial statements have been prepared on the basis consistent with the accounting 
+policies adopted in the 2022 financial statements, except for the adoption for the first time the following 
+new  and  amended  HKFRSs  (collectively  “New  and  Amended  HKFRSs”)  issued  by  the  HKICPA, 
+which are relevant to and effective for the annual consolidated financial statements for the annual period 
+beginning on or after 1st January, 2023.
+
+Amendments to HKAS 1  
+
+Disclosure of Accounting Policies
+
+and HKFRS Practice Statement 2
+
+Amendments to HKAS 8
+Amendments to HKAS 12
+
+Definition of Accounting Estimates
+Deferred Tax related to Assets and Liabilities arising from 
+
+a Single Transaction
+
+HKFRS 17
+Amendments to HKAS 12
+
+Insurance Contracts with related amendments
+International Tax Reform – Pilar Two Model Rules
+
+6
+
+2.  PRINCIPAL ACCOUNTING POLICIES (Continued)
+
+(a)  Statement of compliance (Continued)
+
+The impact of the adoption of the New and Amended HKFRSs are discussed below in note (b). Other 
+than  as  noted  below,  the  adoption  of  the  New  and  Amended  HKFRSs  have  no  material  impact  on  the 
+Group’s consolidated financial statements.
+
+(b)  Adoption of New and Amended HKFRSs
+
+(i)  Amendments to HKAS 1 and HKFRS Practice Statement 2 “Disclosure of Accounting Policies”
+
+The  Group  has  adopted  the  amendments  to  HKAS  1  for  the  first  time  in  the  current  year.  The 
+amendments change the requirements in HKAS 1 with regard to disclosure of accounting policies. 
+The  amendments  replace  all  instances  of  the  term  ‘significant  accounting  policies’  with  ‘material 
+accounting  policy  information’.  Accounting  policy  information  is  material  if,  when  considered 
+together  with  other  information  included  in  an  entity’s  financial  statements,  it  can  reasonably  be 
+expected  to  influence  decisions  that  the  primary  users  of  general  purpose  financial  statements 
+make on the basis of those financial statements.
+
+The  supporting  paragraphs  in  HKAS  1  are  also  amended  to  clarify  that  accounting  policy 
+information  that  relates  to  immaterial  transactions,  other  events  or  conditions  is  immaterial  and 
+need not be disclosed. Accounting policy information may be material because of the nature of the 
+related transactions, other events or conditions, even if the amounts are immaterial. However, not 
+all  accounting  policy  information  relating  to  material  transactions,  other  events  or  conditions  is 
+itself material.
+
+(ii)  Amendments to HKAS 8 “Definition of Accounting Estimates”
+
+The  Group  has  adopted  the  amendments  to  HKAS  8  for  the  first  time  in  the  current  year.  The 
+amendments  replace  the  definition  of  a  change  in  accounting  estimates  with  a  definition  of 
+accounting  estimates.  Under  the  new  definition,  accounting  estimates  are  “monetary  amounts  in 
+financial  statements  that  are  subject  to  measurement  uncertainty”.  The  definition  of  a  change  in 
+accounting estimates was deleted.
+
+(iii)  Amendments to HKAS 12 “International Tax Reform – Pillar Two Model Rules”
+
+The  Group  has  adopted  the  amendments  to  HKAS  12  for  the  first  time  in  the  current  year.  The 
+HKICPA  amends  the  scope  of  HKAS  12  to  clarify  that  the  standard  applies  to  income  taxes 
+arising  from  tax  law  enacted  or  substantively  enacted  to  implement  the  Pillar  Two  model  rules 
+published by the Organisation for Economic Co-operation and Development, including tax law that 
+implements qualified domestic minimum top-up taxes described in those rules. 
+
+The  amendments  introduce  a  temporary  exception  to  the  accounting  requirements  for  deferred 
+taxes  in  HKAS  12,  so  that  an  entity  would  neither  recognise  nor  disclose  information  about 
+deferred tax assets and liabilities related to Pillar Two income taxes.
+
+7
+
+2.  PRINCIPAL ACCOUNTING POLICIES (Continued)
+
+(c)   New HKICPA guidance on the accounting implications of the abolition of the Mandator y 
+
+Provident Fund (“MPF”) – Long Ser vice Payment (“LSP”) of fsetting mechanism
+
+The  Hong  Kong  SAR  Government  (the  “Government”)  gazetted  the  Hong  Kong  Employment  and 
+Retirement  Schemes  Legislation  (Of fsetting  Arrangement)  (Amendment)  Ordinance  2022  (the 
+“Amendment  Ordinance”)  in  June  2022,  which  will  take  effect  on  1st  May,  2025  (the  “Transition 
+Date”). The Amendment Ordinance abolishes the use of the accrued benefits derived from employers’ 
+MPF  contributions  to  offset  LSP  in  respect  of  an  employee’s  service  from  the  Transition  Date  (the 
+“Abolition”).  In  addition,  the  last  month’s  salary  immediately  preceding  the  Transition  Date  is  used 
+to calculate the portion of the LSP in respect of the employment period before the Transition Date. In 
+July  2023,  the  HKICPA  published  “Accounting  implications  of  the  abolition  of  the  MPF-LSP  offsetting 
+mechanism  in  Hong  Kong”  (“the  Guidance”)  that  provides  the  accounting  guidance  relating  to  the 
+offsetting mechanism and the Abolition of the mechanism.
+
+By  following  the  Guidance,  the  Group  has  changed  its  accounting  policy  in  connection  with  its  LSP 
+obligations to reflect the substance of the abolition of the offsetting mechanism. Therefore, the Group 
+ceased to apply the practical expedient and reattribute the deemed employee contributions to periods of 
+service in the same manner as the gross LSP benefit by applying paragraph 93(a) of HKAS 19 Employee 
+Benefits.  This  change  in  accounting  policy  upon  the  cessation  in  applying  the  practical  expedient  has 
+resulted in a catch-up adjustment in profit or loss in June 2022 for the service cost up to that date and 
+consequential  impacts  on  current  service  cost,  interest  expense  and  remeasurement  effects  from 
+changes  in  actuarial  assumptions  for  the  period  ended  31st  December,  2022,  with  the  corresponding 
+adjustment  to  the  comparative  carrying  amount  of  LSP  liability.  However,  the  amount  of  the  catch-
+up profit or loss adjustment was immaterial and did not have any impact on the consolidated financial 
+statements for the prior periods have been prepared and presented.
+
+It  also  did  not  have  a  material  impact  on  the  company-level  statements  of  financial  position  as  at  31st 
+December, 2022 and 31st December, 2023.
+
+8
+
+2.  PRINCIPAL ACCOUNTING POLICIES (Continued)
+
+(d)  Basis of measurement
+
+The  measurement  basis  used  in  the  preparation  of  the  consolidated  financial  statements  is  historical 
+cost, except for financial instruments classified as finance assets which are measured at FVOCI and fair 
+value through profit or loss.
+
+(e)  Future changes in HKFRSs
+
+As  at  the  date  of  authorisation  of  these  consolidated  financial  statements,  the  HKICPA  has  issued 
+certain new and amended HKFRSs which are relevant to the Group and not yet effective. 
+
+Amendments to HKAS 1
+Amendments to HKAS 1
+
+Non-current Liabilities with Covenants1
+Classification of Liabilities as Current or Non-current and  
+
+related amendments to Hong Kong Interpretation1
+
+Amendments to HKAS 7  
+
+Supplier Finance Arrangement1
+
+and HKFRS 7
+
+Amendments to HKFRS 10  
+
+Sale or Contribution of Assets between an Investor and  
+
+and HKAS 28
+
+Amendments to HKFRS 16
+Amendments to HKAS 21
+
+its Associate or Joint Venture3
+
+Lease Liability in a Sale and Leaseback1
+Lack of Exchangeability2
+
+1 
+
+2 
+
+3 
+
+Effective for annual periods beginning on or after 1st January, 2024 
+Effective for annual periods beginning on or after 1st January, 2025
+No mandatory effective date determined yet but available for adoption 
+
+The  directors  of  the  Group  anticipate  that  all  of  the  pronouncements  will  be  adopted  in  the  Group’s 
+accounting  policy  for  the  first  period  beginning  on  or  after  the  effective  date  of  the  pronouncement.  
+The  directors  expect  that  the  new  and  amended  HKFRSs  have  no  material  impact  on  the  Group’s 
+consolidated financial statements. 
+
+9
+
+3.  REVENUE AND SEGMENT INFORMATION
+
+Revenue earned during the year represents: 
+
+Sale of automotive components, net of discounts and return
+Interest and service charge income from provision of  
+auto financing service, net of other indirect taxes
+
+2023
+RMB’000
+
+2022
+RMB’000
+
+842,240
+
+877,945
+
+279,214
+
+252,780
+
+1,121,454
+
+1,130,725
+
+Sale of automotive components are recognised at a point of time. 
+
+During  the  year,  the  Group  had  one  largest  customer  with  aggregate  revenue  of  approximately 
+RMB156,535,000  or  14%  of  the  Group’s  revenue  (2022:  one  largest  customer  with  aggregate  revenue  of 
+approximately  RMB243,989,000  or  22%  of  the  Group’s  revenue).  Other  than  the  largest  customer,  no  other 
+customer had aggregate revenue reaching or exceeding 10% of the Group’s revenue during the year (2022: 
+same). 
+
+Although  the  Group’s  products  are  primarily  sold  in  the  PRC,  the  Group  also  has  sale  to  the  overseas 
+markets and the sales by location of customers are as follows:
+
+PRC 
+Other Asian countries
+Latin America and Caribbean Sea
+Europe
+Others
+
+2023
+RMB’000
+
+2022
+RMB’000
+
+714,091
+6,524
+44,988
+72,548
+4,089
+
+777,845
+2,395
+35,238
+55,385
+7,082
+
+842,240
+
+877,945
+
+All interest and service charge income from provision of auto financing service is derived in the PRC.
+
+The  Group  identifies  operating  segments  and  prepares  segment  information  based  on  the  regular  internal 
+financial  information  reported  to  the  directors  and  the  chief  operating  decision  makers  for  their  decisions 
+about resource allocation to the Group’s business segments, which are determined by the Group’s different 
+brands of vehicles or different nature of business, and their respective performances.
+
+10
+
+3.  REVENUE AND SEGMENT INFORMATION (Continued)
+
+The Group has identified the following reportable segments:
+
+(1) 
+
+the manufacture and sale of automotive components;
+
+(2) 
+
+the manufacture and sale of BMW vehicles and components; and
+
+(3) 
+
+the provision of auto financing services.
+
+The measurement policies the Group adopts for reporting segment results under HKFRS 8 are the same as 
+those used in its consolidated financial statements prepared under HKFRSs, except that the following items 
+are not included in arriving at the segment results of the operating segments:
+
+– 
+
+– 
+
+– 
+
+– 
+
+– 
+
+– 
+
+– 
+
+expenses related to share-based payments;
+
+share of results of associates and a joint venture;
+
+results of deconsolidation of subsidiaries;
+
+results of disposal of partial interest in a joint venture and the respective tax;
+
+interest income;
+
+finance costs;
+
+corporate  income  and  expenses  which  are  not  directly  attributable  to  the  business  activities  of  any 
+operating segment; and
+
+– 
+
+income tax expense.
+
+In  addition,  the  operating  results  of  the  operating  segments  include  completed  segment  results  of  the 
+manufacture  and  sale  of  BMW  vehicles  and  components,  which  are  currently  reported  on  the  basis  of  the 
+Group’s  share  of  equity  interests  in  BBA  and  included  in  the  consolidated  financial  statements  prepared 
+under HKFRSs.
+
+Segment assets include all assets other than interests in associates, equity investments and prepayment for 
+investment. In addition, corporate assets which are not directly attributable to the business activities of any 
+operating segment are not allocated to a segment.
+
+Segment liabilities include all liabilities other than corporate liabilities which are not directly attributable to 
+the business activities of any operating segment and are not allocated to a segment.
+
+In addition, segment assets and segment liabilities include assets and liabilities of the “manufacture and sale 
+of BMW vehicles and components” segment, which are currently reported on the basis of the Group’s share 
+of equity interests in BBA included in the consolidated financial statements prepared under HKFRSs.
+
+All segment assets are located in the PRC.
+
+11
+
+3.  REVENUE AND SEGMENT INFORMATION (Continued)
+
+Operating segments – 2023
+
+Manufacture
+and sale of
+BMW
+vehicles
+and 
+components
+RMB’000
+
+Provision of
+auto 
+financing 
+service
+RMB’000
+
+Manufacture
+and sale of
+automotive
+components
+RMB’000
+
+Reconciliation 
+to the Group’s 
+consolidated 
+statement of 
+profit or loss 
+and 
+intersegment 
+elimination
+RMB’000
+
+Total
+RMB’000 
+
+Segment sales
+
+842,240
+
+253,484,512
+
+279,214
+
+(253,484,512)
+
+1,121,454
+
+Segment results
+Unallocated costs net of 
+unallocated income
+
+Interest income 
+Finance costs
+Share of results of associates
+
+Profit before income tax expense
+
+(13,924)
+
+41,218,766
+
+4,730
+
+(41,186,101)
+
+23,471
+
+2,527
+
+7,794,302
+
+–
+
+–
+
+(225,919)
+670,174
+(1,744)
+7,796,829
+
+8,262,811
+
+12
+
+3.  REVENUE AND SEGMENT INFORMATION (Continued)
+
+Operating segments – 2022
+
+Manufacture
+and sale of
+BMW
+vehicles
+and 
+components
+RMB’000
+
+Manufacture
+and sale of
+automotive
+components
+RMB’000
+
+Provision of
+auto 
+financing 
+service
+RMB’000
+
+Reconciliation 
+to the Group’s 
+consolidated 
+statement of 
+profit or loss 
+and 
+intersegment 
+elimination
+RMB’000
+
+Total
+RMB’000 
+
+Segment sales
+
+877,945
+
+235,589,367
+
+252,780
+
+(235,589,367)
+
+1,130,725
+
+Segment results
+Unallocated costs net of unallocated 
+
+income
+Interest income 
+Finance costs
+Gain on disposal of partial equity 
+interest in a joint venture
+Other taxes related to the disposal
+Gain on deconsolidation of 
+
+subsidiaries
+Share of results of:
+A joint venture
+Associates
+
+Profit before income tax credit
+
+(517,628)
+
+40,996,364
+
+678
+
+(40,965,075)
+
+(485,661)
+
+–
+–
+
+4,895,929
+(7,287,093)
+
+779,278
+
+–
+(29,770)
+
+–
+
+2,379,782
+6,573,565
+
+–
+–
+
+–
+
+–
+–
+
+–
+–
+
+–
+
+–
+–
+
+(86,654)
+416,323
+(12,927)
+
+4,895,929
+(7,287,093)
+
+779,278
+
+2,379,782
+6,543,795
+
+7,142,772
+
+13
+
+3.  REVENUE AND SEGMENT INFORMATION (Continued)
+
+Operating segments - 2023
+
+Manufacture 
+and sale of 
+BMW
+vehicles
+and
+components
+RMB’000
+
+Manufacture
+and sale of
+automotive
+components
+RMB’000
+
+Provision 
+for auto 
+financing
+service
+RMB’000
+
+Reconciliation 
+to the Group’s 
+consolidated 
+statement of 
+financial 
+position 
+and 
+intersegment 
+elimination
+RMB’000
+
+35,270,836
+918,534
+
+159,021,777
+15,771,488
+
+3,833,968
+–
+
+(160,173,716)
+–
+
+2,287,997
+
+95,935,823
+
+2,116,121
+
+(97,087,763)
+
+Total
+RMB’000
+
+37,952,865
+16,690,022
+282,557
+5,909
+223,267
+
+55,154,620
+
+3,252,178
+11,307
+
+3,263,485
+
+19,351
+1,910
+
+13,444,559
+278,798
+
+6,443
+11,778
+
+(13,444,559)
+(278,798)
+
+25,794
+13,688
+
+50,107
+17,197
+
+2,118
+2,376
+21,307
+
+1,341
+3,586
+–
+49,270
+
+6,199,158
+397,815
+
+83,033
+228,663
+2,979,620
+
+1,648,580
+–
+–
+10,041,559
+
+786
+4,230
+
+–
+7,797
+–
+
+–
+49,641
+–
+1,090
+
+(6,199,158)
+(397,815)
+
+(83,033)
+(228,663)
+(2,979,620)
+
+(1,648,580)
+–
+–
+(9,565,559)
+
+50,893
+21,427
+
+2,118
+10,173
+21,307
+
+1,341
+53,227
+–
+526,360
+
+14
+
+Segment assets
+Interests in associates
+Prepayment for investment
+Equity investments
+Unallocated assets
+
+Total assets
+
+Segment liabilities
+Unallocated liabilities
+
+Total liabilities
+
+Other disclosures:
+Capital expenditures
+– Owned assets
+– Right-of-use assets
+
+Depreciation of property, plant 
+
+and equipment
+– Owned assets
+– Right-of-use assets
+Amortisation of land lease 
+
+prepayments
+
+Amortisation of intangible assets
+Provision for inventories
+Reversal of provision for 
+
+inventories sold
+
+Net provision of ECL allowance
+Impairment losses on assets
+Income tax expense
+
+3.  REVENUE AND SEGMENT INFORMATION (Continued)
+
+Operating segments – 2022 
+
+Manufacture 
+and sale of 
+BMW
+vehicles
+and
+components
+RMB’000
+
+Manufacture
+and sale of
+automotive
+components
+RMB’000
+
+Provision 
+for auto 
+financing
+service
+RMB’000
+
+Reconciliation 
+to the Group’s 
+consolidated 
+statement of 
+financial 
+position 
+and 
+intersegment 
+elimination
+RMB’000
+
+33,548,673
+937,002
+
+164,927,049
+18,790,940
+
+2,754,914
+–
+
+(165,578,702)
+–
+
+2,809,915
+
+89,763,288
+
+1,040,306
+
+(90,414,941)
+
+Total
+RMB’000
+
+35,651,934
+19,727,942
+9,924
+36,804
+
+55,426,604
+
+3,198,568
+11,209
+
+3,209,777
+
+33,872
+13,607
+
+53,938
+21,119
+
+2,118
+9,296
+5,250
+
+1,168
+
+5,178
+116
+
+993
+4,573
+
+–
+7,027
+–
+
+(21,064,875)
+(1,380,060)
+
+(5,418,520)
+(336,569)
+
+(82,112)
+(180,726)
+(1,735,498)
+
+–
+
+(943,243)
+
+23,749
+–
+632
+
+500,000
+–
+(9,942,539)
+
+475,748
+4
+(4,058)
+
+28,694
+13,491
+
+52,945
+16,546
+
+2,118
+2,269
+5,250
+
+1,168
+
+451,999
+4
+(4,690)
+
+21,064,875
+1,380,060
+
+5,418,520
+336,569
+
+82,112
+180,726
+1,735,498
+
+943,243
+
+(500,000)
+–
+9,942,539
+
+15
+
+Segment assets
+Interests in associates
+Equity investments
+Unallocated assets
+
+Total assets
+
+Segment liabilities
+Unallocated liabilities
+
+Total liabilities
+
+Other disclosures:
+Capital expenditures
+– Owned assets
+– Right-of-use assets
+Depreciation of property,  
+plant and equipment
+– Owned assets
+– Right-of-use assets
+Amortisation of land lease 
+
+prepayments
+
+Amortisation of intangible assets
+Provision for inventories
+Reversal of provision for  
+
+inventories sold
+
+Net provision (reversal) of  
+
+ECL allowance
+
+Impairment losses on assets
+Income tax (credit) expense
+
+4.  PROFIT BEFORE INCOME TAX (EXPENSE) CREDIT
+
+Profit before income tax (expense) credit is stated after charging and crediting the following:
+
+2023
+RMB’000
+
+2022
+RMB’000
+
+Charging:
+ECL allowance on:
+
+– Accounts receivable 
+– Accounts receivable from affiliated companies
+– Loan receivables
+– Other receivables grouped under current assets
+– Amounts due from affiliated companies
+– Dividend receivable from an affiliated company
+
+Impairment losses on assets:
+
+– Owned intangible assets (b)
+
+Staff costs (including directors’ emoluments)
+Amortisation of intangible assets (a)
+Amortisation of land lease prepayments
+Loss on disposal of property, plant and equipment:
+
+– Owned assets
+– Right-of-use assets
+
+Depreciation of property, plant and equipment:
+
+– Owned assets
+– Right-of-use assets
+
+Cost of inventories
+Cost of provision for auto financing service
+Exchange loss, net (b)
+Provision for inventories
+Auditors’ remuneration (b)
+Research and development costs (b)
+Warranty provision
+Lease charges:
+
+– Short-term leases with lease terms of  
+
+12 months or shorter
+
+– Low value items
+
+Crediting:
+Exchange gain, net (b)
+Reversal of provision for inventories sold
+Rental income from land and buildings
+Reversal of ECL allowance on:
+
+– Accounts receivable from affiliated companies
+– Dividend receivable from an affiliated company
+– Other receivables grouped under:
+
+– Current assets
+– Non-current assets
+
+422
+3,616
+49,641
+–
+213
+–
+
+–
+238,119
+10,173
+2,118
+
+3,641
+897
+
+50,893
+21,427
+743,421
+69,859
+165,546
+21,037
+3,008
+31,590
+2,223
+
+4,837
+145
+
+–
+1,341
+1,060
+
+–
+619
+
+41
+5
+
+5,624
+–
+23,393
+46,664
+405,191
+53
+
+4
+341,675
+9,296
+2,118
+
+12,668
+176
+
+53,938
+21,119
+808,517
+82,554
+–
+5,250
+2,499
+19,078
+1,378
+
+6,178
+15
+
+4,848
+1,168
+1,031
+
+5,084
+–
+
+–
+93
+
+(a)  Amortisation of intangible assets in relation to production was included in cost of sales; amortisation of intangible assets for other 
+
+purposes was included in general and administrative expenses.
+
+(b) 
+
+Included in general and administrative expenses.
+
+16
+
+5. 
+
+INCOME TAX EXPENSE (CREDIT)
+
+The income tax expense (credit) recognised in the consolidated statement of profit or loss represents:
+
+Current tax
+PRC corporate income tax
+
+– Current year
+– Under (Over) provision in prior years
+
+PRC withholding tax on dividend
+
+2023
+RMB’000
+
+2022
+RMB’000
+
+1,216
+49,144
+476,000
+
+2,162
+(6,220)
+–
+
+Total income tax expense (credit)
+
+526,360
+
+(4,058)
+
+(a)  Bermuda tax
+
+The  Company  was  incorporated  under  the  laws  of  Bermuda  and  has  received  an  undertaking  from 
+the  Ministry  of  Finance  in  Bermuda  pursuant  to  the  provisions  of  the  Exempted  Undertakings  Tax 
+Protection  Act,  1966,  which  exempts  the  Company  and  its  shareholders,  other  than  shareholders 
+ordinarily  residing  in  Bermuda,  from  any  Bermuda  taxes  computed  on  profit,  income  or  any  capital 
+asset, gain or appreciation, or any tax in the nature of estate duty or inheritance tax, at least until year 
+2035.
+
+(b)  Hong Kong profits tax
+
+No provision for Hong Kong profits tax has been made as the Group had no assessable profits arising in 
+Hong Kong during the year (2022: nil).
+
+(c)  PRC corporate income tax
+
+The  Group’s  subsidiaries  incorporated  in  the  PRC  are  subject  to  Corporate  Income  Tax.  Under  the 
+PRC  Corporate  Income  Tax  Law  and  the  respective  regulations,  the  Corporate  Income  Tax  for  the 
+subsidiaries,  except  Mianyang  Ruian,  is  calculated  at  25%  on  their  estimated  assessable  profits  for  the 
+year based on existing legislation, interpretations and practices in respect thereof.
+
+Mianyang Ruian received official designation by the local tax authority as a foreign-invested enterprise 
+engaged  in  manufacturing  activities  and  was  also  designated  as  an  entity  under  “the  encouraged 
+industries under Catalogue for the Guidance of Foreign Investment Industries” and with its location in 
+the Western region of the PRC, the applicable income tax rate for Mianyang Ruian is 15%.
+
+With  effect  from  1st  January,  2008,  all  profits  of  the  PRC  subsidiaries  arising  since  that  date  that  are 
+distributed  and  remitted  as  dividend  to  the  overseas  parents  are  subject  to  5%  or  10%  withholding  tax 
+on  the  amount  remitted.  For  the  profits  generated  by  the  Group’s  subsidiaries  in  the  PRC,  it  is  the 
+intention of the management that the Group would reinvest these profits in the respective subsidiaries 
+and therefore withholding tax would not be applicable for those profits. Accordingly, no deferred tax is 
+recognised in respect of this withholding tax on profits of these PRC subsidiaries.
+
+17
+
+5. 
+
+INCOME TAX EXPENSE (CREDIT) (Continued)
+
+Reconciliation between tax expense (credit) and accounting profit using the weighted average taxation rate of 
+the companies within the Group is as follows:
+
+2023
+RMB’000
+
+2022
+RMB’000
+
+Profit before income tax expense (credit) 
+
+8,262,811
+
+7,142,772
+
+Calculated at a weighted average statutory taxation rate in the PRC of 
+
+25.67% (2022: 25.31%)
+
+Effect of tax holiday 
+Tax effect of non-taxable income
+Tax effect of non-deductible expenses
+Profits attributable to a joint venture
+Gain on deconsolidation of subsidiaries
+Gain on disposal of partial equity interest of a joint venture net of other 
+
+taxes related to the disposal
+Profits attributable to associates
+PRC withholding tax on dividend
+Unrecognised temporary differences
+Unrecognised tax losses net of utilisation of previously unrecognised 
+
+tax losses
+
+Under (Over) provision in prior years
+
+2,120,774
+(2,291)
+(163,194)
+2,330
+–
+–
+
+–
+(1,949,207)
+476,000
+(228,878)
+
+221,682
+49,144
+
+1,807,577
+(1,077)
+(132,786)
+15,977
+(594,945)
+(194,820)
+
+597,791
+(1,635,949)
+–
+(482,376)
+
+622,770
+(6,220)
+
+Tax expense (credit) for the year
+
+526,360
+
+(4,058)
+
+6.  EARNINGS PER SHARE
+
+Basic earnings per share is calculated by dividing the profit attributable to equity holders of the Company of 
+approximately RMB7,734,993,000 (2022: approximately RMB7,146,895,000) by the weighted average number 
+of ordinary shares of 5,045,269,000 shares (2022: 5,045,269,000 shares).
+
+Diluted earnings per share is the same as basic earnings per share for the year ended 31st December, 2023 
+(2022: same) as there was no potential dilutive ordinary share in issue during the year (2022: same). 
+
+18
+
+7.  PLEDGED AND RESTRICTED SHOR T-TERM BANK DEPOSITS
+
+Details of pledged and restricted short-term bank deposits as at 31st December, 2023 are as follows: 
+
+2023
+RMB’000
+
+2022
+RMB’000
+
+Restricted short-term deposits (Note i)
+Pledged short-term deposits for bank guaranteed notes issued by  
+
+2,324,385
+
+3,328,387
+
+the Group (Note ii)
+
+176,590
+
+133,535
+
+2,500,975
+
+3,461,922
+
+Note i:   As  detailed  in  note  11  of  this  announcement,  in  2023,  the  Group  made  settlements  of  approximately  RMB447,118,000  for 
+
+certain  lawsuits  in  respect  of  unauthorised  guarantees  directly  out  of  the  restricted  short-term  deposits  by  the  PRC  courts. 
+
+After  the  settlements,  the  respective  restricted  short-term  deposits  of  approximately  RMB554,735,000  were  released  and 
+
+reduced to approximately RMB2,324,385,000 (2022: approximately RMB3,326,238,000).
+
+At  31st  December,  2022,  approximately  RMB900,000  were  also  restricted  by  the  courts  in  the  PRC  for  settlements  of  claims 
+
+by creditors for payment disputes of purchases of goods and capital assets against the Group upon the final court judgements. 
+
+Such restriction was released during the year.
+
+The  directors  of  the  Company  have  assessed  the  respective  liabilities  and  adequate  provision  and  liabilities  have  been 
+
+recognised  in  the  consolidated  financial  statements.  The  directors  of  the  Company  considered  the  respective  provision  and 
+
+liabilities are adequate. 
+
+Note ii:   As  at  31st  December,  2023,  in  addition  to  short-term  deposits  pledged,  the  Group  had  also  pledged  bank  guaranteed  notes 
+
+receivable from third parties and related parties of approximately RMB33.2 million (2022: approximately RMB37.4 million) to 
+
+secure the issue of bank guaranteed notes. 
+
+8.  ACCOUNTS RECEIVABLE
+
+Accounts receivable
+Accounts receivable from affiliated companies
+
+2023
+RMB’000
+
+2022
+RMB’000
+
+341,626
+2,424
+
+279,469
+2,606
+
+344,050
+
+282,075
+
+19
+
+ 
+ 
+8.  ACCOUNTS RECEIVABLE (Continued)
+
+(a)  An aging analysis of accounts receivable based on invoice date is set out below:
+
+Less than six months
+Six months to one year
+Above one year to two years
+Above two years but less than five years
+Five years or above
+
+Less: ECL allowance 
+
+2023
+RMB’000
+
+2022
+RMB’000
+
+344,840
+1,863
+485
+18,721
+17,957
+
+383,866
+(42,240)
+
+284,736
+397
+2,896
+19,081
+18,521
+
+325,631
+(46,162)
+
+341,626
+
+279,469
+
+As  at  31st  December,  2023,  accounts  receivable  from  third  parties  of  approximately  RMB14  million 
+(2022:  approximately  RMB10  million)  are  substantially  denominated  in  U.S.  Dollar  or  Euro  and  the 
+rest  are  denominated  in  Renminbi.  In  order  to  minimise  credit  risk,  credit  history  and  background  of 
+new  customers  and  debtors  are  checked.  Credit  limits  with  credit  terms  of  30  to  90  days  are  set  for 
+customers.  Customers  considered  to  be  high  risk  are  traded  on  cash  basis  or  upon  receipt  of  bank 
+guaranteed notes. Designated staff monitors accounts receivable and follow-up collection with customers. 
+
+9.  ACCOUNTS PAYABLE
+
+Accounts payable
+Accounts payable to affiliated companies
+
+2023
+RMB’000
+
+2022
+RMB’000
+
+283,622
+13,658
+
+344,178
+22,651
+
+297,280
+
+366,829
+
+(a)  An aging analysis of accounts payable based on the invoice date is set out below:
+
+Less than six months
+Six months to one year
+Above one year but less than two years
+Two years or above
+
+2023
+RMB’000
+
+2022
+RMB’000
+
+201,158
+11,073
+17,142
+54,249
+
+262,352
+10,937
+45,484
+25,405
+
+283,622
+
+344,178
+
+Accounts  payable  with  balances  denominated  in  currencies  other  than  Renminbi  are  considered  not 
+significant. All these amounts are payable within one year.
+
+20
+
+10.  DIVIDENDS
+
+Special dividend of HK$0.96 per share
+Special dividend of HK$0.96 per share
+
+2023
+RMB’000
+
+2022
+RMB’000
+
+4,178,452
+4,443,390
+
+8,621,842
+
+–
+–
+
+–
+
+On  13th  January,  2023,  the  Company  declared  a  special  dividend  of  HK$0.96  per  share  (2022:  nil)  totalling 
+HK$4,843,458,000.
+
+On 18th July, 2023, the Company further declared another special dividend of HK$0.96 per share (2022: nil) 
+totalling HK$4,843,458,000.
+
+The directors of the Company did not recommend any dividend payment at the Board meeting held on 28th 
+March, 2024 in respect of the Group’s results for the year ended 31st December, 2023 (2022: nil).
+
+11.  PROVISION FOR LOSS ON UNAUTHORISED GUARANTEES
+
+As at 1st January, 
+Settlements
+
+As at 31st December,
+
+2023
+RMB’000
+
+2022
+RMB’000
+
+1,917,062
+(447,118)
+
+1,917,062
+–
+
+1,469,944
+
+1,917,062
+
+The provision for loss on unauthorised guarantees represents the provision for the estimated loss from the 
+unauthorised  guarantees  provided  by  Shenyang  JinBei  Automotive  Industry  Holdings  Co.,  Ltd.  (“SJAI”), 
+a  subsidiary  of  the  Group,  to  four  creditors  banks  for  the  bank  borrowings  of  Huachen  after  its  default  on 
+repayment. 
+
+Based  on  the  court  judgements,  SJAI  has  to  bear  50%  of  the  bank  borrowings  under  the  unauthorised 
+guarantees  that  have  been  utilised  but  cannot  be  finally  settled  by  Huachen.  Although  the  administrator  of 
+the restructuring of Huachen has announced the restructuring plan of Huachen, it is still uncertain as to the 
+final respective bank borrowings under these unauthorised guarantee Huachen is able to settle. Accordingly, 
+the Group recognised the provision of RMB1,917,062,000 for the respective losses which is 50% of the bank 
+facilities utilised under these unauthorised guarantees plus the respective legal costs.
+
+During the year, the courts demanded a total amount of RMB447,118,000 for settlements to three out of the 
+four creditors banks. 
+
+21
+
+OVERVIEW AND PROSPECTS
+
+The Chinese economy gradually recovered in 2023 post COVID-19, and China’s GDP grew 5.2% for the full year. 
+According  to  the  China  Association  of  Automobile  Manufacturers,  total  vehicle  production  and  sales  in  China 
+increased  by  11.6%  to  30.1  million  units  and  12.0%  to  30.1  million  units,  respectively,  in  2023,  which  ranked  the 
+largest in the world for 15 consecutive years and resulted in the 1st peak of sales since 2014. Sales of passenger 
+cars  increased  by  10.6%  to  26.1  million  units.  Sales  of  new  energy  vehicles  (“NEVs”)  (including  battery  electric 
+vehicles  (“BEVs”),  plug-in  hybrid  electric  vehicles,  and  also  fuel  cell  vehicles)  increased  significantly  to  9.5 
+million units, up 37.9% from 2022. Premium passenger vehicle sales continued to grow at 15.4% to 4.5 million units, 
+outperforming the overall market. The OEMs’ promotion and the state government’s support policies drove the 
+strong performance of premium passenger vehicle sales.
+
+In  spite  of  various  external  uncertainties  and  fierce  market  competition  in  2023,  BBA  continued  to  deliver 
+remarkable  results  for  the  year  and  participated  in  the  long-term  growth  story  of  China.  With  the  strong 
+dedication  of  the  teams  and  working  closely  with  other  entities  of  the  BMW  Group,  BBA  continued  its  strong 
+momentum in meeting customer demands. BBA is also continuously expanding its supplier network in China and 
+consistently  implementing  its  “local  for  local”  approach.  In  addition,  BBA’s  dealer  network  nationwide  reached 
+more  than  740  outlets  in  mainland  China.  As  of  the  end  of  2023,  the  joint  venture  had  26,000  employees.  It  has 
+been the highest taxpayer in Shenyang for the past 18 years and Liaoning Province for the past 8 years.
+
+In  2023,  BBA  reached  another  major  corporate  milestone  and  celebrated  its  20th  anniversar y  with  a  total 
+production  volume  of  around  728,000  BMW  cars  last  year.  BBA  also  began  production  of  the  all-new  BMW  X1 
+and the first-ever BMW iX1 and launched the new generation BMW 5 Series and the first-ever i5 in China in early 
+2024. 
+
+BBA  is  committed  to  becoming  the  leader  in  premium  e-automobile  in  China.  As  an  integrated  part  of  BMW 
+Group, BBA is dedicated to exploring new technologies and accelerating digital transformation. Ling Yue Digital 
+Information Technology Company Limited, a wholly-owned subsidiary of BBA, provides services, including data 
+solutions, digital solutions, customer relationship management, e-commerce, and IT development and operations 
+for BBA and BMW entities in China. Its core competencies have enhanced customer interaction and satisfaction 
+(around  10  million  registered  users  of My BMW App as  of  February  2024),  acted  as  a  customer  relationship 
+management tool, identified sales leads, and drove e-commerce transactions.
+
+In  2023,  Ningbo  Yumin  accelerated  the  pace  of  product  transformation  and  upgraded  with  increased  investment 
+in emerging businesses and product research and development, which affected its profitability. Ningbo Yumin has 
+established  relationships  with  three  new  customers  and  has  undertaken  21  new  projects.  New  businesses  have 
+increased by 5% annually, and multiple innovative products have been developed. Ningbo Yumin has been awarded 
+the  Zhejiang  Province  Postdoctoral  Workstation  Enterprise  and  Provincial  Enterprise  Technology  Research 
+Institute titles during the year.
+
+Mianyang  Ruian,  another  wholly-owned  subsidiary  of  the  Company,  continues  to  engage  in  the  research  and 
+manufacturing  of  camshafts  for  gasoline  and  electric  vehicle  engines.  In  2023,  Mianyang  Ruian  continued  to 
+achieve  growth  in  sales  in  the  unfavorable  business  environment  of  declining  traditional  fuel  vehicles  and 
+fierce  competition  for  its  camshafts  production.  In  2023,  Mianyang  Ruian  achieved  sales  of  700,000  units  of  its 
+combination  camshaft  to  Li  Auto.  During  the  year,  Mianyang  Ruian  officially  became  a  supplier  of  BYD  and 
+actively participated in biddings to supply to BYD. The R&D project for the new product resin balance shaft has 
+completed the technical solution for resin gears, and the relevant key technologies for resin gears are still being 
+verified. 
+
+22
+
+Renault  Brilliance  Jinbei  Automotive  Company  Limited  (“RBJAC”)  which  carried  out  our  minibus  and  light 
+commercial vehicles (“LCVs”) business has applied to the Intermediate People’s Court of Shenyang City, Liaoning 
+Province（ 遼寧省瀋陽市中級人民法院）(the  “Shenyang  Intermediate  People’s  Court”)  on  30th  December, 
+2021  for  restructuring.  On  23rd  May,  2023,  the  Shenyang  Intermediate  People’s  Court  ruled  to  approve  the 
+restructuring  plan  and  complete  the  restructuring  procedures  with  an  execution  period  of  12  months.  In  2024, 
+RBJAC  will  start  the  debt  repayment  procedure  according  to  the  restructuring  plan  and  prepare  for  resuming 
+work and production. The Board is evaluating various strategic options for RBJAC from an operational perspective.
+
+In  2023,  BBAFC,  our  auto  finance  subsidiary  in  China  successfully  completed  two  batches  of  green  and  carbon 
+neutral  syndication  loans  which  paved  the  way  for  more  stable  and  diversified  funding  sources  by  contributing 
+towards  the  social  responsibilities.  Further,  the  completion  of  the  Huachen  restructuring  process  will  provide 
+positive  momentum  for  BBAFC,  by  improving  the  market  reputation  with  bank  partners,  OEM  co-operators 
+as  well  as  customers.  However,  the  growing  concerns  around  the  global  economic  development  and  fierce 
+competition  between  key  OEM  brands  have  led  to  increasing  acquisition  costs  as  well  as  the  need  for  stricter 
+risk controls. These challenging aspects will potentially affect the auto financing industry through reducing sales 
+volumes, shrinking margins, and increasing credit risks. BBAFC is formulating measures to offset these market 
+challenges, which include the selective expansion of co-operation partnerships with key brands as well as creative 
+refinancing channels, whilst implementing solid and robust risk control measures.
+
+During  the  year,  the  Board  had  resolved  to  declare  two  special  dividends  each  for  an  amount  of  HK$0.96  per 
+ordinary  share  of  the  Company  out  of  the  proceeds  from  the  disposal  of  its  25%  interest  in  BBA.  With  China’s 
+ambition  to  continue  supporting  the  automobile  industry,  the  Board  is  optimistic  about  the  performance  of  our 
+group companies. In addition, the Board will continue to identify suitable strategic investments, primarily within 
+the automobile industry value chain, which could generate sustainable business growth for the Group.
+
+BUSINESS DISCUSSION & ANALYSIS
+
+The  consolidated  revenues  of  the  Group  (which  comprised  primarily  net  sales  derived  from  the  businesses 
+operated by our major operating subsidiaries including Ningbo Yumin, Mianyang Ruian and BBAFC) for the year 
+ended 31st December, 2023 was RMB1,121.5 million, representing a slight decrease of 0.8% from the RMB1,130.7 
+million generated during the year ended 31st December, 2022. The decrease in revenue was due to the continuing 
+fall in demand for the Group’s motor vehicle components from traditional fossil-fueled motor vehicles, but being 
+offset  by  the  increasing  demand  from  electric  and  hybrid  motor  vehicle  manufacturers.  Apart  from  this,  the 
+revenue contribution from BBAFC also increased in the second half of 2023 as a result of high demand of motor 
+vehicle financing market.
+
+Cost of sales decreased by 6.9% from RMB895.2 million in 2022 to RMB833.0 million in 2023. The gross profit of 
+the  Group  increased  by  22.5%  from  RMB235.6  million  in  2022  to  RMB288.5  million  in  2023.  Consequently,  the 
+gross profit margin  of  the  Group improved to 25.7% in 2023 when compared to  20.8% in 2022. The improvement 
+was mainly due to the decrease in the market price of the major raw material aluminum in 2023. In addition, the 
+borrowing cost for BBAFC also decreased as a result of lowering interest rates for borrowing used for financing 
+the auto financing service business in 2023.
+
+Other income decreased by 71.5% from RMB139.6 million in 2022 to RMB39.8 million in 2023. The decrease was 
+mainly  due  to  the  recognition  of  compensation  income  from  the  local  government  for  the  relocation  of  certain 
+premises of a subsidiary in 2022 which did not occur in 2023.
+
+23
+
+Interest  income  increased  by  61.0%  from  RMB416.3  million  in  2022  to  RMB670.2  million  in  2023  due  to  the 
+increase of average short-term deposits and cash and cash equivalents in 2023, as a result of the dividend income 
+from BBA received in 2023.
+
+Selling  expenses  increased  by  33.6%  from  RMB33.9  million  in  2022  to  RMB45.3  million  in  2023.  The  increase 
+in  selling  expenses  was  mainly  due  to  increase  in  costs  to  solicit  and  recruit  new  business.  As  a  result,  selling 
+expenses as a percentage of revenue has increased from 3.0% in 2022 to 4.0% in 2023.
+
+General  and  administrative  expenses  (excluding  net  ECL  allowance  on  loans  and  receivables)  decreased  by 
+1.3%  from  RMB437.8  million  in  2022  to  RMB432.3  million  in  2023.  As  a  result,  the  general  and  administrative 
+expenses  as  a  percentage  of  revenue  decreased  from  38.7%  in  2022  to  38.5%  in  2023.  The  decrease  was  mainly 
+due to professional fees incurred in 2022 in relation to the Group’s unauthorised pledged deposits and guarantees 
+and  resumption  of  trading  of  the  Company’s  shares,  and  employee  compensation  in  2022  for  resizing  certain 
+subsidiaries.  The  decrease  was  partly  offset  by  the  exchange  loss  arising  from  the  depreciation  of  Renminbi  in 
+2023 for the special dividends distributed in Hong Kong Dollar.
+
+Net  ECL  allowance  on  loans  and  receivables  recognised  in  2023  amounted  to  RMB53.2  million,  a  decrease  of 
+88.8%  from  RMB475.7  million  in  2022.  The  ECL  allowance  for  2022  was  mainly  provided  for  RBJAC  after  its 
+deconsolidation from the Group whereas the ECL allowance for 2023 was mainly for loan receivables in respect of 
+BBAFC.
+
+Finance  costs  decreased  by  86.8%  from  RMB12.9  million  in  2022  to  RMB1.7  million  in  2023,  mainly  due  to  the 
+decrease  in  interest  on  bank  borrowings  and  the  decrease  in  average  bank  borrowings  which  caused  lower 
+finance cost in 2023.
+
+The  Group  did  not  recognise  any  share  of  results  of  joint  venture  in  2023  due  to  reclassification  of  BBA  from  a 
+joint venture to an associate since February 2022 when the sale of 25% BBA equity interest to BMW Holding B.V. 
+became effective. Starting from 11th February, 2022, BBA was treated as an associate of the Company. As a result, 
+the Group’s share of results of associates included the recognition of BBA contribution as the Group’s associate 
+over the full year 2023 as compared to approximately 10.5 months period in 2022, which led to an increase of the 
+Group’s  share  of  results  of  associates  by  19.1%  from  RMB6,543.8  million  in  2022  to  RMB7,796.8  million  in  2023, 
+with BBA’s contribution no longer being recognised in any share of results of joint venture in 2023.
+
+24
+
+BBA achieved local sales of 709,954 units in 2023, an increase of 6.8% as compared to 664,934 BMW vehicles sold 
+in 2022, with strong growth in the BEV segment benefitting from the rapid industry growth of NEVs in China. The 
+local sales volumes of BBA by models are listed in the table below:
+
+BMW Models
+
+2023
+
+2022
+
+% Change
+
+1-series
+3-series
+5-series
+X1
+X2
+X3
+X5
+
+14,638
+203,688
+142,322
+83,010
+17,230
+155,343
+93,723
+
+24,195
+161,721
+173,977
+81,895
+18,506
+146,407
+58,233
+
+-39.5%
+26.0%
+-18.2%
+1.4%
+-6.9%
+6.1%
+60.9%
+
+Total
+Of which BEVs
+
+709,954
+95,550
+
+664,934
+45,364
+
+6.8%
+110.6%
+
+In  addition,  BBA  exported  33,931  units,  mainly  X3  BEV  models,  to  overseas  in  2023,  an  increase  by  13.1%  from 
+30,005 units sold overseas in 2022.
+
+The Group did not recognise any gain on disposal of partial equity interest in a joint venture or the related tax on 
+disposal in 2023, both of which resulted from the disposal of the 25% equity interest in BBA by the Group to BMW 
+which became effective on 11th February, 2022.
+
+The  Group  did  not  recognise  any  gain  on  deconsolidation  of  a  subsidiar y  in  2023  which  arose  from  the 
+deconsolidation of RBJAC and Shenyang Brilliance Jindong Development Co., Ltd. from the Group’s accounts in 
+2022.
+
+The Group’s profit before income tax increased by 15.7% from RMB7,142.8 million in 2022 to RMB8,262.8 million 
+in  2023.  Income  tax  expense  was  RMB526.4  million  in  2023  which  was  mainly  due  to  the  withholding  tax  on 
+dividend from a subsidiary for the year as compared to an income tax credit of RMB4.1 million in 2022.
+
+As  a  result  of  the  above,  the  Group  recorded  net  profit  attributable  to  equity  holders  of  the  Company  of 
+RMB7,735.0  million  for  the  year  2023,  representing  an  increase  of  8.2%  from  the  RMB7,146.9  million  realised  in 
+2022. Basic earnings per share in 2023 amounted to RMB1.53312, compared to RMB1.41655 in 2022. In addition, 
+return on capital employed (as defined by the EBITDA÷average capital employed) for 2023 was 16.0%, compared 
+to 15.5% for 2022.
+
+25
+
+LIQUIDITY AND FINANCIAL RESOURCES
+
+As  at  31st  December,  2023,  the  Group  had  RMB30,845.8  million  in  cash  and  cash  equivalents  (As  at  31st 
+December, 2022: RMB28,463.3 million), RMB57.5 million in statutory deposit reserves at central bank (As at 31st 
+December,  2022:  RMB32.5  million),  and  RMB2,501.0  million  in  pledged  and  restricted  short-term  bank  deposits 
+(As at 31st December, 2022: RMB3,461.9 million).
+
+As at 31st December, 2023, the Group had notes payable in the amount of RMB219.3 million (As at 31st December, 
+2022: RMB170.1 million).
+
+As  at  31st  December,  2023,  the  Group  had  outstanding  short-term  bank  borrowings  of  RMB924.5  million  (As 
+at  31st  December,  2022:  RMB350.0  million),  and  no  long-term  bank  borrowings  due  within  one  year  (As  at  31st 
+December, 2022: RMB7.5 million). As at 31st December, 2023, the Group did not have long-term bank borrowings 
+due over one year (As at 31st December, 2022: nil).
+
+All  short-term  bank  borrowings  as  at  31st  December,  2023  were  due  within  one  year,  being  repayable  from 
+19th January, 2024 to 6th December, 2024 (As at 31st December, 2022: repayable from 6th January, 2023 to 20th 
+December, 2023). As at 31st December, 2023, these borrowings were interest-bearing at rates ranging from 3.80% 
+to 5.50% per annum, and were denominated in Renminbi (As at 31st December, 2022: 5.50% to 5.65% per annum, 
+Renminbi).
+
+There were no long-term bank borrowings as at 31st December, 2023. The long-term bank borrowings due within 
+one year of RMB7.5 million as at 31st December, 2022 were repayable from 20th January, 2023 to 20th October, 
+2023.  As  at  31st  December,  2022,  these  long-term  bank  borrowings  were  interest-bearing  at  rates  ranging  from 
+4.30% to 4.60% per annum, and were denominated in Renminbi.
+
+With  an  aim  to  improving  its  liquidity,  the  Group  regularly  monitors  its  accounts  receivable  turnover  and 
+inventory turnover. For the year ended 31st December, 2023, the Group’s accounts receivable turnover days was 
+approximately 101 days, compared to approximately 94 days for 2022. Inventory turnover days was approximately 
+76 days in 2023, compared to approximately 88 days in 2022.
+
+CAPITAL STRUCTURE AND FUNDING POLICIES
+
+As at 31st December, 2023, the Group’s total assets was approximately RMB55,154.6 million (As at 31st December, 
+2022:  RMB55,426.6  million),  which  was  funded  by  the  following:  (a)  share  capital  of  RMB397.2  million  (As  at 
+31st  December,  2022:  RMB397.2  million),  (b)  reserves  of  RMB50,720.9  million  (As  at  31st  December,  2022: 
+RMB51,048.1 million), (c) total liabilities of RMB3,263.5 million (As at 31st December, 2022: RMB3,209.8 million) 
+and  (d)  contribution  from  non-controlling  interests  of  RMB773.0  million  (As  at  31st  December,  2022:  RMB771.6 
+million).
+
+26
+
+As  at  31st  December,  2023,  99.3%  (As  at  31st  December,  2022:  99.9%)  of  the  Group’s  cash  and  cash  equivalents 
+(comprising  cash  on  hand,  bank  balances  and  demand  deposits  within  3  months  of  maturity  when  acquired) 
+were denominated in Renminbi, whereas 0.7% were denominated in other currencies (As at 31st December, 2022: 
+0.1%). Apart from the bank borrowings mentioned above, as at 31st December, 2023, the Group did not have any 
+committed banking facilities.
+
+The  Group  funds  its  short-term  working  capital  requirement  mainly  through  its  own  operational  cash  flow,  short-
+term bank borrowings, issue of bank guaranteed notes and payment credit from its suppliers. The Group monitors 
+and maintains a level of cash and cash equivalents considered adequate by the management to finance the Group’s 
+operations,  expected  expansion  and  product  developments.  Management  also  monitors  the  utilisation  of  bank 
+borrowings and ensures compliance with loan covenants. For long-term capital expenditures, the Group’s strategy is 
+to fund these long-term capital commitments by a combination of operational cash flow, bank borrowings, dividends 
+from joint ventures and associates, if any, and fund raising exercises in the capital market, if and when necessary.
+
+CAPITAL EXPENDITURES AND COMMITMENTS
+
+In  2023,  the  Group  incurred  capital  expenditures  of  RMB39.5  million  (2022:  RMB47.5  million)  mainly  for 
+acquisition  of  both  owned  and  right-of-use  assets  of  tools  and  moulds,  machiner y  and  equipment,  and 
+construction-in-progress as well as specialised software.
+
+As at 31st December, 2023, the Group’s contracted capital commitments amounted to RMB1,071.9 million (As at 31st 
+December, 2022: RMB4.0 million), which were related to the capital expenditures in respect of acquisition of plant 
+and machinery and investment into RBJAC.
+
+SIGNIFICANT  INVESTMENTS  HELD,  MA TERIAL  ACQUISITIONS  AND  DISPOSALS  OF 
+SUBSIDIARIES, ASSOCIATES AND JOINT VENTURES
+
+References  are  made  to  the  announcements  of  the  Company  issued  on  17th  May,  2023  (the  “17th  May 
+Announcement”) and 25th May, 2023.
+
+Subsequent  to  the  approval  of  the  Formal  Restructuring  Plan  (as  defined  in  the  17th  May  Announcement)  by 
+the  Shenyang  Intermediate  People’s  Court  on  23rd  May,  2023,  SJAI  has  provided  (a)  an  initial  portion  of  the 
+Cash  Contribution  (as  defined  in  the  17th  May  Announcement)  amounted  to  around  RMB282.6  million  to  the 
+administrator of RBJAC (the “RBJAC Administrator”) for settlement of employees and social security claims and 
+tax claims of RBJAC, and (b) the remaining amount of the Cash Contribution amounted to around RMB1.05 billion 
+to the RBJAC Administrator for settlement of unsettled amount of the Final RBJAC Indebtedness (as defined in the 
+17th May Announcement) subsequent to the receipt of detailed written request from the RBJAC Administrator.  As 
+announced, any unutilised amount of the Cash Contribution shall be returned to SJAI in accordance with the terms 
+of the Restructuring Investment Agreement (as defined in the 17th May Announcement). Following completion of 
+the restructuring of RBJAC (the “RBJAC Restructuring”), RBJAC will become a non-wholly owned subsidiary of 
+the Company. The final effective interests owned by the Group in RBJAC is subject to the final amount of the Cash 
+Contribution.
+
+Save as aforesaid, there were no significant investments held, nor were there any material acquisitions or disposals 
+of subsidiaries, associates and joint ventures during the year ended 31st December, 2023.
+
+27
+
+NEW BUSINESS AND NEW PRODUCTS
+
+The  Company  is  devoted  to  capture  valuable  investment  opportunities  in  order  to  enhance  the  Company’s 
+profitability  and  create  value  for  its  shareholders.  The  Company  is  in  the  course  of  studying  and  exploring 
+various  investment  opportunities,  including  but  not  limited  to  cooperation  with  BMW  with  respect  to  supply  of 
+components for BMW vehicles, possible expansion into NEV manufacturing, components supply and digitalisation 
+business, spanning across the entire value chain of the automotive industry.
+
+BBA  will  continue  to  follow  BMW’s  flexible  production  strategy  and  open  approach  to  technology.  On  20th 
+February,  2023,  a  BMW  i3  40L  rolled  off  the  production  line  of  Plant  Tiexi  Lydia  site,  marking  the  cumulative 
+production of 5 million cars at BMW Shenyang Production Base and the beginning of a new chapter in the BMW 
+group’s electrification journey. In 2024, BBA will roll off its six millionth car produced in China. Currently, BBA is 
+moving quickly in preparation for the start of production of the “Neue Klasse” model in 2026. 
+
+As for RBJAC, with the approval of the formal restructuring plan, the Company believes that it is able to maintain 
+its  automobile  manufacturing  platform  by  leveraging  the  capability  and  resources  of  RBJAC  and  its  existing 
+qualification, with the aims to seek future cooperation with international and domestic automobile companies and 
+to further strengthen the Company’s position in the automobile market. Feasibility studies have been undertaken 
+on  the  business  prospect  of  RBJAC  and  the  potential  business  opportunities  of  co-operation  with  strategic 
+partners, especially in the NEV business segment.
+
+The LCVs market has been making stable progress in recent years amid the development of the logistics sector, 
+the emergence of new retail models, the growing market of NEVs and the favourable policies. RBJAC expects to 
+grow the Jinbei brand to a renowned name of LCVs by enhancing its presence in the new energy LCVs market. 
+Riding on the rising trend of electrification, RBJAC plans to develop new lines of electric vehicles, namely Haise
+（ 海獅）and  Haise  King（ 海獅王）,  and  also  pure  electric  medium-duty  commercial  vehicles  based  on  market 
+demand.
+
+Looking  forward,  RBJAC  will  focus  its  development  efforts  on  NEVs  by  working  with  its  strategic  partners  to 
+explore  presence  in  the  new  energy  commercial  vehicle  market  and  expand  export  opportunities.  It  expects  to 
+pursue  mutual  growth  with  its  strategic  partners  on  the  Jinbei  product  platform  in  the  field  of  new  energy  and 
+jointly develop large commercial vehicle products with core competitiveness.
+
+BBAFC  new  business  is  strategically  focused  on  the  NEV  segment  where  it  identifies  the  most  significant 
+opportunities.  This  highly  competitive  segment  continues  to  expand,  whilst  undergoing  its  own  internal 
+restructure  due  to  the  significant  inter-brand  competitiveness.  BBAFC  is  carefully  making  selective  alignments 
+with key globally recognised brands that will continue to be relevant to the future. 
+
+In  addition,  BBAFC  is  also  expanding  its  finance  product  strategy  away  from  the  traditional  ‘own  finance’  and 
+‘retail  co-lending’  products  to  also  include  ‘assisted  lending’  which  can  further  enhance  its  fee-based  income 
+stream. BBAFC strives to be regarded as the ‘Green Finance’ alternative for eco-friendly individual and business 
+customers that support the social and economic strategy of mainland China.
+
+Operationally,  BBAFC  continues  to  actively  embrace  online  /  digital  solutions  that  support  both  customer  and 
+retailer  convenience,  with  improved  risk  aversion  and  mitigation  properties,  whilst  also  maintaining  the  highest 
+levels of customer centricity as accredited by the regular OEM and customer survey results.
+
+Ningbo  Yumin  plans  to  further  develop  lightweight  products  related  to  aluminium  alloys,  such  as  bumper 
+anti-collision beams, door sills, pedals, battery box shells and frames and mounting brackets.
+
+28
+
+Mianyang Ruian was awarded the strategic product project EN04 for NEVs of Great Wall Motor Company Limited 
+(“Great Wall”) in 2023. This project will serve as the core product of Great Wall and will be equipped with a series 
+of models such as Great Wall tanks. At the same time, it has been designated as a shift drum project for vehicles 
+of Shanghai New Power Automotive Technology Co., Ltd. This product is a key component for the electrification 
+of  commercial  vehicles.  In  terms  of  scientific  research,  Mianyang  Ruian  collaborated  with  Shanghai  Jiao  Tong 
+University  and  SAIC  Maxus  Automotive  Co.,  Ltd.  to  improve  the  camshaft  profile  and  enhance  the  combustion 
+efficiency  of  diesel  engines,  simultaneously  launching  the  research  and  development  of  the  robot  reducer 
+camshaft, and striving to break the monopoly of foreign enterprises. Till now, the trial production of samples has 
+been completed.
+
+EMPLOYEES, REMUNERATION POLICY AND TRAINING PROGRAMMES
+
+The  Group  employed  approximately  1,200  employees  as  at  31st  December,  2023  (As  at  31st  December,  2022: 
+approximately  1,300).  Employee  costs  amounted  to  RMB238.1  million  for  the  year  ended  31st  December,  2023 
+(For the year ended 31st December, 2022: RMB341.7 million). The Group will endeavour to ensure that the salary 
+levels  of  its  employees  are  in  line  with  industry  practices  and  prevailing  market  conditions,  and  that  employees’ 
+remuneration is based on performance.
+
+In order to improve the overall quality and professional technical level of all employees, the Group provides online 
+or  offline  trainings  on,  among  other  things,  professional  skills,  quality  enhancements,  business  and  product 
+knowledge,  occupational  ethics  and  safety,  ESG  issues,  anti-corruption,  rules  and  regulations,  management 
+skills,  leadership  and  teamwork  cooperation  to  its  directors/employees  from  time  to  time.  Ningbo  Yumin  and 
+Mianyang  Ruian  have  formulated  and  implemented  administrative  measures  for  education  and  training,  and 
+have  established  a  set  of  training  systems  and  workflows  including  new  employee  induction  training,  special 
+post  personnel  training,  management  training,  professional  technical  training  and  quality  training.  The  course 
+contents are extensive, covering basic/middle-level management, new product development, quality management, 
+financial management, lean production, teamwork, and professionalism. Training demand research are conducted 
+and  training  plans  are  formulated  on  an  annual  basis.  BBAFC  has  specifically  arranged  compliance  training, 
+business  training,  new  hire  training,  paired  with  online  courses,  meeting  the  learning  needs  of  the  employees. 
+It  has  even  developed  its  own  online  training  platform,  allowing  its  employees  to  browse  training  and  financial 
+product knowledge materials, reducing the travel needs for sales and training teams. BBAFC has also developed a 
+succession plan which lays a solid foundation of talent for its long-term development.
+
+CHARGE ON ASSETS
+
+As  at  31st  December,  2023,  short-term  bank  borrowings  of  RMB344.5  million  (As  at  31st  December,  2022: 
+RMB200.0 million) were secured by the Group’s loan receivables of approximately RMB443.7 million (As at 31st 
+December, 2022: RMB249.5 million).
+
+There were no long-term bank borrowings as at 31st December, 2023. The long-term bank borrowings due within 
+one year of RMB7.5 million as at 31st December, 2022 were secured by the Group’s land lease prepayments with a 
+net book value of approximately RMB28.1 million and buildings, plant and equipment with an aggregate net book 
+value of approximately RMB35.4 million.
+
+In  addition,  as  at  31st  December,  2023,  the  Group  pledged  short-term  bank  deposits  in  an  aggregate  amount 
+of  RMB176.6  million  (As  at  31st  December,  2022:  RMB133.5  million),  and  pledged  bank  guaranteed  notes 
+receivable  from  third  parties  and  related  parties  of  approximately  RMB33.2  million  (As  at  31st  December,  2022: 
+approximately RMB37.4 million) to secure the issue of bank guaranteed notes. For details, please refer to note 7 to 
+this announcement.
+
+29
+
+As  at  31st  December,  2023,  the  Group  had  restricted  short-term  bank  deposits  of  approximately  RMB2,324.4 
+million  (As  at  31st  December,  2022:  RMB3,328.4  million),  all  of  which  (As  at  31st  December,  2022:  RMB3,326.2 
+million)  were  restricted  by  the  courts  in  the  PRC  for  potential  amounts  the  Group  may  need  to  settle  for  the 
+lawsuits underway in respect of the unauthorised guarantees as detailed in note 11 to this announcement.
+
+The directors of the Company have assessed the respective liabilities and adequate provision and liabilities have 
+been recognised in the consolidated financial statements. The directors of the Company considered the respective 
+provision and liabilities are adequate.
+
+FUTURE PLANS FOR MATERIAL INVESTMENTS OR ADDITIONS OF CAPITAL ASSETS
+
+Save as disclosed, the Group does not have future plans for material investments or additions of capital assets as at 
+the date of this announcement.
+
+GEARING RATIO
+
+As at 31st December, 2023, the gearing ratio, computed by dividing total liabilities by total equity attributable to 
+equity  holders  of  the  Company,  was  approximately  0.06  (As  at  31st  December,  2022:  approximately  0.06).  The 
+gearing ratio remained stable for the year.
+
+FOREIGN EXCHANGE RISKS
+
+Due  to  the  depreciation  of  Renminbi  in  the  year,  exchange  loss  was  recognised  for  the  distribution  of  special 
+dividends denominated in Hong Kong Dollar in this year. Other than this, as the Group’s substantial transactions 
+during  the  year  were  denominated  in  Renminbi,  the  Group  considers  that  exchange  rate  fluctuations  do  not 
+have  significant  effect  on  the  overall  financial  performance  of  the  Group.  The  Group  will  continue  to  monitor 
+transactions and monetary assets and liabilities denominated in foreign currencies to minimise foreign exchange 
+risks. There were no outstanding hedging transactions as at 31st December, 2023 (As at 31st December, 2022: nil).
+
+CONTINGENT LIABILITIES
+
+The Group did not have any contingent liabilities as at 31st December, 2023.
+
+DIVIDENDS
+
+As announced by the Company, special dividends of HK$0.96 per ordinary share of the Company were declared 
+by  the  directors  of  the  Company  on  13th  January,  2023  and  18th  July,  2023,  respectively.  The  respective  special 
+dividends were paid to the shareholders on 27th February, 2023 and 31st August, 2023.
+
+The  directors  of  the  Company  did  not  recommend  any  dividend  payment  at  the  Board  meeting  held  on 
+28th March, 2024 in respect of the Group’s 2023 annual results (2023: nil).
+
+CLOSURE OF REGISTER OF MEMBERS
+
+The  Company’s  forthcoming  annual  general  meeting  will  be  held  on  Tuesday,  25th  June,  2024  at  9:00  a.m.  (the 
+“2024  AGM”).  The  register  of  members  of  the  Company  will  be  closed  from  Wednesday,  19th  June,  2024  to 
+Tuesday,  25th  June,  2024,  both  days  inclusive,  during  which  period  no  transfer  of  shares  will  be  registered. 
+The  record  date  for  the  2024  AGM  is  Wednesday,  19th  June,  2024.  Only  shareholders  of  the  Company  whose 
+names  appear  on  the  register  of  members  of  the  Company  on  Wednesday,  19th  June,  2024  or  their  proxies  or 
+duly authorised corporate representatives are entitled to attend and vote at the 2024 AGM. In order to qualify for 
+attending and voting at the 2024 AGM, all properly completed transfer forms accompanied by the relevant share 
+
+30
+
+certificates must be lodged with the Company’s branch registrar and transfer office in Hong Kong, Computershare 
+Hong  Kong  Investor  Services  Limited  at  Shops  1712-16,  17th  Floor,  Hopewell  Centre,  183  Queen’s  Road  East, 
+Wanchai, Hong Kong for registration not later than 4:30 p.m., Hong Kong time, on Tuesday, 18th June, 2024.
+
+PROXY LODGMENT DEADLINE DATE AND TIME
+
+Whether or not a shareholder is able to attend the 2024 AGM, he/she is requested to complete the proxy form in 
+accordance with the instructions printed thereon and return it to the office of the Company’s branch registrar in 
+Hong Kong, Computershare Hong  Kong Investor Services Limited at 17M Floor, Hopewell Centre, 183 Queen’s 
+Road East, Wanchai, Hong Kong before 9:00 a.m., Hong Kong time, on Sunday, 23rd June, 2024, or not less than 
+48 hours before the time appointed for holding of any adjourned meeting of the 2024 AGM. Completion and return 
+of  the  form  of  proxy  will  not  preclude  shareholders  of  the  Company  from  attending  and  voting  in  person  at  the 
+2024 AGM or any adjourned meeting thereof if they so wish and in such event, the form of proxy will be deemed 
+to be revoked.
+
+IMPOR TANT  EVENTS  AFFECTING  THE  GROUP  THAT  HAVE  OCCURRED  SINCE  THE  END  OF 
+THE FINANCIAL YEAR
+
+Save  as  disclosed  below,  to  the  knowledge  of  the  directors  of  the  Company,  there  is  no  other  important  event 
+affecting the Group since the end of the financial year and up to the date of this announcement:
+
+(a)  RBJAC Restructuring
+
+Reference is made to the 17th May Announcement.
+
+Subsequent  to  the  approval  of  the  Formal  Restructuring  Plan  (as  defined  in  the  17th  May  Announcement) 
+by the Shenyang Intermediate People’s Court on 23rd May, 2023, SJAI has provided (a) an initial portion of 
+the  Cash  Contribution  (as  defined  in  the  17th  May  Announcement)  amounted  to  around  RMB282.6  million 
+to the RBJAC Administrator for settlement of employees and social security claims and tax claims of RBJAC, 
+and (b) the remaining amount of the Cash Contribution amounted to around RMB1.05 billion to the RBJAC 
+Administrator  for  settlement  of  unsettled  amount  of  the  Final  RBJAC  Indebtedness  (as  defined  in  the  17th 
+May  Announcement)  subsequent  to  the  receipt  of  detailed  written  request  from  the  RBJAC  Administrator. 
+As  announced,  any  unutilised  amount  of  the  Cash  Contribution  shall  be  returned  to  SJAI  in  accordance 
+with  the  terms  of  the  Restructuring  Investment  Agreement  (as  defined  in  the  17th  May  Announcement). 
+Following  completion  of  the  RBJAC  Restructuring,  RBJAC  will  become  a  non-wholly  owned  subsidiary  of 
+the Company. The final effective interests owned by the Group in RBJAC is subject to the final amount of the 
+Cash Contribution.
+
+(b)  Restructuring of Huachen
+
+References are made to the announcements of the Company dated 13th March, 2024 and 15th March, 2024 in 
+relation to, among others, the restructuring of Huachen.
+
+The  Company  has  been  informed  by  Huachen  that  (i)  Liaoning  Xinrui  has  completed  the  disposal  of 
+22,199,186  shares  of  the  Company  held  by  it  through  the  system  and  facilities  of  the  Stock  Exchange 
+on  12th  March,  2024;  and  (ii)  100%  of  the  equity  interest  in  Huachen  has  been  transferred  to  Shenyang 
+Automobile  Co.,  Ltd.*（ 瀋陽汽車有限公司）(“Shenyang  Automobile”)  and  the  relevant  industrial  and 
+commercial registration of changes has been completed on 15th March, 2024 (the “Completion”). Following 
+Completion,  Shenyang  Automobile  indirectly  holds  approximately  29.99%  of  the  shares  in  the  Company 
+through Huachen and Liaoning Xinrui.
+
+31
+
+(c)  Litigations against the Group
+
+References  are  made  to  (i)  the  announcements  issued  by  the  Company  dated  14th  April,  2021,  10th  June, 
+2021,  30th  September,  2021,  15th  December,  2021,  30th  December,  2021,  14th  February,  2022,  4th  March, 
+2022, 30th March, 2022, 28th April, 2022, 30th June, 2022 and 30th September, 2022; (ii) the annual reports 
+of  the  Company  for  the  years  ended  31st  December,  2021  and  2022  (the  “Annual  Reports”);  and  (iii)  the 
+interim report of the Company for the six months ended 30th June, 2023. Capitalised terms used below shall 
+have the same meaning as those defined in the Annual Reports. 
+
+In  December  2023  and  January  2024,  the  Supreme  People’s  Court  of  the  People’s  Republic  of  China（ 中華
+人民共和國最高人民法院）(the  “Supreme  People’s  Court”)  has  delivered  rulings  rejecting  the  appeal 
+applications  filed  by  China  Everbright  Bank  in  relation  to  each  of  the  CEB  RMB1,818  million  Proceeding 
+Trial Judgment, the CEB RMB30 million Proceeding Trial Judgment, the CEB RMB156 million Proceeding 
+Trial  Judgment,  the  CEB  RMB208  million  Proceeding  Trial  Judgment  and  the  CEB  RMB490  million 
+Proceeding Trial Judgment.
+
+PURCHASE, SALE OR REDEMPTION OF THE COMPANY’S LISTED SECURITIES
+
+Neither  the  Company  nor  any  of  its  subsidiaries  purchased,  sold  or  redeemed  any  of  the  Company’s  listed 
+securities in 2023.
+
+COMPLIANCE  WITH  THE  MODEL  CODE  FOR  SECURITIES  TRANSACTIONS  BY  DIRECTORS  OF 
+LISTED ISSUERS
+
+The Company has adopted the Model Code for Securities Transactions by Directors of Listed Issuers (the “Model 
+Code”) as set out in Appendix C3 to the Listing Rules. Having made specific enquiry of all directors, each director 
+of the Company has confirmed that he/she has complied with the standards set out in the Model Code during the 
+year ended 31st December, 2023.
+
+COMPLIANCE WITH THE CORPORATE GOVERNANCE CODE
+
+The  Company  is  committed  to  achieving  and  maintaining  the  highest  standards  of  corporate  governance 
+consistent  with  the  needs  and  requirements  of  the  business  and  its  shareholders,  ensuring  that  its  affairs  are 
+conducted  in  accordance  with  applicable  laws  and  regulations  and  consistent  with  the  “Corporate  Governance 
+Code”  set  out  in  Appendix  14  to  the  Listing  Rules  which  was  prevailing  in  2023  (the  “CG  Code”,  renamed  as 
+Appendix C1 with effect from 31st December, 2023). The Group has considered the principles of good corporate 
+governance  set  out  in  the  CG  Code,  and  has  put  in  place  corporate  governance  practices  to  meet  the  code 
+provisions.  Throughout  the  financial  year  ended  31st  December,  2023,  the  Group  has  complied  with  all  code 
+provisions set out in Part 2 of Appendix 14 to the Listing Rules which were in effect for the financial year 2023.
+
+32
+
+REVIEW OF FINANCIAL STATEMENTS
+
+The  audit  committee  of  the  Company  has  reviewed  with  management  the  accounting  principles  and  practices 
+adopted  by  the  Group  and  discussed  auditing,  internal  control  and  financial  reporting  matters,  including  the 
+consolidated financial statements of the Group for the year ended 31st December, 2023.
+
+At  present,  the  audit  committee  comprises  Mr.  Song  Jian,  Mr.  Jiang  Bo  and  Mr.  Dong  Yang,  all  of  whom  are 
+independent non-executive directors of the Company. Mr. Jiang Bo is the chairman of the audit committee.
+
+SCOPE OF WORK OF THE AUDITOR
+
+The figures in respect of the preliminary announcement of the Group’s results for the year ended 31st December, 
+2023  have  been  agreed  by  Grant  Thornton  Hong  Kong  Limited,  the  Company’s  auditor  (the  “Auditor”),  to  the 
+amounts  set  out  in  the  Group’s  draft  consolidated  financial  statements  for  the  year.  The  work  performed  by  the 
+Auditor in this respect did not constitute an assurance engagement in accordance with Hong Kong Standards on 
+Auditing,  Hong  Kong  Standards  on  Review  Engagements  or  Hong  Kong  Standards  on  Assurance  Engagements 
+issued  by  the  HKICPA  and  consequently  no  assurance  has  been  expressed  by  the  Auditor  on  the  preliminary 
+announcement.
+
+PUBLICATION OF ANNUAL REPOR T
+
+The 2023 annual report of the Company containing the information required by the Listing Rules will be published 
+on the websites of the SEHK (www.hkexnews.hk) and the Company (www.brillianceauto.com) in due course.
+
+BOARD OF DIRECTORS
+
+As at the date of this announcement, the Board comprises three executive directors: Mr. Wu Xiao An (also known 
+as Mr. Ng Siu On) (Chairman), Mr. Zhang Wei and Mr. Xu Daqing; and four independent non-executive directors: 
+Mr. Song Jian, Mr. Jiang Bo, Mr. Dong Yang and Dr. Lam Kit Lan, Cynthia.
+
+By Order of the Board
+Brilliance China Automotive Holdings Limited
+Wu Xiao An
+(also known as Ng Siu On)
+Chairman
+
+Hong Kong, 28th March, 2024
+
+33
+
+

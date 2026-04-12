@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>問題日誌｜華晨中國（01114.HK）是否值得投資？</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+TC:wght@400;500;700&display=swap');
+
+    :root {
+      --bg: #f5f7fa;
+      --surface: #ffffff;
+      --text: #1a1a2e;
+      --text-secondary: #6b7280;
+      --accent: #4f46e5;
+      --accent-light: #e0e7ff;
+      --border: #e5e7eb;
+      --green: #059669;
+      --green-bg: #ecfdf5;
+      --red: #dc2626;
+      --red-bg: #fef2f2;
+      --amber: #d97706;
+      --amber-bg: #fffbeb;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Inter', 'Noto Sans TC', -apple-system, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+      min-height: 100vh;
+    }
+
+    .container {
+      max-width: 820px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    header {
+      background: var(--surface);
+      border-bottom: 1px solid var(--border);
+      padding: 32px 0;
+    }
+
+    .back-link {
+      display: inline-block;
+      font-size: 0.85rem;
+      color: var(--text-secondary);
+      text-decoration: none;
+      margin-bottom: 12px;
+    }
+
+    .meta-row {
+      display: flex;
+      gap: 12px;
+      align-items: center;
+      margin-bottom: 16px;
+      flex-wrap: wrap;
+    }
+
+    .date { font-size: 0.85rem; color: var(--text-secondary); }
+
+    .tag {
+      font-size: 0.75rem;
+      background: var(--accent-light);
+      color: var(--accent);
+      padding: 3px 12px;
+      border-radius: 99px;
+      font-weight: 500;
+    }
+
+    h1 {
+      font-size: 1.6rem;
+      font-weight: 700;
+      line-height: 1.35;
+      letter-spacing: -0.01em;
+    }
+
+    main {
+      padding: 32px 0 60px;
+    }
+
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 28px 32px;
+      margin-bottom: 20px;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+    }
+
+    .card h2 {
+      font-size: 1.05rem;
+      font-weight: 600;
+      color: var(--accent);
+      margin-bottom: 14px;
+      padding-bottom: 8px;
+      border-bottom: 2px solid var(--accent-light);
+    }
+
+    .summary-text {
+      font-size: 1.05rem;
+      color: var(--text);
+      line-height: 1.8;
+    }
+
+    .answer-text {
+      white-space: pre-wrap;
+      line-height: 1.85;
+      font-size: 0.98rem;
+    }
+
+    .scenario-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 14px;
+      margin-top: 10px;
+    }
+
+    .scenario {
+      padding: 16px 18px;
+      border-radius: 10px;
+      font-size: 0.92rem;
+      line-height: 1.65;
+    }
+
+    .scenario-bull { background: var(--green-bg); border-left: 4px solid var(--green); }
+    .scenario-base { background: var(--amber-bg); border-left: 4px solid var(--amber); }
+    .scenario-bear { background: var(--red-bg); border-left: 4px solid var(--red); }
+
+    .scenario strong { display: block; margin-bottom: 4px; }
+    .scenario-bull strong { color: var(--green); }
+    .scenario-base strong { color: var(--amber); }
+    .scenario-bear strong { color: var(--red); }
+
+    .fin-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.88rem;
+      margin-top: 12px;
+    }
+
+    .fin-table th, .fin-table td {
+      padding: 10px 14px;
+      border: 1px solid var(--border);
+      text-align: left;
+    }
+
+    .fin-table th {
+      background: var(--bg);
+      font-weight: 600;
+      font-size: 0.82rem;
+      color: var(--text-secondary);
+    }
+
+    .fin-table td { font-variant-numeric: tabular-nums; }
+
+    .risk-item {
+      padding: 12px 16px;
+      background: var(--bg);
+      border-radius: 8px;
+      margin-bottom: 8px;
+      font-size: 0.92rem;
+      line-height: 1.6;
+    }
+
+    .risk-item .pill {
+      display: inline-block;
+      font-size: 0.7rem;
+      font-weight: 600;
+      padding: 2px 8px;
+      border-radius: 4px;
+      margin-right: 6px;
+      vertical-align: middle;
+    }
+
+    .pill-high { background: var(--red-bg); color: var(--red); }
+    .pill-med { background: var(--amber-bg); color: var(--amber); }
+
+    .conclusion-box {
+      background: linear-gradient(135deg, #eef2ff, #e0e7ff);
+      border: 1px solid #c7d2fe;
+      border-radius: 10px;
+      padding: 20px 24px;
+      margin-top: 16px;
+      font-size: 0.95rem;
+      line-height: 1.75;
+    }
+
+    .ref-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .ref-list li {
+      padding: 12px 16px;
+      background: var(--bg);
+      border-radius: 8px;
+      font-size: 0.9rem;
+    }
+
+    .ref-list li a {
+      color: var(--accent);
+      text-decoration: none;
+      word-break: break-all;
+    }
+
+    .ref-list li a:hover { text-decoration: underline; }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      font-size: 0.78rem;
+      color: var(--text-secondary);
+      border-top: 1px solid var(--border);
+    }
+
+    @media (max-width: 600px) {
+      .card { padding: 20px; }
+      h1 { font-size: 1.3rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="container">
+      <a href="index.html" class="back-link">← 回到問題列表</a>
+      <div class="meta-row">
+        <span class="date">2026-04-11</span>
+        <span class="tag">投資</span>
+        <span class="tag">港股</span>
+      </div>
+      <h1>華晨中國（01114.HK）是否值得投資？</h1>
+    </div>
+  </header>
+
+  <main>
+    <div class="container">
+
+      <!-- 問題摘要 -->
+      <div class="card">
+        <h2>問題摘要</h2>
+        <p class="summary-text">核心價值來自持有華晨寶馬 (BBA) 25% 股權，高股息殖利率提供下行保護，但盈利高度集中於單一聯營公司，需關注 BBA 利潤趨勢與特別股息可持續性。</p>
+      </div>
+
+      <!-- 投資論點 -->
+      <div class="card">
+        <h2>投資論點</h2>
+        <p style="font-size:0.95rem; margin-bottom:14px;">華晨中國目前的核心投資邏輯在於<strong>「現金返還」</strong>。公司於 2024 年 12 月確立了「不低於稅後利潤 50%」的常規派息政策，並在 2024-2025 年間宣派 3 次特別股息（累計每股 6.8 港元），在當前估值下提供<strong>雙位數的股息率</strong>，構成極強的下行保護。</p>
+        <p style="font-size:0.95rem;">未來催化劑在於 2026 年 BBA 新世代車型（Neue Klasse）的推出，以及公司帳上龐大現金的持續釋放。</p>
+      </div>
+
+      <!-- 財務概況 -->
+      <div class="card">
+        <h2>財務概況</h2>
+        <table class="fin-table">
+          <thead>
+            <tr>
+              <th>項目</th>
+              <th>2023 全年</th>
+              <th>2024 全年</th>
+              <th>2025 上半年</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>營收（百萬人民幣）</td>
+              <td>1,121.5</td>
+              <td>1,095.9</td>
+              <td>561.7（+8.4% YoY）</td>
+            </tr>
+            <tr>
+              <td>聯營公司成果分成</td>
+              <td>7,796.8</td>
+              <td>4,361.4</td>
+              <td>2,048.5</td>
+            </tr>
+            <tr>
+              <td>淨利（百萬人民幣）</td>
+              <td>7,736.5</td>
+              <td>3,045.6（-60% YoY）</td>
+              <td>1,654.2（+15.5% YoY）</td>
+            </tr>
+            <tr>
+              <td>自 BBA 收到股息</td>
+              <td>~11,419.7</td>
+              <td>~7,654.0</td>
+              <td>~2,144.0（期後再收同等金額）</td>
+            </tr>
+            <tr>
+              <td>對股東派息</td>
+              <td>~8,750.1</td>
+              <td>~27,210.9</td>
+              <td>—</td>
+            </tr>
+          </tbody>
+        </table>
+        <p style="font-size:0.82rem; color:var(--text-secondary); margin-top:10px;">
+          * 2024 年派息遠超 BBA 股息流入，代表公司動用大量帳上現金進行分派
+        </p>
+      </div>
+
+      <!-- 情境分析 -->
+      <div class="card">
+        <h2>三種情境分析</h2>
+        <div class="scenario-grid">
+          <div class="scenario scenario-bull">
+            <strong>Bull Case（樂觀）</strong>
+            BBA "Neue Klasse" 新世代車型 2026 年順利量產大賣，新能源車轉型成功，帶動利潤重回高增長；公司將剩餘現金大量以特別股息分派。
+          </div>
+          <div class="scenario scenario-base">
+            <strong>Base Case（基準）</strong>
+            BBA 銷量與利潤在 2025-2026 年維持低個位數增長或持平。2025 年稅後利潤約 40 億人民幣，按 50%-75% 派息率，常規股息約 20-30 億人民幣，股息率 12%-18%。
+          </div>
+          <div class="scenario scenario-bear">
+            <strong>Bear Case（悲觀）</strong>
+            中國豪華車市場價格戰加劇，BBA 利潤率大幅下滑，TCL 智能座艙合資產生超預期虧損，侵蝕母公司現金流，導致派息不及預期。
+          </div>
+        </div>
+      </div>
+
+      <!-- 主要風險 -->
+      <div class="card">
+        <h2>主要風險</h2>
+        <div class="risk-item">
+          <span class="pill pill-high">高</span>
+          <strong>集中度風險</strong>：盈利與現金高度依賴 BBA 及其股息政策，單一聯營公司貢獻幾乎全部利潤。
+        </div>
+        <div class="risk-item">
+          <span class="pill pill-high">高</span>
+          <strong>股息可持續性</strong>：特別股息屬一次性、高波動資本回饋。2024 年對股東派息 272 億遠超自 BBA 收到的 76.54 億，大量消耗帳上現金。
+        </div>
+        <div class="risk-item">
+          <span class="pill pill-med">中</span>
+          <strong>產業競爭</strong>：中國乘用車市場電動化轉型劇烈，本土新勢力崛起，豪華品牌面臨價格戰壓力。
+        </div>
+        <div class="risk-item">
+          <span class="pill pill-med">中</span>
+          <strong>新投資風險</strong>：JSA 復產、TCL 合資（出資 7 億人民幣）等新投資需時間驗證回報。
+        </div>
+      </div>
+
+      <!-- 結論 -->
+      <div class="card">
+        <h2>結論</h2>
+        <div class="conclusion-box">
+          <strong>偏多但需謹慎。</strong>高股息提供安全邊際，但必須持續追蹤：<br>
+          1. BBA 利潤趨勢與在中國市場的銷量表現<br>
+          2. 帳上現金存量的消耗速度<br>
+          3. 2026 年 Neue Klasse 車型的推出進度<br>
+          4. 特別股息不可視為常態，需以 BBA 獲利與集團現金綜合評估
+        </div>
+      </div>
+
+      <!-- 參考資料 -->
+      <div class="card">
+        <h2>參考資料</h2>
+        <ul class="ref-list">
+          <li>📎 <a href="https://www1.hkexnews.hk/listedco/listconews/sehk/2025/0428/2025042800000_c.pdf" target="_blank">2024 年報（港交所）</a></li>
+          <li>📎 <a href="https://www.brillianceauto.com/pdf/investor/announcements/2025_announcements/e_Ann_20250321_eng.pdf" target="_blank">2024 全年業績公告</a></li>
+          <li>📎 <a href="https://www.hkexnews.hk/listedco/listconews/sehk/2025/0822/2025082200955.pdf" target="_blank">2025 中期業績（港交所）</a></li>
+          <li>📎 <a href="https://www.stockfisher.com.hk/news/ebf0eee2-074b-45bf-a9a0-7f3ac601440e" target="_blank">股息政策公告（StockFisher）</a></li>
+          <li>📎 <a href="https://www1.hkexnews.hk/listedco/listconews/sehk/2024/1231/2024123100538_c.pdf" target="_blank">TCL 智能座艙合資公告</a></li>
+          <li>📎 <a href="https://www.hkexnews.hk/search/titlesearch.xhtml?lang=en&stockcode=01114" target="_blank">港交所 — 華晨中國公告搜尋</a></li>
+          <li>📎 <a href="https://www.brillianceauto.com/en/investor/financial_information_AR.html" target="_blank">公司 IR — 年報與業績列表</a></li>
+        </ul>
+      </div>
+
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>Question Journal &copy; 2026 ｜ 免責聲明：本內容依公開資訊整理，僅供學習與參考，不構成任何投資建議。</p>
+    </div>
+  </footer>
+
+</body>
+</html>
