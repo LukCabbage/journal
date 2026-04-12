@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>什麼是DCF估值法，他跟銀行工作的人有什麼關係</title>
+<style>
+:root {
+  --bg:#f4f5f7;--surface:#fff;--text:#1a1a2e;--muted:#6b7280;
+  --border:#e5e7eb;--accent:#2563eb;--accent-soft:#dbeafe;
+  --code-bg:#1e293b;--code-fg:#e2e8f0;
+  --shadow:0 1px 3px rgba(0,0,0,.06);
+}
+@media(prefers-color-scheme:dark){:root{
+  --bg:#0f172a;--surface:#1e293b;--text:#f1f5f9;--muted:#94a3b8;
+  --border:#334155;--accent:#60a5fa;--accent-soft:#1e3a5f;
+  --code-bg:#0f172a;--code-fg:#e2e8f0;
+  --shadow:0 1px 3px rgba(0,0,0,.3);
+}}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Noto Sans TC",sans-serif;
+  background:var(--bg);color:var(--text);line-height:1.7}
+article{max-width:720px;margin:0 auto;padding:1.5rem 1rem 3rem}
+h1{font-size:1.5rem;font-weight:700;margin-bottom:.25rem;line-height:1.3}
+.meta{color:var(--muted);font-size:.8125rem;margin-bottom:1.5rem;
+  padding-bottom:1rem;border-bottom:1px solid var(--border)}
+.mode-tag{display:inline-block;font-size:.6875rem;font-weight:600;padding:.1rem .5rem;
+  border-radius:10px;margin-left:.5rem}
+.mode-quick{background:#d1fae5;color:#059669}
+.mode-detail{background:#dbeafe;color:#2563eb}
+.mode-deep{background:#fef3c7;color:#d97706}
+.question{background:var(--accent-soft);border-left:4px solid var(--accent);
+  padding:.75rem 1rem;border-radius:0 8px 8px 0;margin-bottom:1.5rem;font-weight:500}
+.answer h2,.answer h3{margin-top:1.5rem;margin-bottom:.5rem}
+.answer h2{font-size:1.25rem} .answer h3{font-size:1.0625rem}
+.answer p{margin-bottom:.75rem}
+.answer ul,.answer ol{margin:0 0 .75rem 1.25rem}
+.answer li{margin-bottom:.25rem}
+.answer table{width:100%;border-collapse:collapse;margin:1rem 0;font-size:.875rem}
+.answer th,.answer td{border:1px solid var(--border);padding:.5rem .75rem;text-align:left}
+.answer th{background:var(--accent-soft);font-weight:600}
+.answer code{background:var(--code-bg);color:var(--code-fg);padding:.15em .35em;
+  border-radius:4px;font-size:.875em}
+.answer pre{background:var(--code-bg);color:var(--code-fg);padding:1rem;
+  border-radius:8px;overflow-x:auto;margin:1rem 0}
+.answer pre code{background:none;padding:0}
+.answer blockquote{border-left:3px solid var(--accent);padding:.5rem 1rem;
+  margin:1rem 0;color:var(--muted)}
+.back{display:inline-block;margin-bottom:1rem;color:var(--accent);
+  text-decoration:none;font-size:.875rem}
+.back:hover{text-decoration:underline}
+@media(min-width:640px){article{padding:2rem 1.5rem 4rem}h1{font-size:1.75rem}}
+</style>
+</head>
+<body>
+<article>
+  <a class="back" href="index.html">&larr; 回到日誌首頁</a>
+  <h1>什麼是DCF估值法，他跟銀行工作的人有什麼關係</h1>
+  <div class="meta">2026-04-12 22:33 <span class="mode-tag mode-detail">詳細</span></div>
+  <div class="question">什麼是DCF估值法，他跟銀行工作的人有什麼關係</div>
+  <div class="answer"><h1>DCF估值法概述</h1>
+<p><strong>折現現金流（Discounted Cash Flow, DCF）估值法</strong>是一種金融評價工具，用於估算企業或投資項目的內在價值。這種方法的基本原則是將未來的現金流量折現回今天的價值，從而評估其真實價值。</p>
+<h2>DCF估值法的基本步驟</h2>
+<ol>
+<li><strong>預測未來的現金流</strong>：</li>
+<li>
+<p>須預測在一定期間內（通常是5到10年）的自由現金流（Free Cash Flow, FCF），通常包括營業收入扣除營業成本、資本支出，以及變動的運營資本。</p>
+</li>
+<li>
+<p><strong>選擇折現率</strong>：</p>
+</li>
+<li>
+<p>折現率通常基於資本成本（Cost of Capital），如加權平均資本成本（WACC），能夠反映投資者的風險期望報酬率。</p>
+</li>
+<li>
+<p><strong>計算現值</strong>：</p>
+</li>
+<li>將未來的現金流量折現到現在，用公式表示為：<br />
+     [<br />
+     PV = \frac{CF_1}{(1 + r)^1} + \frac{CF_2}{(1 + r)^2} + ... + \frac{CF_n}{(1 + r)^n}<br />
+     ]</li>
+<li>
+<p>其中，(PV) 為現值，(CF) 為每年預測的現金流，(r) 為折現率，(n) 為年數。</p>
+</li>
+<li>
+<p><strong>計算終值</strong>：</p>
+</li>
+<li>
+<p>終期的現金流量通常使用增長模型（如Gordon增長模型）計算，並同樣折現回現在。</p>
+</li>
+<li>
+<p><strong>加總現值和終值</strong>：</p>
+</li>
+<li>將所有折現後的未來現金流和終值加總，即可得出公司的總估值。</li>
+</ol>
+<h2>與銀行工作人員的關係</h2>
+<h3>1. 財務分析師</h3>
+<p>銀行業中的財務分析師常會使用DCF估值法來分析貸款申請者的潛在還款能力或評估投資機會。他們需要預測現金流，並建模風險以確定貸款的可行性和回報。</p>
+<h3>2. 投資銀行</h3>
+<p>在並購或資本募集的過程中，投資銀行經常使用DCF估值法來評估目標公司的價值，幫助客戶作出更明智的投資決策。準確的估值能夠影響交易的條款、價格和結構。</p>
+<h3>3. 風險管理</h3>
+<p>銀行的風險管理部門也會評估企業的風險狀況，利用DCF估值法預測企業的價值波動，以衡量與投資相關的風險。</p>
+<h3>4. 抵押貸款的風險評估</h3>
+<p>銀行在發放高額貸款時，例如抵押貸款，會分析借款人或資產的現金流，以決定是否批准貸款及貸款條件。</p>
+<h2>總結</h2>
+<p>DCF估值法是一個重要的工具，幫助銀行專業人士在多個領域進行深入的財務分析和決策。其對未來現金流的預測及折現過程，使得銀行能夠在資本配置和風險評估上作出更有效的決策。透過這種方法，銀行人員能夠更清晰地理解某項投資的內在價值，進而減少資金投放的風險。</p></div>
+</article>
+</body>
+</html>
