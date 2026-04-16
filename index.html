@@ -197,8 +197,13 @@
 <body>
   <header class="header">
     <div class="header-inner">
-      <h1>投資研究日誌</h1>
-      <p>個人投資筆記、書籍整理與研究紀錄</p>
+      <div style="display:flex;justify-content:space-between;align-items:flex-start">
+        <div>
+          <h1>投資研究日誌</h1>
+          <p>個人投資筆記、書籍整理與研究紀錄</p>
+        </div>
+        <a href="manage.html" style="font-size:0.8rem;padding:6px 14px;border:1px solid var(--border);border-radius:8px;color:var(--muted);text-decoration:none;white-space:nowrap;margin-top:4px">🛠 管理</a>
+      </div>
       <div class="filters" id="filters"></div>
     </div>
   </header>
@@ -261,6 +266,7 @@
         <li>
           <a class="article-card" href="${a.filename}">
             <div class="card-top">
+              ${a.id ? `<span class="card-date" style="font-family:monospace;font-size:0.7rem;background:var(--bg);padding:1px 6px;border-radius:4px">${a.id}</span>` : ""}
               <span class="tag tag-${a.category}">${a.category}</span>
               <span class="card-date">${a.date}</span>
             </div>
