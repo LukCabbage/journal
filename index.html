@@ -1,55 +1,46 @@
 <!DOCTYPE html>
-<html lang="zh-Hant">
+<html lang="zh-Hant" data-theme="light">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>投資研究日誌</title>
   <style>
-    :root {
-      --bg: #f4f5f7;
+    /* ── Light theme (default) ── */
+    :root,
+    [data-theme="light"] {
+      --bg: #ffffff;
       --surface: #ffffff;
       --text: #1a1a2e;
       --muted: #6b7280;
       --border: #e5e7eb;
       --accent: #2563eb;
       --accent-soft: #dbeafe;
-      --tag-research: #059669;
-      --tag-research-bg: #d1fae5;
-      --tag-book: #7c3aed;
-      --tag-book-bg: #ede9fe;
-      --tag-macro: #d97706;
-      --tag-macro-bg: #fef3c7;
-      --tag-trade: #dc2626;
-      --tag-trade-bg: #fee2e2;
-      --tag-journal: #2563eb;
-      --tag-journal-bg: #dbeafe;
+      --tag-research: #059669; --tag-research-bg: #d1fae5;
+      --tag-book: #7c3aed;     --tag-book-bg: #ede9fe;
+      --tag-macro: #d97706;    --tag-macro-bg: #fef3c7;
+      --tag-trade: #dc2626;    --tag-trade-bg: #fee2e2;
+      --tag-journal: #2563eb;  --tag-journal-bg: #dbeafe;
       --shadow: 0 1px 3px rgba(0,0,0,0.06), 0 1px 2px rgba(0,0,0,0.04);
       --shadow-hover: 0 10px 25px rgba(0,0,0,0.08);
       --radius: 12px;
     }
 
-    @media (prefers-color-scheme: dark) {
-      :root {
-        --bg: #0f172a;
-        --surface: #1e293b;
-        --text: #f1f5f9;
-        --muted: #94a3b8;
-        --border: #334155;
-        --accent: #60a5fa;
-        --accent-soft: #1e3a5f;
-        --tag-research: #34d399;
-        --tag-research-bg: #064e3b;
-        --tag-book: #a78bfa;
-        --tag-book-bg: #3b0764;
-        --tag-macro: #fbbf24;
-        --tag-macro-bg: #78350f;
-        --tag-trade: #f87171;
-        --tag-trade-bg: #7f1d1d;
-        --tag-journal: #60a5fa;
-        --tag-journal-bg: #1e3a5f;
-        --shadow: 0 1px 3px rgba(0,0,0,0.3);
-        --shadow-hover: 0 10px 25px rgba(0,0,0,0.4);
-      }
+    /* ── Dark theme ── */
+    [data-theme="dark"] {
+      --bg: #0f172a;
+      --surface: #1e293b;
+      --text: #f1f5f9;
+      --muted: #94a3b8;
+      --border: #334155;
+      --accent: #60a5fa;
+      --accent-soft: #1e3a5f;
+      --tag-research: #34d399; --tag-research-bg: #064e3b;
+      --tag-book: #a78bfa;     --tag-book-bg: #3b0764;
+      --tag-macro: #fbbf24;    --tag-macro-bg: #78350f;
+      --tag-trade: #f87171;    --tag-trade-bg: #7f1d1d;
+      --tag-journal: #60a5fa;  --tag-journal-bg: #1e3a5f;
+      --shadow: 0 1px 3px rgba(0,0,0,0.3);
+      --shadow-hover: 0 10px 25px rgba(0,0,0,0.4);
     }
 
     * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -60,6 +51,7 @@
       color: var(--text);
       line-height: 1.6;
       min-height: 100vh;
+      transition: background 0.2s, color 0.2s;
     }
 
     .header {
@@ -72,22 +64,34 @@
       backdrop-filter: blur(10px);
     }
 
-    .header-inner {
-      max-width: 720px;
-      margin: 0 auto;
+    .header-inner { max-width: 720px; margin: 0 auto; }
+
+    .header h1 { font-size: 1.5rem; font-weight: 700; letter-spacing: -0.02em; }
+    .header p { color: var(--muted); font-size: 0.875rem; margin-top: 0.25rem; }
+
+    .header-actions {
+      display: flex;
+      gap: 8px;
+      align-items: center;
+      flex-shrink: 0;
+      margin-top: 4px;
     }
 
-    .header h1 {
-      font-size: 1.5rem;
-      font-weight: 700;
-      letter-spacing: -0.02em;
-    }
-
-    .header p {
+    .header-btn {
+      font-size: 0.8rem;
+      padding: 6px 14px;
+      border: 1px solid var(--border);
+      border-radius: 8px;
       color: var(--muted);
-      font-size: 0.875rem;
-      margin-top: 0.25rem;
+      text-decoration: none;
+      background: transparent;
+      cursor: pointer;
+      font-family: inherit;
+      white-space: nowrap;
+      transition: border-color 0.15s, color 0.15s;
+      line-height: 1;
     }
+    .header-btn:hover { border-color: var(--accent); color: var(--accent); }
 
     .filters {
       display: flex;
@@ -112,17 +116,9 @@
       font-family: inherit;
     }
     .filter-btn:hover { border-color: var(--accent); color: var(--accent); }
-    .filter-btn.active {
-      background: var(--accent);
-      color: #fff;
-      border-color: var(--accent);
-    }
+    .filter-btn.active { background: var(--accent); color: #fff; border-color: var(--accent); }
 
-    .main {
-      max-width: 720px;
-      margin: 0 auto;
-      padding: 1rem;
-    }
+    .main { max-width: 720px; margin: 0 auto; padding: 1rem; }
 
     .article-list { list-style: none; }
 
@@ -138,10 +134,7 @@
       box-shadow: var(--shadow);
       transition: box-shadow 0.2s, transform 0.2s;
     }
-    .article-card:hover {
-      box-shadow: var(--shadow-hover);
-      transform: translateY(-1px);
-    }
+    .article-card:hover { box-shadow: var(--shadow-hover); transform: translateY(-1px); }
 
     .card-top {
       display: flex;
@@ -151,40 +144,20 @@
     }
 
     .tag {
-      font-size: 0.6875rem;
-      font-weight: 600;
-      padding: 0.15rem 0.5rem;
-      border-radius: 10px;
-      letter-spacing: 0.02em;
+      font-size: 0.6875rem; font-weight: 600;
+      padding: 0.15rem 0.5rem; border-radius: 10px; letter-spacing: 0.02em;
     }
     .tag-投資研究 { color: var(--tag-research); background: var(--tag-research-bg); }
-    .tag-書籍筆記 { color: var(--tag-book); background: var(--tag-book-bg); }
-    .tag-總經研究 { color: var(--tag-macro); background: var(--tag-macro-bg); }
-    .tag-交易策略 { color: var(--tag-trade); background: var(--tag-trade-bg); }
-    .tag-日誌 { color: var(--tag-journal); background: var(--tag-journal-bg); }
+    .tag-書籍筆記 { color: var(--tag-book);     background: var(--tag-book-bg); }
+    .tag-總經研究 { color: var(--tag-macro);     background: var(--tag-macro-bg); }
+    .tag-交易策略 { color: var(--tag-trade);     background: var(--tag-trade-bg); }
+    .tag-日誌     { color: var(--tag-journal);   background: var(--tag-journal-bg); }
 
-    .card-date {
-      font-size: 0.75rem;
-      color: var(--muted);
-    }
+    .card-date { font-size: 0.75rem; color: var(--muted); }
+    .card-title { font-size: 1rem; font-weight: 600; line-height: 1.4; }
 
-    .card-title {
-      font-size: 1rem;
-      font-weight: 600;
-      line-height: 1.4;
-    }
-
-    .empty-state {
-      text-align: center;
-      padding: 3rem 1rem;
-      color: var(--muted);
-    }
-
-    .count {
-      font-size: 0.8125rem;
-      color: var(--muted);
-      margin-bottom: 1rem;
-    }
+    .empty-state { text-align: center; padding: 3rem 1rem; color: var(--muted); }
+    .count { font-size: 0.8125rem; color: var(--muted); margin-bottom: 1rem; }
 
     @media (min-width: 640px) {
       .header { padding: 2rem 1.5rem; }
@@ -193,6 +166,13 @@
       .card-title { font-size: 1.0625rem; }
     }
   </style>
+  <script>
+    /* Apply saved theme before paint to avoid flash */
+    (function() {
+      const t = localStorage.getItem("theme") || "light";
+      document.documentElement.setAttribute("data-theme", t);
+    })();
+  </script>
 </head>
 <body>
   <header class="header">
@@ -202,7 +182,10 @@
           <h1>投資研究日誌</h1>
           <p>個人投資筆記、書籍整理與研究紀錄</p>
         </div>
-        <a href="manage.html" style="font-size:0.8rem;padding:6px 14px;border:1px solid var(--border);border-radius:8px;color:var(--muted);text-decoration:none;white-space:nowrap;margin-top:4px">🛠 管理</a>
+        <div class="header-actions">
+          <button class="header-btn" id="themeToggle" title="切換深色/淺色模式">☀️ 淺色</button>
+          <a href="manage.html" class="header-btn">🛠 管理</a>
+        </div>
       </div>
       <div class="filters" id="filters"></div>
     </div>
@@ -214,8 +197,24 @@
   </main>
 
   <script>
-    const CATEGORY_ORDER = ["全部", "投資研究", "總經研究", "書籍筆記", "交易策略", "日誌"];
+    /* ── Theme toggle ── */
+    const root = document.documentElement;
+    const toggleBtn = document.getElementById("themeToggle");
 
+    function applyTheme(t) {
+      root.setAttribute("data-theme", t);
+      localStorage.setItem("theme", t);
+      toggleBtn.textContent = t === "dark" ? "☀️ 淺色" : "🌙 深色";
+    }
+
+    applyTheme(localStorage.getItem("theme") || "light");
+
+    toggleBtn.addEventListener("click", () => {
+      applyTheme(root.getAttribute("data-theme") === "dark" ? "light" : "dark");
+    });
+
+    /* ── Articles ── */
+    const CATEGORY_ORDER = ["全部", "投資研究", "總經研究", "書籍筆記", "交易策略", "日誌"];
     let articles = [];
     let activeCategory = "全部";
 
@@ -223,9 +222,7 @@
       try {
         const r = await fetch("articles.json");
         articles = await r.json();
-      } catch {
-        articles = [];
-      }
+      } catch { articles = []; }
       buildFilters();
       render();
     }
@@ -233,12 +230,10 @@
     function buildFilters() {
       const cats = new Set(articles.map(a => a.category));
       const ordered = CATEGORY_ORDER.filter(c => c === "全部" || cats.has(c));
-
       const el = document.getElementById("filters");
       el.innerHTML = ordered.map(c =>
         `<button class="filter-btn${c === activeCategory ? " active" : ""}" data-cat="${c}">${c}</button>`
       ).join("");
-
       el.addEventListener("click", e => {
         const btn = e.target.closest(".filter-btn");
         if (!btn) return;
@@ -251,22 +246,18 @@
 
     function render() {
       const filtered = activeCategory === "全部"
-        ? articles
-        : articles.filter(a => a.category === activeCategory);
-
+        ? articles : articles.filter(a => a.category === activeCategory);
       document.getElementById("count").textContent = `共 ${filtered.length} 篇`;
-
       const listEl = document.getElementById("list");
       if (filtered.length === 0) {
         listEl.innerHTML = '<li class="empty-state">尚無文章</li>';
         return;
       }
-
       listEl.innerHTML = filtered.map(a => `
         <li>
           <a class="article-card" href="${a.filename}">
             <div class="card-top">
-              ${a.id ? `<span class="card-date" style="font-family:monospace;font-size:0.7rem;background:var(--bg);padding:1px 6px;border-radius:4px">${a.id}</span>` : ""}
+              ${a.id ? `<span class="card-date" style="font-family:monospace;font-size:0.7rem;background:var(--bg);padding:1px 6px;border-radius:4px;border:1px solid var(--border)">${a.id}</span>` : ""}
               <span class="tag tag-${a.category}">${a.category}</span>
               <span class="card-date">${a.date}</span>
             </div>
