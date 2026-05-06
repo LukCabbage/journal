@@ -1,6 +1,11 @@
 <!DOCTYPE html>
 <html lang="zh-Hant">
-  <head>
+  <head><script>
+(function(){
+  var t = localStorage.getItem('theme') || 'light';
+  document.documentElement.setAttribute('data-theme', t);
+})();
+</script>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>《技術革命與金融資本》第一篇整理</title>

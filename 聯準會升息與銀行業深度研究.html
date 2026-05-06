@@ -1,6 +1,11 @@
 <!DOCTYPE html>
 <html lang="zh-Hant">
-  <head>
+  <head><script>
+(function(){
+  var t = localStorage.getItem('theme') || 'light';
+  document.documentElement.setAttribute('data-theme', t);
+})();
+</script>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>聯準會升息對銀行業的全面影響：從 NIM、存款定價到系統性風險</title>
