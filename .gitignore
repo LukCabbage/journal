@@ -5,3 +5,10 @@ __pycache__/
 .DS_Store
 node_modules/
 .cursor/
+
+# 私人內容庫與原始素材：僅存本機，不推上公開 repo（避免個人筆記外流與版權書入庫）
+knowledge/
+transcript/
+_sources/已閱讀原始檔/
+國家為什麼會破產*.txt
+viewer/dist/

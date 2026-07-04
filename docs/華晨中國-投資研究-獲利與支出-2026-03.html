@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>華晨中國（01114.HK）投資研究｜獲利、股息與資本支出（公開資訊彙整）</title>
+    <style>
+      :root {
+        --bg: #0f172a;
+        --card: #111827;
+        --border: #1e293b;
+        --text: #e5e7eb;
+        --muted: #94a3b8;
+        --accent: #38bdf8;
+        --warn: #fbbf24;
+        --danger: #f87171;
+        --ok: #4ade80;
+      }
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+        font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+        background: radial-gradient(circle at 20% 0%, #1e293b, #020617 55%);
+        color: var(--text);
+        line-height: 1.65;
+      }
+      .page {
+        max-width: 980px;
+        margin: 0 auto;
+        padding: 32px 20px 56px;
+      }
+      header {
+        margin-bottom: 28px;
+      }
+      .badge {
+        display: inline-block;
+        font-size: 11px;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        color: var(--accent);
+        border: 1px solid rgba(56, 189, 248, 0.35);
+        padding: 4px 10px;
+        border-radius: 999px;
+        margin-bottom: 10px;
+      }
+      h1 {
+        font-size: clamp(1.35rem, 2.5vw, 1.75rem);
+        margin: 0 0 8px;
+        letter-spacing: 0.02em;
+      }
+      .subtitle {
+        color: var(--muted);
+        font-size: 14px;
+        max-width: 72ch;
+      }
+      .meta {
+        margin-top: 14px;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px 18px;
+        font-size: 13px;
+        color: var(--muted);
+      }
+      nav.toc {
+        background: rgba(15, 23, 42, 0.85);
+        border: 1px solid var(--border);
+        border-radius: 12px;
+        padding: 14px 18px;
+        margin-bottom: 22px;
+      }
+      nav.toc strong {
+        display: block;
+        margin-bottom: 8px;
+        color: var(--accent);
+        font-size: 13px;
+      }
+      nav.toc ol {
+        margin: 0;
+        padding-left: 1.2rem;
+        font-size: 14px;
+      }
+      nav.toc a {
+        color: #7dd3fc;
+        text-decoration: none;
+      }
+      nav.toc a:hover {
+        text-decoration: underline;
+      }
+      section {
+        background: var(--card);
+        border: 1px solid var(--border);
+        border-radius: 14px;
+        padding: 18px 20px 20px;
+        margin-bottom: 18px;
+        box-shadow: 0 18px 40px rgba(0, 0, 0, 0.35);
+      }
+      section h2 {
+        margin: 0 0 12px;
+        font-size: 1.1rem;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+      }
+      section h2 .tag {
+        font-size: 11px;
+        font-weight: 600;
+        padding: 2px 8px;
+        border-radius: 6px;
+        border: 1px solid rgba(148, 163, 184, 0.35);
+        color: var(--muted);
+      }
+      section h3 {
+        margin: 16px 0 8px;
+        font-size: 0.98rem;
+        color: #cbd5e1;
+      }
+      p {
+        margin: 0 0 10px;
+        color: #d1d5db;
+      }
+      ul {
+        margin: 8px 0 0;
+        padding-left: 1.2rem;
+        color: #d1d5db;
+      }
+      li {
+        margin-bottom: 6px;
+      }
+      a {
+        color: #7dd3fc;
+        word-break: break-word;
+      }
+      a:hover {
+        text-decoration: underline;
+      }
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        font-size: 13px;
+        margin-top: 10px;
+      }
+      th,
+      td {
+        border: 1px solid var(--border);
+        padding: 8px 10px;
+        text-align: left;
+        vertical-align: top;
+      }
+      th {
+        background: rgba(15, 23, 42, 0.9);
+        color: #e2e8f0;
+        font-weight: 600;
+      }
+      td.num {
+        font-variant-numeric: tabular-nums;
+        white-space: nowrap;
+      }
+      .note {
+        font-size: 12px;
+        color: var(--muted);
+        margin-top: 10px;
+      }
+      .callout {
+        border-left: 3px solid var(--accent);
+        padding-left: 12px;
+        margin: 12px 0;
+        color: #cbd5e1;
+        font-size: 14px;
+      }
+      .risk {
+        border-left-color: var(--warn);
+      }
+      .pill {
+        display: inline-block;
+        font-size: 11px;
+        padding: 2px 8px;
+        border-radius: 6px;
+        margin-right: 6px;
+        margin-top: 4px;
+      }
+      .pill-high {
+        background: rgba(248, 113, 113, 0.15);
+        color: #fecaca;
+        border: 1px solid rgba(248, 113, 113, 0.35);
+      }
+      .pill-med {
+        background: rgba(251, 191, 36, 0.12);
+        color: #fef3c7;
+        border: 1px solid rgba(251, 191, 36, 0.35);
+      }
+      footer {
+        margin-top: 28px;
+        font-size: 11px;
+        color: var(--muted);
+        border-top: 1px solid var(--border);
+        padding-top: 14px;
+      }
+      code {
+        font-size: 0.92em;
+        background: rgba(15, 23, 42, 0.8);
+        padding: 1px 5px;
+        border-radius: 4px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="page">
+      <header>
+        <div class="badge">研究彙整 · 非投資建議</div>
+        <h1>華晨中國（01114.HK）投資研究</h1>
+        <p class="subtitle">
+          聚焦<strong>獲利來源</strong>、<strong>股息／現金可持續性</strong>與<strong>資本支出／投資佈局</strong>；數字以公司公告、年報與港交所披露文件為主，並盡量涵蓋至<strong>最接近今日之公開資料</strong>（含
+          2025 年中期業績；若日後發布 2025 全年業績請以最新公告為準）。
+        </p>
+        <div class="meta">
+          <span>股票代號：<strong>01114.HK</strong></span>
+          <span>報告整理日：<strong>2026-03-20</strong></span>
+          <span>幣別：<strong>人民幣（RMB）為主；股息另有港幣（HK$）</strong></span>
+        </div>
+      </header>
+
+      <nav class="toc" aria-label="目錄">
+        <strong>目錄</strong>
+        <ol>
+          <li><a href="#sources">資料來源、時間範圍與「最新」說明</a></li>
+          <li><a href="#s1">議題一｜股息與現金：可持續性怎麼看？</a></li>
+          <li><a href="#s2">議題二｜CapEx 與策略投資：錢花在哪、回報如何觀察？</a></li>
+          <li><a href="#s3">議題三｜趨勢表（2022–2024 全年 + 2025 上半年可比）</a></li>
+          <li><a href="#compare">對照表｜BBA 股息流入 vs 母公司派息／融資現金流</a></li>
+          <li><a href="#latest">2025 中期與期後事項（最接近「現在」）</a></li>
+          <li><a href="#risks">主要風險與建議追蹤指標</a></li>
+          <li><a href="#links">參考連結清單</a></li>
+        </ol>
+      </nav>
+
+      <section id="sources">
+        <h2>資料來源、時間範圍與「最新」說明 <span class="tag">公開資訊</span></h2>
+        <p>
+          本檔以<strong>公司投資者關係網站</strong>與<strong>香港交易所披露易（HKEX）</strong>之 PDF 公告為主。截至
+          <strong>2026-03-20</strong>，可取得之「較新」定期披露包括：
+        </p>
+        <ul>
+          <li>
+            <strong>2024 會計年度全年業績</strong>（截至 2024-12-31）：公司公告 2025-03-21。
+          </li>
+          <li>
+            <strong>2025 會計年度中期業績</strong>（截至 2025-06-30）：港交所公告 2025-08-22。
+          </li>
+          <li>
+            <strong>2025 會計年度全年業績</strong>：若已於 2026 年內發布，請至
+            <a href="https://www.hkexnews.hk/search/titlesearch.xhtml?lang=en&amp;stockcode=01114" target="_blank" rel="noopener noreferrer">港交所—華晨中國公告列表</a>
+            或
+            <a href="https://www.brillianceauto.com/en/investor/financial_information_AR.html" target="_blank" rel="noopener noreferrer">公司 IR「業績公告」</a>
+            查最新 PDF；本檔表格可在取得新公告後再更新一列「2025FY」。
+          </li>
+        </ul>
+        <p class="note">
+          金額單位：除特別註明外，公告損益表常以「人民幣千元（RMB’000）」列示；本檔已換算為「百萬元」以利閱讀（除以 1,000）。
+        </p>
+      </section>
+
+      <section id="s1">
+        <h2>議題一｜股息與現金：可持續性怎麼看？ <span class="tag">資本回饋</span></h2>
+        <p>
+          華晨中國近年的<strong>現金大幅回饋股東</strong>（特別股息）使「殖利率／股息故事」成為市場焦點，但同時也<strong>顯著壓低現金及等價物</strong>。判斷可持續性，建議同時看三件事：
+        </p>
+        <ul>
+          <li>
+            <strong>上游現金來源</strong>：聯營公司（尤其 BMW Brilliance／BBA）之<strong>盈利與對母公司之股息</strong>（見「對照表」與 2025 中期段落）。
+          </li>
+          <li>
+            <strong>下游現金流出</strong>：母公司對股東之<strong>已付股息</strong>（現金流量表「Dividends paid」）；2024 年該項金額相當大。
+          </li>
+          <li>
+            <strong>政策與治理</strong>：年報載有修訂後之股息政策，說明董事會決定股息時須考量營運資金、資本支出、負債契諾與 BBA 現金股息等多項因素（詳年報「Dividend Policy」章節）。
+          </li>
+        </ul>
+        <div class="callout risk">
+          <strong>重點：</strong>過去曾發放高額特別股息<strong>不代表</strong>未來必然維持同樣金額或頻率；須以 BBA 獲利與集團現金、承諾投資綜合評估。
+        </div>
+        <p class="note">
+          參考：2024 全年業績公告（股息附註、流動性章節）—
+          <a href="https://www.brillianceauto.com/pdf/investor/announcements/2025_announcements/e_Ann_20250321_eng.pdf" target="_blank" rel="noopener noreferrer">e_Ann_20250321_eng.pdf</a>
+        </p>
+      </section>
+
+      <section id="s2">
+        <h2>議題二｜CapEx 與策略投資：錢花在哪、回報如何觀察？ <span class="tag">投資與建設</span></h2>
+        <p>集團資本支出與投資大致可分三類（以 2024 年報「資本支出與承諾」及後續公告為例）：</p>
+        <ul>
+          <li>
+            <strong>產能／設備類 CapEx</strong>：例如工具、模具、機械設備與在建工程（2024 年報披露年度資本支出<strong>約 RMB 259.6 百萬元</strong>，2023 年約 RMB 39.5 百萬元）。
+          </li>
+          <li>
+            <strong>重整後之 JSA（金杯相關業務）</strong>：年報披露對 JSA 之資本支出與注資（含 2024 年<strong>約 RMB 1,054.4 百萬元</strong>之投資表述）；2025 年中期亦載有進一步注資與持股變動。
+          </li>
+          <li>
+            <strong>新合資（智能座艙等）</strong>：與 TCL 相關之合資（年報／中期稱 Yuxin 等）及<strong>已承諾出資</strong>；屬中長期產能與技術布局，短期未必立即貢獻利潤。
+          </li>
+        </ul>
+        <p>
+          <strong>回報觀察方式：</strong>除財報列示之收入／分部表現外，可追蹤中期所描述之<strong>投產進度、經銷網絡恢復、與整車廠合作項目</strong>是否帶來可持續營收與毛利，並留意管理層對<strong>價格戰、授信風險</strong>（如汽車金融）之描述。
+        </p>
+        <p class="note">
+          參考：2024 年報 —
+          <a href="https://www.brillianceauto.com/pdf/investor/annual_reports/AR_HK/e_2024AR_20250428_eng.pdf" target="_blank" rel="noopener noreferrer">e_2024AR_20250428_eng.pdf</a>
+          ；2025 中期 —
+          <a href="https://www.hkexnews.hk/listedco/listconews/sehk/2025/0822/2025082200955.pdf" target="_blank" rel="noopener noreferrer">HKEX 2025082200955.pdf</a>
+        </p>
+      </section>
+
+      <section id="s3">
+        <h2>議題三｜趨勢表（2022–2024 全年 + 2025 上半年可比） <span class="tag">長期趨勢</span></h2>
+        <p>下表摘錄綜合損益表關鍵科目（全年為經審計／全年公告；2025 為<strong>未經審核中期</strong>，僅能與 2024 上半年比較趨勢）。</p>
+        <table>
+          <thead>
+            <tr>
+              <th>項目（人民幣）</th>
+              <th>2022FY</th>
+              <th>2023FY</th>
+              <th>2024FY</th>
+              <th>2025H1<br /><small>（中期）</small></th>
+              <th>2024H1<br /><small>（中期，同比用）</small></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>營收（百萬元）</td>
+              <td class="num">1,130.7</td>
+              <td class="num">1,121.5</td>
+              <td class="num">1,095.9</td>
+              <td class="num">561.7</td>
+              <td class="num">518.0</td>
+            </tr>
+            <tr>
+              <td>聯營公司成果分成（百萬元）</td>
+              <td class="num">6,543.8</td>
+              <td class="num">7,796.8</td>
+              <td class="num">4,361.4</td>
+              <td class="num">2,048.5 <small>（註2）</small></td>
+              <td class="num">2,734.7 <small>（註2）</small></td>
+            </tr>
+            <tr>
+              <td>本期／年淨利（百萬元）</td>
+              <td class="num">7,146.8</td>
+              <td class="num">7,736.5</td>
+              <td class="num">3,045.6</td>
+              <td class="num">1,654.2</td>
+              <td class="num">1,465.6</td>
+            </tr>
+            <tr>
+              <td>基本 EPS（人民幣）</td>
+              <td class="num">1.41655</td>
+              <td class="num">1.53312</td>
+              <td class="num">0.61465</td>
+              <td class="num">0.33723</td>
+              <td class="num">0.29201</td>
+            </tr>
+          </tbody>
+        </table>
+        <p class="note">
+          註1：2022／2023 之「聯營」金額取自 2023 全年業績公告綜合損益表「Share of results of associates」欄位（2022 年為 6,543,795 千元；2023 年為 7,796,829 千元）。若需與「合營／聯營」合併前後表述完全一致，請以各年 PDF 全文為準。<br />
+          註2：2025H1／2024H1 數字來自 2025 中期業績之「Share of results of associates」；中期亦另列「Share of results of a joint venture」科目，上表為聚焦聯營而單獨摘錄。<br />
+          來源：2023 全年
+          <a href="https://www.brillianceauto.com/pdf/investor/announcements/2024_announcements/e_Ann_20240328_1_eng.pdf" target="_blank" rel="noopener noreferrer">e_Ann_20240328_1_eng.pdf</a>
+          ；2024 全年
+          <a href="https://www.brillianceauto.com/pdf/investor/announcements/2025_announcements/e_Ann_20250321_eng.pdf" target="_blank" rel="noopener noreferrer">e_Ann_20250321_eng.pdf</a>
+          ；2025 中期
+          <a href="https://www.hkexnews.hk/listedco/listconews/sehk/2025/0822/2025082200955.pdf" target="_blank" rel="noopener noreferrer">HKEX 2025082200955.pdf</a>
+        </p>
+      </section>
+
+      <section id="compare">
+        <h2>對照表｜BBA 股息流入 vs 母公司派息（現金流角度） <span class="tag">核心對照</span></h2>
+        <p>
+          下表嘗試回答「<strong>BBA 回了多少現金給上市公司</strong>」與「<strong>上市公司付了多少現金給股東</strong>」之<strong>數量級對照</strong>。部分年度母公司對外派息以現金流量表「Dividends paid」呈現；BBA 方面則優先採用公告明確披露之「dividend from BBA」，其餘年度輔以現金流量表「Dividends received from associates」（可能包含其他聯營），於附註說明。
+        </p>
+        <table>
+          <thead>
+            <tr>
+              <th>年度／期間</th>
+              <th>自 BBA 取得之股息（約）</th>
+              <th>集團「Dividends received from associates」（現金流表）</th>
+              <th>集團「Dividends paid」（付予股東）</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>2022FY</td>
+              <td>—（請於 2022 年報「BBA／投資」及現金流附註查核；本檔未單獨摘錄 BBA-only 金額）</td>
+              <td class="num">約 10,658.1 百萬元（現金流表「Dividends received from associates」）</td>
+              <td class="num">—（2022 年報融資活動科目編列與 2023 後不完全相同；2023-01 曾宣告 2022 相關之 HK$0.96／股特別股息，請以公告日期與支付時點為準）</td>
+            </tr>
+            <tr>
+              <td>2023FY</td>
+              <td>—（請參年報「BBA」投資段落；或現金流「來自聯營股息」合計）</td>
+              <td class="num">約 11,419.7 百萬元</td>
+              <td class="num">約 8,750.1 百萬元</td>
+            </tr>
+            <tr>
+              <td>2024FY</td>
+              <td class="num"><strong>約 7,654.0 百萬元</strong>（公告明確：來自 BBA 之股息）</td>
+              <td class="num">（請以 2024 年報現金流表為準）</td>
+              <td class="num"><strong>約 27,210.9 百萬元</strong></td>
+            </tr>
+            <tr>
+              <td>2025H1（中期）</td>
+              <td class="num">
+                上半年已收 <strong>約 2,144.0 百萬元</strong>；公告另披露期後 <strong>2025-08-11 再收約 2,144.0 百萬元</strong>
+              </td>
+              <td class="num">—</td>
+              <td class="num">—（中期報告請查「融資活動」原文）</td>
+            </tr>
+          </tbody>
+        </table>
+        <p class="note">
+          2024FY BBA 股息與 2024FY Dividends paid：見 2024 全年業績公告／2024 年報。<br />
+          2023FY「Dividends received from associates」「Dividends paid」：見 2023 年報現金流量表。<br />
+          2025H1 BBA 股息兩筆：見 2025 中期「Existing Investments — BBA」段落 — HKEX
+          <a href="https://www.hkexnews.hk/listedco/listconews/sehk/2025/0822/2025082200955.pdf" target="_blank" rel="noopener noreferrer">2025082200955.pdf</a>
+        </p>
+      </section>
+
+      <section id="latest">
+        <h2>2025 中期與期後事項（最接近「現在」） <span class="tag">2025-08</span></h2>
+        <p>2025 年中期報告（截至 2025-06-30）重點摘錄：</p>
+        <ul>
+          <li>
+            <strong>聯營成果（BBA 貢獻為主）</strong>：中期披露 2025 上半年來自聯營之份額約 <strong>RMB 2,048.5 百萬元</strong>，並稱來自 BBA 之份額利潤約
+            <strong>RMB 2,051.6 百萬元</strong>、同比<strong>約 -25%</strong>（請以英文原文為準）。
+          </li>
+          <li>
+            <strong>BBA 股息</strong>：上半年已收約 <strong>RMB 2,143.96 百萬元</strong>；另於 <strong>2025-08-11</strong> 再收約 <strong>同等金額</strong>之股息（期後事項披露）。
+          </li>
+          <li>
+            <strong>JSA 注資</strong>：董事會曾批准對 JSA 現金注資；中期稱工商變更於 <strong>2025-07-07</strong> 完成，持股比例變動等—詳中期原文。
+          </li>
+        </ul>
+        <p class="note">
+          來源（港交所 PDF）：
+          <a href="https://www.hkexnews.hk/listedco/listconews/sehk/2025/0822/2025082200955.pdf" target="_blank" rel="noopener noreferrer">https://www.hkexnews.hk/listedco/listconews/sehk/2025/0822/2025082200955.pdf</a>
+        </p>
+      </section>
+
+      <section id="risks">
+        <h2>主要風險與建議追蹤指標 <span class="tag">風險</span></h2>
+        <p>
+          <span class="pill pill-high">集中度</span>
+          盈利與現金高度依賴 <strong>BBA</strong> 與其股息政策。
+        </p>
+        <p>
+          <span class="pill pill-high">股息</span>
+          特別股息屬<strong>一次性／高波動</strong>資本回饋，與長期穩定配息不可直接畫上等號。
+        </p>
+        <p>
+          <span class="pill pill-med">產業</span>
+          中國乘用車市場競爭、價格壓力、新能源滲透與豪華品牌促銷，可能影響 BBA 利潤與現金。
+        </p>
+        <p>
+          <span class="pill pill-med">投資</span>
+          JSA 復產、合資新事業（座艙等）與潛在新投資—需時間驗證現金回報。
+        </p>
+        <h3>建議追蹤</h3>
+        <ul>
+          <li>BBA 本地銷量、價格／促銷與利潤率相關敘述（年報／中期）。</li>
+          <li>現金及等價物餘額、短期借款餘額與加權資金成本。</li>
+          <li>「Dividends paid」與「來自聯營股息」之年度對照。</li>
+          <li>港交所最新公告（若有 2025 全年業績）：同上連結查新。</li>
+        </ul>
+      </section>
+
+      <section id="links">
+        <h2>參考連結清單 <span class="tag">原文</span></h2>
+        <ul>
+          <li>
+            港交所—公告搜尋（01114）：
+            <a href="https://www.hkexnews.hk/search/titlesearch.xhtml?lang=en&amp;stockcode=01114" target="_blank" rel="noopener noreferrer">hkexnews.hk 搜尋 01114</a>
+          </li>
+          <li>
+            公司 IR—業績與年報列表：
+            <a href="https://www.brillianceauto.com/en/investor/financial_information_AR.html" target="_blank" rel="noopener noreferrer">brillianceauto.com financial_information_AR</a>
+          </li>
+          <li>
+            2023 全年業績公告（2024-03-28）：
+            <a href="https://www.brillianceauto.com/pdf/investor/announcements/2024_announcements/e_Ann_20240328_1_eng.pdf" target="_blank" rel="noopener noreferrer">e_Ann_20240328_1_eng.pdf</a>
+          </li>
+          <li>
+            2024 全年業績公告（2025-03-21）：
+            <a href="https://www.brillianceauto.com/pdf/investor/announcements/2025_announcements/e_Ann_20250321_eng.pdf" target="_blank" rel="noopener noreferrer">e_Ann_20250321_eng.pdf</a>
+          </li>
+          <li>
+            2024 年報（2025-04-28）：
+            <a href="https://www.brillianceauto.com/pdf/investor/annual_reports/AR_HK/e_2024AR_20250428_eng.pdf" target="_blank" rel="noopener noreferrer">e_2024AR_20250428_eng.pdf</a>
+          </li>
+          <li>
+            2025 中期業績（2025-08-22，港交所）：
+            <a href="https://www.hkexnews.hk/listedco/listconews/sehk/2025/0822/2025082200955.pdf" target="_blank" rel="noopener noreferrer">2025082200955.pdf</a>
+          </li>
+        </ul>
+      </section>
+
+      <footer>
+        免責聲明：本檔案為依公開資訊整理之研究筆記，僅供學習與決策參考，不構成任何買賣建議。數字與陳述以原公告為準；若轉載或再製請保留出處連結。若你取得更新之
+        2025 全年業績或更新中期，建議將新表數據補入「趨勢表」最後一欄。
+      </footer>
+    </div>
+  </body>
+</html>

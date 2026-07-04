@@ -1,0 +1,698 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>臺灣期貨／選擇權｜期交所規費與看多／看空策略</title>
+  <style>
+    :root {
+      --bg: #ffffff;
+      --card: #f6f8fb;
+      --text: #1a1f26;
+      --muted: #5c6570;
+      --bull: #0d7a4d;
+      --bear: #c41e3a;
+      --accent: #1565c0;
+      --border: #d8dee6;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: "Segoe UI", "Noto Sans TC", "PingFang TC", sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.65;
+      padding: 2rem 1.25rem 4rem;
+    }
+    .wrap { max-width: 980px; margin: 0 auto; }
+    h1 {
+      font-size: 1.65rem;
+      font-weight: 700;
+      margin: 0 0 0.5rem;
+      letter-spacing: -0.02em;
+    }
+    .sub {
+      color: var(--muted);
+      font-size: 0.95rem;
+      margin-bottom: 1.75rem;
+    }
+    .notice {
+      background: #e8f1fb;
+      border: 1px solid #b8d4f0;
+      border-radius: 10px;
+      padding: 1rem 1.15rem;
+      margin-bottom: 2rem;
+      font-size: 0.9rem;
+    }
+    .notice strong { color: var(--accent); }
+    h2 {
+      font-size: 1.2rem;
+      margin: 2rem 0 0.75rem;
+      padding-bottom: 0.4rem;
+      border-bottom: 1px solid var(--border);
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.88rem;
+      margin: 0.75rem 0 1.25rem;
+    }
+    th, td {
+      border: 1px solid var(--border);
+      padding: 0.55rem 0.65rem;
+      text-align: left;
+    }
+    th { background: #eef2f7; color: #2d3740; }
+    .num { font-variant-numeric: tabular-nums; text-align: right; }
+    .grid {
+      display: grid;
+      gap: 1rem;
+    }
+    @media (min-width: 720px) {
+      .grid-2 { grid-template-columns: 1fr 1fr; }
+    }
+    .card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 1.15rem 1.25rem;
+    }
+    .card h3 {
+      margin: 0 0 0.65rem;
+      font-size: 1.05rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .tag {
+      display: inline-block;
+      font-size: 0.7rem;
+      font-weight: 600;
+      padding: 0.2rem 0.5rem;
+      border-radius: 6px;
+      letter-spacing: 0.02em;
+    }
+    .tag-bull { background: #d4edda; color: var(--bull); }
+    .tag-bear { background: #f8d7da; color: var(--bear); }
+    .tag-env { background: #d6e8fc; color: var(--accent); }
+    ul { margin: 0.4rem 0 0; padding-left: 1.2rem; }
+    li { margin: 0.35rem 0; }
+    .fee-box {
+      background: #eef2f6;
+      border-radius: 8px;
+      padding: 0.75rem 1rem;
+      margin-top: 0.75rem;
+      font-size: 0.85rem;
+      color: #3d4754;
+    }
+    .fee-box code { color: #0d47a1; font-size: 0.82rem; }
+    footer {
+      margin-top: 2.5rem;
+      padding-top: 1.25rem;
+      border-top: 1px solid var(--border);
+      font-size: 0.82rem;
+      color: var(--muted);
+    }
+    a { color: var(--accent); }
+    .preset-box {
+      background: #ecf8f1;
+      border: 1px solid #a8dcc4;
+      border-radius: 10px;
+      padding: 1rem 1.15rem;
+      margin: 1rem 0 1.5rem;
+      font-size: 0.9rem;
+    }
+    .preset-box h3 { margin: 0 0 0.6rem; font-size: 1rem; color: var(--bull); }
+    .preset-box table { margin: 0.5rem 0 0; font-size: 0.82rem; }
+    .impl {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 1.15rem 1.25rem;
+      margin: 1rem 0 1.5rem;
+    }
+    .impl h3 { margin: 0 0 0.75rem; font-size: 1.08rem; color: #1e2935; }
+    .impl ol.steps { margin: 0.4rem 0 0; padding-left: 1.35rem; }
+    .impl ol.steps > li { margin: 0.5rem 0; }
+    .impl .substep { color: var(--muted); font-size: 0.88rem; margin-top: 0.25rem; }
+    .formula {
+      font-family: ui-monospace, monospace;
+      font-size: 0.84rem;
+      background: #eef2f6;
+      border: 1px solid var(--border);
+      padding: 0.65rem 0.85rem;
+      border-radius: 8px;
+      margin: 0.6rem 0;
+      color: #1e2935;
+      overflow-x: auto;
+    }
+    .kbd { background: #e8ecf0; padding: 0.1rem 0.35rem; border-radius: 4px; font-size: 0.85rem; border: 1px solid #cdd4dc; }
+    .ex-story {
+      border-left: 4px solid var(--accent);
+      padding: 0.5rem 0 0.5rem 1rem;
+      margin: 0.75rem 0 1rem;
+      color: var(--muted);
+      font-size: 0.92rem;
+    }
+    .ex-story strong { color: var(--text); }
+    .scenario-table td:nth-child(3), .scenario-table td:nth-child(4) { text-align: right; font-variant-numeric: tabular-nums; }
+    h3.ex-title { font-size: 1.1rem; margin: 2rem 0 0.5rem; color: #0d47a1; }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <h1>臺灣期貨／選擇權：期交所規費與看多／看空策略</h1>
+    <p class="sub">資料來源：臺灣期貨交易所（TAIFEX）官網「期交所期貨暨選擇權商品相關費用表」；以下手續費試算採<strong>預設不打折</strong>之假設（見「預設費用假設」區塊）。</p>
+
+    <div class="notice">
+      <strong>說明：</strong>臺灣的股價指數期貨與選擇權在<strong>臺灣期貨交易所</strong>交易（與證交所現貨不同）。總成本＝<strong>期交所規費（經手費＋結算手續費，每筆成交各計）</strong>＋<strong>期貨商手續費</strong>＋<strong>期貨交易稅</strong>。多腳「復式」策略<strong>每成交一腳、每一邊</strong>各計一次；本頁後段「看多復式實作」含逐步下單與試算。
+    </div>
+
+    <div class="preset-box" id="preset-fees">
+      <h3>預設費用假設（不考慮期貨商折讓／VIP／活動優惠）</h3>
+      <p style="margin:0 0 0.75rem; color:var(--muted);">下列為<strong>教學試算用預設值</strong>：期交所數字依官網費率表；期貨商向客戶收取之金額因戶而異，此處統一假設「牌告／未議價」情境以便加總。</p>
+      <table>
+        <thead>
+          <tr>
+            <th>項目</th>
+            <th class="num">預設內容</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>TXO（臺指選擇權）期交所—每邊每口</td>
+            <td class="num">交易經手費 6 ＋ 結算手續費 4 ＝ <strong>10</strong> 元（不含交割手續費；一般買賣沖銷不另計交割）</td>
+          </tr>
+          <tr>
+            <td>TX（臺股期貨）期交所—每邊每口</td>
+            <td class="num">12 ＋ 8 ＝ <strong>20</strong> 元</td>
+          </tr>
+          <tr>
+            <td>期貨商手續費—每邊每口（預設、不打折）</td>
+            <td class="num">統一假設 <strong>50</strong> 元／口／邊（期貨與選擇權同假設，便於計算；實際依您的開戶約定）</td>
+          </tr>
+          <tr>
+            <td>期貨交易稅</td>
+            <td class="num">TX：<strong>契約金額 × 0.00002</strong>（每邊）。TXO：<strong>權利金金額 × 0.001</strong>（每邊）；臺指選擇權每點 50 元 → 單邊稅 ≈ <strong>成交點數 × 0.05</strong> 元／口</td>
+          </tr>
+        </tbody>
+      </table>
+      <p style="margin:0.75rem 0 0; font-size:0.85rem; color:var(--muted);">
+        <strong>單邊每口總費用（TXO，預設）</strong> ≈ 期交所 10 ＋ 期貨商 50 ＋ 權利金點數×0.05 ＝ <strong>60 ＋ 權利金點數×0.05</strong>（元／口／邊）。<br />
+        <strong>單邊每口總費用（TX，預設）</strong> ≈ 期交所 20 ＋ 期貨商 50 ＋ 契約金額×0.00002（元／口／邊）。
+      </p>
+    </div>
+
+    <h2>一、期交所公告之主要費率（摘錄）</h2>
+    <p style="color:var(--muted); font-size:0.9rem; margin-top:0;">單位：新臺幣元／口（交易所手續費欄位）；期貨交易稅為稅率。</p>
+    <table>
+      <thead>
+        <tr>
+          <th>商品（摘錄）</th>
+          <th class="num">交易經手費</th>
+          <th class="num">結算手續費</th>
+          <th class="num">交割手續費</th>
+          <th class="num">期貨交易稅率（註）</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>臺股期貨(TX)、電子期貨(TE)、金融期貨(TF)</td>
+          <td class="num">12</td>
+          <td class="num">8</td>
+          <td class="num">8</td>
+          <td class="num">0.00002</td>
+        </tr>
+        <tr>
+          <td>小型臺指期貨(MTX) 等（見官網完整表）</td>
+          <td class="num">7.5</td>
+          <td class="num">5</td>
+          <td class="num">5</td>
+          <td class="num">0.00002</td>
+        </tr>
+        <tr>
+          <td>微型臺指期貨(TMF) 等</td>
+          <td class="num">4.8</td>
+          <td class="num">3.2</td>
+          <td class="num">3.2</td>
+          <td class="num">0.00002</td>
+        </tr>
+        <tr>
+          <td>臺指選擇權(TXO)、電子選擇權(TEO)、金融選擇權(TFO) 等</td>
+          <td class="num">6</td>
+          <td class="num">4</td>
+          <td class="num">4</td>
+          <td class="num">0.001</td>
+        </tr>
+        <tr>
+          <td>股票選擇權（標的為股票者）</td>
+          <td class="num">3</td>
+          <td class="num">2</td>
+          <td class="num">2</td>
+          <td class="num">0.001</td>
+        </tr>
+      </tbody>
+    </table>
+    <p style="font-size:0.88rem; color:var(--muted); margin-top:-0.5rem;">
+      註：依期交所網頁說明，期貨交易稅係以<strong>契約金額×稅率</strong>計算；選擇權則以<strong>權利金金額×稅率</strong>計算（細節與實例請以主管機關／期交所最新文件為準）。
+      完整列表與 PDF：<a href="https://www.taifex.com.tw/cht/4/feeSchedules?menuid1=12" target="_blank" rel="noopener">期交所費率表</a>、
+      <a href="https://www.taifex.com.tw/file/taifex/CHINESE/4/doc/TransactionFeeTable.pdf" target="_blank" rel="noopener">TransactionFeeTable.pdf</a>
+    </p>
+
+    <h2>二、費用對策略的含意（概念）</h2>
+    <ul>
+      <li><strong>期貨（如 TX）</strong>：稅率為股價指數類之萬分之二（0.00002），費用隨<strong>契約金額</strong>變動；單純進出與「復式」相比，復式若涉及多口成交，規費與稅負隨成交口數與金額累加。</li>
+      <li><strong>選擇權（如 TXO）</strong>：稅率為千分之一（0.001），以<strong>權利金金額</strong>為基礎；當權利金很低（深價外、近到期）時，<strong>稅負占權利金比例可能顯著</strong>，短線進出前宜估算。</li>
+      <li><strong>復式策略</strong>：垂直價差、跨式／勒式、蝶式、鐵兀鷹等均為多腳；每腳買賣皆產生成本，若行情需要「拆單調整」或頻繁移倉，摩擦成本會吃掉獲利。</li>
+    </ul>
+
+    <h2>三、看多（Bullish）策略</h2>
+    <div class="grid grid-2">
+      <div class="card">
+        <h3><span class="tag tag-bull">看多</span><span class="tag tag-env">市場環境</span> 趨勢／波動適配</h3>
+        <ul>
+          <li><strong>強多頭、波動偏低</strong>：買入 TX 或 MTX／TMF 多單，或以 TXO <strong>買入價外程度適中之 Call</strong>；期貨契約金額大、選擇權則權利金與千分之一交易稅需一併衡量。</li>
+          <li><strong>看多但怕短線拉回</strong>：<strong>Bull Call Spread</strong>（買低履約價 Call、賣高履約價 Call）以權利金支出換取較明確之上下限；成本為<strong>兩腳規費＋兩邊稅負</strong>，通常低於單買深價外 Call 反覆試錯。</li>
+          <li><strong>看多且預期波動將擴大</strong>：<strong>Long Straddle／Strangle</strong>（買進買權＋買進賣權）偏多側可搭配<strong>方向性偏多</strong>解讀，但本質為波動策略；雙腳選擇權成本與稅負為單腳之兩倍起跳。</li>
+        </ul>
+        <div class="fee-box">
+          <strong>費用心得：</strong> 同樣看多，<strong>期貨</strong>單口期交所規費欄位數字高於<strong>微型臺指</strong>，但契約口徑不同；實務上常同時比較「保證金占用／每點損益／總摩擦成本」。
+        </div>
+      </div>
+      <div class="card">
+        <h3><span class="tag tag-bull">看多</span><span class="tag tag-env">結構型</span> 復式（較不依大盤情境）</h3>
+        <ul>
+          <li><strong>買權多頭價差（Bull Call Spread）</strong>：上限與下限清楚，適合<strong>溫和看漲</strong>；最大損失原則上為淨權利金支出加總交易成本。</li>
+          <li><strong>賣出 Put（Cash-secured 思維）</strong>：屬<strong>偏多收權利金</strong>，但下行風險大且保證金與履約指派需規劃；費用為賣出選擇權之規費與權利金課稅，若之後買回沖銷再計一次。</li>
+          <li><strong>期貨＋選擇權避險組合</strong>：例如持有多單 TX 搭配買 Put 當保險；成本＝期貨端與選擇權端各自之規費與稅負（依實際成交與是否持有至結算而定）。</li>
+        </ul>
+        <div class="fee-box">
+          <strong>提醒：</strong> 「看多」若用<strong>賣 Call 無擔保</strong>，風險與保證金與純看多不同，下單前請確認契約與期貨商風控規定。
+        </div>
+      </div>
+    </div>
+
+    <h2>四、看多復式策略：詳細實作（含預設手續費試算）</h2>
+    <p style="color:var(--muted); font-size:0.9rem;">以下假設標的為<strong>臺指選擇權（TXO）</strong>：契約每點<strong>50 元</strong>；履約價間距以當時掛牌為準。費用採上文<a href="#preset-fees">預設費用假設</a>（期交所＋期貨商每邊 50／口、<strong>不考慮打折</strong>）。</p>
+
+    <div class="impl">
+      <h3>策略 A：買權多頭價差（Bull Call Spread）</h3>
+      <p><strong>結構：</strong>買入<strong>較低履約價</strong>之買權（Long Call）＋ 賣出<strong>較高履約價</strong>之買權（Short Call），同月到期。看多但認為漲幅有限，以賣出高履約價 Call 換取較低淨權利金支出。</p>
+      <ol class="steps">
+        <li><strong>選擇到期月份</strong>：依剩餘天數與事件（結算、除息密集期等）決定週三到期之近月或次月。</li>
+        <li><strong>決定履約價 K<sub>低</sub> &lt; K<sub>高</sub></strong>：通常 K<sub>低</sub> 取價平或輕微價外（看漲方向）；K<sub>高</sub> 為預期上檔目標或技術壓力附近。</li>
+        <li><strong>下單方式</strong>：使用複式單「Bull Call」或分兩筆限價（先買後賣或一併送出，依券商介面）；確認兩腳為<strong>同到期、同標的</strong>。</li>
+        <li><strong>最大損失／獲利（理論到期）</strong>：
+          <div class="formula">淨權利金支出（點）＝ Call(K<sub>低</sub>) 買入價 － Call(K<sub>高</sub>) 賣出價（均為「點」）<br />
+          最大損失（點）≈ 淨支出（若為淨收入則為賣方價差，性質不同）<br />
+          最大獲利（點）≈ (K<sub>高</sub> − K<sub>低</sub>) − 淨支出點數</div>
+        </li>
+        <li><strong>損益兩平（約）</strong>：到期指數 &gt; K<sub>低</sub> ＋ 淨支出點數（需再減去建倉成本若要以金額精算）。</li>
+      </ol>
+      <p class="substep"><strong>保證金：</strong>價差策略在台灣多為組合部位，實際占用依期貨商與是否組合申報而定，下單前請向您的券商確認。</p>
+    </div>
+
+    <div class="impl">
+      <h3>策略 B：賣權多頭價差（Bull Put Spread，信用價差）</h3>
+      <p><strong>結構：</strong>賣出<strong>較高履約價</strong>之賣權（Short Put）＋ 買入<strong>較低履約價</strong>之賣權（Long Put），同月到期。看多或認為<strong>不會跌破下檔</strong>，先收權利金、以買入較低履約價 Put 限制最大損失。</p>
+      <ol class="steps">
+        <li>選月分與履約價：Short Put 之履約價常放在<strong>支撑</strong>或願意接貨價位下方之第一或第二檔；Long Put 再往下 1～多檔。</li>
+        <li>下單：複式「Bull Put」或兩筆限價；兩腳須同到期。</li>
+        <li><strong>現金流</strong>：通常為<strong>淨收入權利金</strong>（點）；最大獲利為該淨收入（點），最大損失約為履約價差（點）減淨收入。</li>
+      </ol>
+    </div>
+
+    <div class="impl">
+      <h3>策略 C：合成多單（Synthetic Long）</h3>
+      <p><strong>結構：</strong>買入買權（Long Call）＋ 賣出<strong>同履約價</strong>之賣權（Short Put），同月到期。理論上近似<strong>做多</strong>現貨／期貨之損益型態（仍受波動、保證金與指派影響）。</p>
+      <ol class="steps">
+        <li>選同一履約價 K（多取價平附近）。</li>
+        <li>先確認 Short Put 之<strong>保證金與追繳</strong>；賣方部位與純買入 Call 風險不同。</li>
+        <li>下單：兩腳同時或依流動性拆單；注意買賣報價滑價。</li>
+      </ol>
+    </div>
+
+    <h3 style="margin-top:1.5rem;">數字範例：Bull Call Spread（TXO，預設費用不打折）</h3>
+    <p style="color:var(--muted); font-size:0.9rem;">假設近月某週三到期，指數約 21,000；買入 Call 履約價 <span class="kbd">21000</span>，成交權利金 <strong>120 點</strong>；賣出 Call 履約價 <span class="kbd">21200</span>，成交權利金 <strong>55 點</strong>。各 <strong>1 口</strong>。</p>
+    <table>
+      <thead>
+        <tr>
+          <th>項目</th>
+          <th class="num">計算</th>
+          <th class="num">金額（元）</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>淨權利金支出（點）</td>
+          <td class="num">120 − 55</td>
+          <td class="num">65 點 → 65×50 = <strong>3,250</strong></td>
+        </tr>
+        <tr>
+          <td>建倉—買入 21000Call（單邊）</td>
+          <td class="num">期交所 10＋期貨商 50＋稅 120×0.05</td>
+          <td class="num">10+50+6 = <strong>66</strong></td>
+        </tr>
+        <tr>
+          <td>建倉—賣出 21200Call（單邊）</td>
+          <td class="num">10＋50＋55×0.05</td>
+          <td class="num">10+50+2.75 = <strong>62.75</strong></td>
+        </tr>
+        <tr>
+          <td>建倉合計（僅手續費＋稅，不含權利金）</td>
+          <td class="num">66 + 62.75</td>
+          <td class="num"><strong>128.75</strong></td>
+        </tr>
+        <tr>
+          <td>若到期前平倉：兩腳各再一買一賣</td>
+          <td class="num">再 4 次單邊（近似）</td>
+          <td class="num">需依<strong>平倉時權利金點數</strong>重算稅；總摩擦 ≈ 建倉類似量級×2 前後（示意）</td>
+        </tr>
+      </tbody>
+    </table>
+    <p style="font-size:0.88rem; color:var(--muted);">說明：平倉時每一腳之期交所 10 元、期貨商 50 元仍各計一次；交易稅依<strong>平倉成交之權利金點數</strong>重算。若持有至到期且價差自動結算，費用結構與「手動平倉四次單邊」可能不同，以實際成交與券商明細為準。</p>
+
+    <h2>五、看空（Bearish）策略</h2>
+    <div class="grid grid-2">
+      <div class="card">
+        <h3><span class="tag tag-bear">看空</span><span class="tag tag-env">市場環境</span> 趨勢／波動適配</h3>
+        <ul>
+          <li><strong>空頭趨勢明確</strong>：TX／MTX／TMF <strong>空單</strong>；期貨交易稅依契約金額計，短線來回需注意與趨勢波段之報酬比。</li>
+          <li><strong>看空但波動已高</strong>：可優先考慮<strong>Bear Put Spread</strong>（買高履約價 Put、賣低履約價 Put）壓縮權利金支出與最大損失，惟獲利空間亦被限縮。</li>
+          <li><strong>擔心急彈</strong>：單買 Put 或 Put 價差，相對於裸空期貨，在<strong>損失可控性</strong>上常較直觀（仍含時間價值流失與成本）。</li>
+        </ul>
+        <div class="fee-box">
+          <strong>費用心得：</strong> 選擇權看空時，若僅買入極便宜之深價外 Put「博反轉」，可能出現<strong>權利金極小但相對稅負與最小跳動之摩擦顯著</strong>的情況。
+        </div>
+      </div>
+      <div class="card">
+        <h3><span class="tag tag-bear">看空</span><span class="tag tag-env">結構型</span> 復式（較不依大盤情境）</h3>
+        <ul>
+          <li><strong>賣權空頭價差（Bear Put Spread）</strong>：溫和看空或偏保守之偏空布局。</li>
+          <li><strong>Iron Condor／Iron Butterfly</strong>：多為<strong>區間、收權利金</strong>策略；若您主觀解讀為「上檔壓力重、偏空盤整」，可放在偏空情境，但風險為跳空突破區間。</li>
+          <li><strong>日曆價差、對角價差</strong>：依近遠月波動與時間衰減操作，與單純多空方向解耦較高，仍屬多腳、成本項目較多。</li>
+        </ul>
+        <div class="fee-box">
+          <strong>提醒：</strong> 空單期貨與選擇權賣方策略之<strong>保證金與追繳機制</strong>不同，請以契約與期貨商規則為準。
+        </div>
+      </div>
+    </div>
+
+    <h2>六、摩擦成本加總（配合預設費用、不打折）</h2>
+    <p style="color:var(--muted); font-size:0.9rem;">與<a href="#preset-fees">預設費用假設</a>一致：期交所依官網；期貨商每邊每口<strong>50 元</strong>；不套用折讓。實際仍依成交價、是否當沖、是否持有至結算而異。</p>
+    <table>
+      <thead>
+        <tr>
+          <th>情境</th>
+          <th>預設情況下之成本項目</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>大台 TX 一來一回（開倉＋平倉）</td>
+          <td>每邊：期交所 <strong>20</strong> ＋ 期貨商 <strong>50</strong> ＋ 契約金額×0.00002；開＋平共 <strong>兩次單邊</strong>。</td>
+        </tr>
+        <tr>
+          <td>TXO 單腳 一來一回</td>
+          <td>每邊：期交所 <strong>10</strong> ＋ 期貨商 <strong>50</strong> ＋ 權利金點數×<strong>0.05</strong>；開＋平共兩次單邊。</td>
+        </tr>
+        <tr>
+          <td>Bull Call Spread（建倉一次，兩腳）</td>
+          <td>建倉時 <strong>兩次單邊</strong>（買低履約價、賣高履約價各一次）；平倉若再各沖銷一腳 → 再 <strong>兩次單邊</strong>，共四次單邊（稅依每次成交點數）。</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2>七、詳細交易範例（全流程數字，預設費用不打折）</h2>
+    <p style="color:var(--muted); font-size:0.95rem;">以下為<strong>教學用假設情境</strong>：人物、成交價位、指數位階均為示意，方便您對照「下單 → 成交 → 平倉／到期」時，費用與損益如何加總。大台每點<strong>200 元</strong>；臺指選擇權每點<strong>50 元</strong>。期交所＋期貨商費率同<a href="#preset-fees">預設區塊</a>。</p>
+
+    <h3 class="ex-title">範例一：大台（TX）當日沖銷—多單（買開 → 賣平）</h3>
+    <div class="ex-story"><strong>背景：</strong>交易人預期盤中偏多，於指數約 21,000 時<strong>買進開倉 1 口</strong>，午後於 21,100 <strong>賣出平倉</strong>（當沖）。</div>
+    <table>
+      <thead>
+        <tr>
+          <th>步驟</th>
+          <th>成交價（點）</th>
+          <th class="num">契約金額（元）</th>
+          <th class="num">期交所+期貨商（元）</th>
+          <th class="num">期交稅（元）<br /><span style="font-weight:normal;font-size:0.78rem;">金額×0.00002</span></th>
+          <th class="num">該邊小計（元）</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>① 買進開倉</td>
+          <td>21,000</td>
+          <td class="num">21,000×200 = 4,200,000</td>
+          <td class="num">20+50=70</td>
+          <td class="num">4,200,000×0.00002 = <strong>84</strong></td>
+          <td class="num"><strong>154</strong></td>
+        </tr>
+        <tr>
+          <td>② 賣出平倉</td>
+          <td>21,100</td>
+          <td class="num">21,100×200 = 4,220,000</td>
+          <td class="num">70</td>
+          <td class="num">4,220,000×0.00002 = <strong>84.4</strong></td>
+          <td class="num"><strong>154.4</strong></td>
+        </tr>
+        <tr>
+          <td colspan="5"><strong>價差損益（不計費用）</strong></td>
+          <td class="num">(21,100−21,000)×200 = <strong>20,000</strong></td>
+        </tr>
+        <tr>
+          <td colspan="5"><strong>兩邊費用＋稅合計</strong></td>
+          <td class="num">154+154.4 = <strong>308.4</strong></td>
+        </tr>
+        <tr>
+          <td colspan="5"><strong>粗略淨損益（本例）</strong></td>
+          <td class="num">20,000 − 308.4 ≈ <strong>19,691.6</strong></td>
+        </tr>
+      </tbody>
+    </table>
+    <p style="font-size:0.88rem; color:var(--muted);">重點：期貨稅隨<strong>成交價位</strong>變動，平倉價較高時單邊稅金略增；當沖仍為<strong>開、平各一次單邊</strong>，共兩次。</p>
+
+    <h3 class="ex-title">範例二：臺指選擇權（TXO）—買進買權後認賠平倉</h3>
+    <div class="ex-story"><strong>背景：</strong>看多波動，買入近月 <span class="kbd">21000 Call</span> 1 口，成交 <strong>100 點</strong>；數日後走勢不如預期，以 <strong>35 點</strong> 賣出平倉。</div>
+    <table>
+      <thead>
+        <tr>
+          <th>步驟</th>
+          <th>權利金（點）</th>
+          <th class="num">權利金金額（元）</th>
+          <th class="num">期交所+期貨商</th>
+          <th class="num">期交稅（點×0.05）</th>
+          <th class="num">該邊小計</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>① 買進（支付）</td>
+          <td>100</td>
+          <td class="num">5,000</td>
+          <td class="num">60</td>
+          <td class="num">5.00</td>
+          <td class="num"><strong>65</strong></td>
+        </tr>
+        <tr>
+          <td>② 賣出（收回）</td>
+          <td>35</td>
+          <td class="num">1,750</td>
+          <td class="num">60</td>
+          <td class="num">1.75</td>
+          <td class="num"><strong>61.75</strong></td>
+        </tr>
+        <tr>
+          <td colspan="5">權利金淨損益（點）</td>
+          <td class="num">35−100 = <strong>−65 點</strong> → −3,250 元</td>
+        </tr>
+        <tr>
+          <td colspan="5">兩邊費用＋稅</td>
+          <td class="num">65+61.75 = <strong>126.75</strong></td>
+        </tr>
+        <tr>
+          <td colspan="5"><strong>合計（權利金損益＋摩擦成本）</strong></td>
+          <td class="num">−3,250 − 126.75 ≈ <strong>−3,376.75</strong></td>
+        </tr>
+      </tbody>
+    </table>
+    <p style="font-size:0.88rem; color:var(--muted);">可見：即使方向錯誤，<strong>手續費與稅仍雙向收取</strong>；短線若權利金變動不大，摩擦成本占損益比例會偏高。</p>
+
+    <h3 class="ex-title">範例三：Bull Call Spread—建倉、到期結算前損益情境表</h3>
+    <div class="ex-story"><strong>延續前例：</strong>買 <span class="kbd">21000 Call</span> 120 點、賣 <span class="kbd">21200 Call</span> 55 點，淨支出 <strong>65 點</strong>（3,250 元）。以下假設<strong>持有至到期</strong>，且以歐式現金結算邏輯估算內含價值（教學用；實務請依契約與結算規則）。不另模擬「到期前平倉」之四次單邊費用。</div>
+    <p style="font-size:0.9rem;">履約價寬度：21200−21000 = <strong>200 點</strong>。理論最大獲利點數 = 200 − 65 = <strong>135 點</strong>（6,750 元，未扣建倉手續費）。建倉摩擦 <strong>128.75 元</strong>（見前文表格）。</p>
+    <table class="scenario-table">
+      <thead>
+        <tr>
+          <th>假設到期加權指數</th>
+          <th>價差內含價值（點，示意）</th>
+          <th>價差損益點數（扣淨支出 65 點）</th>
+          <th>約當金額（元，×50）</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>20,800（兩腳皆價外）</td>
+          <td>0</td>
+          <td>0 − 65 = <strong>−65</strong></td>
+          <td><strong>−3,250</strong>（理論最大損失，未另扣費）</td>
+        </tr>
+        <tr>
+          <td>21,050（僅低履約價進入價內）</td>
+          <td>50</td>
+          <td>50 − 65 = <strong>−15</strong></td>
+          <td><strong>−750</strong></td>
+        </tr>
+        <tr>
+          <td>21,065（約兩平附近）</td>
+          <td>65</td>
+          <td>65 − 65 = <strong>0</strong></td>
+          <td><strong>0</strong>（仍須扣建倉費用則為小負）</td>
+        </tr>
+        <tr>
+          <td>21,200（高履約價價平）</td>
+          <td>200</td>
+          <td>200 − 65 = <strong>135</strong></td>
+          <td><strong>+6,750</strong>（理論最大獲利區間上緣）</td>
+        </tr>
+        <tr>
+          <td>21,400（兩腳皆深價內）</td>
+          <td>200（鎖定寬度）</td>
+          <td><strong>135</strong></td>
+          <td><strong>+6,750</strong></td>
+        </tr>
+      </tbody>
+    </table>
+    <p style="font-size:0.88rem; color:var(--muted);">若改為<strong>到期前平倉</strong>：需將兩腳分別沖銷，通常產生<strong>四次單邊</strong>之規費、期貨商費與依成交權利金計算之稅，總摩擦往往高於「僅建倉一次」。</p>
+
+    <h3 class="ex-title">範例四：Bull Put Spread（信用價差）—收權利金後買回平倉</h3>
+    <div class="ex-story"><strong>背景：</strong>偏多盤整，賣出 <span class="kbd">21000 Put</span> 收 <strong>45 點</strong>，同時買入 <span class="kbd">20800 Put</span> 付 <strong>18 點</strong>，淨收 <strong>27 點</strong>（1,350 元）。隔週因波動升高決定<strong>兩腳買回</strong>平倉：買回 21000Put 付 62 點、賣出 20800Put 收 25 點。</div>
+    <table>
+      <thead>
+        <tr>
+          <th>階段</th>
+          <th>說明</th>
+          <th class="num">點數差額</th>
+          <th class="num">建倉時兩腳費用+稅（元）</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>建倉</td>
+          <td>賣 21000Put 45 點／買 20800Put 18 點</td>
+          <td class="num">淨收 27 點</td>
+          <td class="num">賣腳 60+2.25=62.25；買腳 60+0.9=60.9 → 合計 <strong>123.15</strong></td>
+        </tr>
+        <tr>
+          <td>平倉</td>
+          <td>買回 21000Put 62／賣出 20800Put 25</td>
+          <td class="num">淨付 37 點</td>
+          <td class="num">（略）兩腳各單邊，稅隨新成交點數；四單邊合計通常與建倉同數量級</td>
+        </tr>
+        <tr>
+          <td colspan="2"><strong>權利金淨損益（點）</strong></td>
+          <td class="num" colspan="2">+27 − 37 = <strong>−10 點</strong> → −500 元（未扣平倉摩擦）</td>
+        </tr>
+      </tbody>
+    </table>
+    <p style="font-size:0.88rem; color:var(--muted);">信用價差若一路持有至到期且未穿越賣出履約價，最大獲利可接近當初淨收權利金；本例為<strong>提前平倉</strong>，故額外承擔兩腳買賣之摩擦。</p>
+
+    <h3 class="ex-title">範例五：Bear Put Spread—看空價差（買高履約價 Put、賣低履約價 Put）</h3>
+    <div class="ex-story"><strong>背景：</strong>預期短線修正，買入 <span class="kbd">21200 Put</span> 付 <strong>95 點</strong>，賣出 <span class="kbd">21000 Put</span> 收 <strong>38 點</strong>，淨付 <strong>57 點</strong>（2,850 元）。建倉兩腳費用試算：</div>
+    <table>
+      <thead>
+        <tr>
+          <th>腳位</th>
+          <th>權利金點數</th>
+          <th class="num">單邊費用+稅（元）</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>買入 21200Put</td>
+          <td>95</td>
+          <td class="num">60 + 95×0.05 = <strong>64.75</strong></td>
+        </tr>
+        <tr>
+          <td>賣出 21000Put</td>
+          <td>38</td>
+          <td class="num">60 + 1.9 = <strong>61.9</strong></td>
+        </tr>
+        <tr>
+          <td><strong>建倉合計</strong></td>
+          <td>—</td>
+          <td class="num"><strong>126.65</strong></td>
+        </tr>
+      </tbody>
+    </table>
+    <p style="font-size:0.88rem; color:var(--muted);">最大損失／獲利須再扣履約價寬度（本例 200 點）與淨支出點數；與 Bull Call 對稱，差在方向與 Put 履約價高低配置。</p>
+
+    <h3 class="ex-title">範例六：Long Straddle—同履約價買進買權＋賣權（波動策略）</h3>
+    <div class="ex-story"><strong>背景：</strong>預期大波動、方向不明，同月 <span class="kbd">21000</span> 買入 Call <strong>85 點</strong>、買入 Put <strong>78 點</strong>，共<strong>兩腳買方</strong>。</div>
+    <table>
+      <thead>
+        <tr>
+          <th>腳位</th>
+          <th class="num">單邊費用+稅（元）</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>買 21000Call @85 點</td>
+          <td class="num">60 + 4.25 = <strong>64.25</strong></td>
+        </tr>
+        <tr>
+          <td>買 21000Put @78 點</td>
+          <td class="num">60 + 3.9 = <strong>63.9</strong></td>
+        </tr>
+        <tr>
+          <td><strong>建倉合計（僅摩擦）</strong></td>
+          <td class="num"><strong>128.15</strong></td>
+        </tr>
+        <tr>
+          <td>權利金總支出（點／元）</td>
+          <td class="num">85+78 = 163 點 → <strong>8,150 元</strong></td>
+        </tr>
+      </tbody>
+    </table>
+    <p style="font-size:0.88rem; color:var(--muted);">跨式需<strong>顯著突破兩平區間</strong>才容易覆蓋雙倍買方成本；若盤整震盪，時間價值流失＋來回摩擦會快速侵蝕本金。</p>
+
+    <h3 class="ex-title">範例七：對照表—「幾次單邊」與摩擦（記憶用）</h3>
+    <table>
+      <thead>
+        <tr>
+          <th>策略／動作</th>
+          <th>建倉單邊次數（每口）</th>
+          <th>平倉單邊次數（每口，若兩腳皆沖銷）</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>TX 一輪多單</td>
+          <td>1（買進）</td>
+          <td>1（賣出）</td>
+        </tr>
+        <tr>
+          <td>TXO 單腳 Long</td>
+          <td>1</td>
+          <td>1</td>
+        </tr>
+        <tr>
+          <td>垂直價差（兩腳）</td>
+          <td>2</td>
+          <td>2</td>
+        </tr>
+        <tr>
+          <td>跨式（兩買方）</td>
+          <td>2</td>
+          <td>2</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <footer>
+      <p>本頁僅為教育性整理，非投資建議。交易稅、費率與契約規格可能更新，請以臺灣期貨交易所、期貨商及主管機關最新公告為準。投資期貨與選擇權具高槓桿與損失超過保證金之風險，請審慎評估。</p>
+    </footer>
+  </div>
+</body>
+</html>

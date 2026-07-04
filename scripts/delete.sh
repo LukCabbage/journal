@@ -11,10 +11,10 @@ if [ $# -eq 0 ]; then
   echo "目前所有文章："
   python3 -c "
 import json
-with open('articles.json') as f:
+with open('docs/articles.json') as f:
     arts = json.load(f)
 for a in arts:
-    print(f\"  {a['id']:6s}  {a['date']}  [{a['category']}]  {a['title'][:50]}\")
+    print(f\"  {a.get('id','-'):6s}  {a['date']}  [{a['category']}]  {a['title'][:50]}\")
 print(f\"\n  共 {len(arts)} 篇\")
 "
   exit 0
@@ -27,7 +27,7 @@ import json, sys, os
 
 ids_to_delete = set('$IDS'.split())
 
-with open('articles.json') as f:
+with open('docs/articles.json') as f:
     arts = json.load(f)
 
 deleted = [a for a in arts if a.get('id') in ids_to_delete]
@@ -39,7 +39,7 @@ if not deleted:
 
 # Remove HTML files
 for a in deleted:
-    fpath = a['filename']
+    fpath = os.path.join('docs', a['filename'])
     if os.path.exists(fpath):
         os.remove(fpath)
         print(f'  🗑  刪除檔案: {fpath}')
@@ -47,7 +47,7 @@ for a in deleted:
         print(f'  ⚠️  檔案不存在（已跳過）: {fpath}')
 
 # Update articles.json
-with open('articles.json', 'w') as f:
+with open('docs/articles.json', 'w') as f:
     json.dump(remaining, f, ensure_ascii=False, indent=2)
     f.write('\n')
 

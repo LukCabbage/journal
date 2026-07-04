@@ -34,6 +34,9 @@ GITHUB_TOKEN = os.environ["GITHUB_TOKEN"]
 GITHUB_OWNER = os.environ["GITHUB_OWNER"]
 GITHUB_REPO = os.environ["GITHUB_REPO"]
 PAGES_BASE = f"https://{GITHUB_OWNER}.github.io/{GITHUB_REPO}"
+# GitHub Pages 從 main 分支的 /docs 資料夾發布：git 路徑需加 docs/ 前綴，
+# 但對外 URL 與 articles.json 內的 filename 不含 docs/（docs/ 即網站根）。
+SITE_DIR = "docs"
 
 logging.basicConfig(
     format="%(asctime)s [%(levelname)s] %(message)s", level=logging.INFO
@@ -177,7 +180,7 @@ def push_file(path: str, content: str, commit_msg: str):
 
 
 def update_manifest(title: str, filename: str, date: str, category: str = "日誌"):
-    r = http_requests.get(_gh_url("articles.json"), headers=_gh_headers(), timeout=15)
+    r = http_requests.get(_gh_url(f"{SITE_DIR}/articles.json"), headers=_gh_headers(), timeout=15)
     if r.status_code == 200:
         data = r.json()
         articles = json.loads(base64.b64decode(data["content"]).decode("utf-8"))
@@ -203,7 +206,7 @@ def update_manifest(title: str, filename: str, date: str, category: str = "日�
         payload["sha"] = sha
 
     r = http_requests.put(
-        _gh_url("articles.json"), headers=_gh_headers(), json=payload, timeout=30
+        _gh_url(f"{SITE_DIR}/articles.json"), headers=_gh_headers(), json=payload, timeout=30
     )
     r.raise_for_status()
 
@@ -216,7 +219,7 @@ def publish(title: str, question: str, answer: str) -> str:
     filename = f"journal/{date_str}-{time_str}-{safe}.html"
 
     html = build_html(title, now.strftime("%Y-%m-%d %H:%M"), question, answer)
-    push_file(filename, html, f"Add: {title}")
+    push_file(f"{SITE_DIR}/{filename}", html, f"Add: {title}")
     update_manifest(title, filename, date_str)
 
     return f"{PAGES_BASE}/{filename}"
